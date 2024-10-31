@@ -225,7 +225,7 @@
             btnPrveedores.TabIndex = 101;
             btnPrveedores.Text = "Proveedores";
             btnPrveedores.UseVisualStyleBackColor = true;
-            btnPrveedores.Click += btnPrveedores_Click;
+            //btnPrveedores.Click += btnPrveedores_Click;
             // 
             // btnEmpleadoPanel
             // 
@@ -238,7 +238,7 @@
             btnEmpleadoPanel.TabIndex = 100;
             btnEmpleadoPanel.Text = "Empleados";
             btnEmpleadoPanel.UseVisualStyleBackColor = true;
-            btnEmpleadoPanel.Click += btnEmpleadoPanel_Click;
+          //  btnEmpleadoPanel.Click += btnEmpleadoPanel_Click;
             // 
             // btnAdminPanel
             // 
@@ -251,7 +251,7 @@
             btnAdminPanel.TabIndex = 99;
             btnAdminPanel.Text = "Administradores";
             btnAdminPanel.UseVisualStyleBackColor = true;
-            btnAdminPanel.Click += btnAdminPanel_Click;
+          //  btnAdminPanel.Click += btnAdminPanel_Click;
             // 
             // pictureBox2
             // 
@@ -275,7 +275,7 @@
             btnUsuarioPanel.TabIndex = 98;
             btnUsuarioPanel.Text = "Usuarios";
             btnUsuarioPanel.UseVisualStyleBackColor = false;
-            btnUsuarioPanel.Click += btnUsuarioPanel_Click;
+          //  btnUsuarioPanel.Click += btnUsuarioPanel_Click;
             // 
             // lblTITULO
             // 
@@ -298,7 +298,7 @@
             btnEditarUsuario.Size = new Size(72, 72);
             btnEditarUsuario.TabIndex = 100;
             btnEditarUsuario.UseVisualStyleBackColor = true;
-            btnEditarUsuario.Click += btnEditarUsuario_Click;
+          //  btnEditarUsuario.Click += btnEditarUsuario_Click;
             // 
             // btnEliminarUsuario
             // 
@@ -308,7 +308,7 @@
             btnEliminarUsuario.Size = new Size(72, 72);
             btnEliminarUsuario.TabIndex = 99;
             btnEliminarUsuario.UseVisualStyleBackColor = true;
-            btnEliminarUsuario.Click += btnEliminarUsuario_Click;
+          //  btnEliminarUsuario.Click += btnEliminarUsuario_Click;
             // 
             // lblBreadCrumbUser
             // 

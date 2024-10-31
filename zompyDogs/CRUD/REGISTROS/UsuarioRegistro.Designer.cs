@@ -540,6 +540,7 @@
             // 
             cbPuesto.FormattingEnabled = true;
             cbPuesto.ItemHeight = 20;
+            cbPuesto.Items.AddRange(new object[] { "1", "2", "3" });
             cbPuesto.Location = new Point(213, 69);
             cbPuesto.Name = "cbPuesto";
             cbPuesto.Size = new Size(180, 28);
@@ -623,7 +624,7 @@
         #endregion
 
         public Label lblTituloRegistro;
-        private TextBox txtCodigoGenerado;
+        public TextBox txtCodigoGenerado;
         private Label label3;
         public TextBox txtPrimNombre;
         private GroupBox groupBox1;
@@ -639,7 +640,6 @@
         private Label label2;
         private Label label10;
         public DateTimePicker dtpFechaNacimiento;
-        private ComboBox cbxEsatdoCivil;
         private Label label9;
         public TextBox txtTelefono;
         private Label label8;
@@ -672,5 +672,6 @@
         public Button btnCancelar;
         private ComboBox comboBox1;
         private Label label1;
+        public ComboBox cbxEsatdoCivil;
     }
 }
