@@ -33,7 +33,7 @@ namespace zompyDogs
 
         private void btnPedidos_Click(object sender, EventArgs e)
         {
-            Pedidos frmPedidos = new Pedidos();
+            Factura frmPedidos = new Factura();
             frmPedidos.Show();
             this.Close();
         }

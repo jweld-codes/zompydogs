@@ -52,7 +52,7 @@
     <Compile Update="PanelEmpleado.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Pedidos.cs">
+    <Compile Update="Factura.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Peticiones.cs">

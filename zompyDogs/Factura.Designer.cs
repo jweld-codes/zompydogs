@@ -1,6 +1,6 @@
 ﻿namespace zompyDogs
 {
-    partial class Pedidos
+    partial class Factura
     {
         /// <summary>
         /// Required designer variable.
@@ -28,95 +28,38 @@
         /// </summary>
         private void InitializeComponent()
         {
-            btnEditarUsuario = new Button();
             btnEliminarUsuario = new Button();
-            topBarMenu = new Panel();
-            pictureBox2 = new PictureBox();
-            btnUsuarioPanel = new Button();
-            lblTITULO = new Label();
             groupBox1 = new GroupBox();
             btnNext = new Button();
             btnAtras = new Button();
             dgvPedidos = new DataGridView();
-            btnAgregarRegistro = new Button();
             lblTituloRegistroPanel = new Label();
             pictureBox1 = new PictureBox();
             txtBuscarUsuario = new TextBox();
             btnVisualizarRegistro = new Button();
-            topBarMenu.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
+            topBarMenu = new Panel();
+            btnFactura = new Button();
+            pictureBox2 = new PictureBox();
+            btnPDVPanel = new Button();
+            lblTITULO = new Label();
+            btnRefreshDG = new Button();
+            cbxFiltro = new ComboBox();
             groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvPedidos).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            topBarMenu.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             SuspendLayout();
-            // 
-            // btnEditarUsuario
-            // 
-            btnEditarUsuario.FlatAppearance.BorderSize = 0;
-            btnEditarUsuario.Image = Properties.Resources.pen__1_;
-            btnEditarUsuario.Location = new Point(192, 199);
-            btnEditarUsuario.Name = "btnEditarUsuario";
-            btnEditarUsuario.Size = new Size(72, 72);
-            btnEditarUsuario.TabIndex = 120;
-            btnEditarUsuario.UseVisualStyleBackColor = true;
             // 
             // btnEliminarUsuario
             // 
             btnEliminarUsuario.FlatAppearance.BorderSize = 0;
             btnEliminarUsuario.Image = Properties.Resources.bin;
-            btnEliminarUsuario.Location = new Point(270, 199);
+            btnEliminarUsuario.Location = new Point(114, 199);
             btnEliminarUsuario.Name = "btnEliminarUsuario";
             btnEliminarUsuario.Size = new Size(72, 72);
             btnEliminarUsuario.TabIndex = 119;
             btnEliminarUsuario.UseVisualStyleBackColor = true;
-            // 
-            // topBarMenu
-            // 
-            topBarMenu.BackColor = Color.FromArgb(31, 19, 10);
-            topBarMenu.Controls.Add(pictureBox2);
-            topBarMenu.Controls.Add(btnUsuarioPanel);
-            topBarMenu.Controls.Add(lblTITULO);
-            topBarMenu.Dock = DockStyle.Top;
-            topBarMenu.Location = new Point(0, 0);
-            topBarMenu.Name = "topBarMenu";
-            topBarMenu.Size = new Size(901, 81);
-            topBarMenu.TabIndex = 116;
-            // 
-            // pictureBox2
-            // 
-            pictureBox2.Image = Properties.Resources.shopping_bag;
-            pictureBox2.Location = new Point(36, 29);
-            pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(67, 40);
-            pictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox2.TabIndex = 97;
-            pictureBox2.TabStop = false;
-            // 
-            // btnUsuarioPanel
-            // 
-            btnUsuarioPanel.BackColor = Color.White;
-            btnUsuarioPanel.FlatAppearance.BorderSize = 0;
-            btnUsuarioPanel.FlatStyle = FlatStyle.Flat;
-            btnUsuarioPanel.ForeColor = SystemColors.ActiveCaptionText;
-            btnUsuarioPanel.Location = new Point(706, 45);
-            btnUsuarioPanel.Name = "btnUsuarioPanel";
-            btnUsuarioPanel.Size = new Size(152, 36);
-            btnUsuarioPanel.TabIndex = 98;
-            btnUsuarioPanel.Text = "Inicio";
-            btnUsuarioPanel.UseVisualStyleBackColor = false;
-            // 
-            // lblTITULO
-            // 
-            lblTITULO.AutoSize = true;
-            lblTITULO.BackColor = Color.Transparent;
-            lblTITULO.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblTITULO.ForeColor = Color.Transparent;
-            lblTITULO.Location = new Point(108, 34);
-            lblTITULO.Name = "lblTITULO";
-            lblTITULO.Size = new Size(269, 31);
-            lblTITULO.TabIndex = 3;
-            lblTITULO.Text = "HISTORIAL DE PEDIDOS";
-            lblTITULO.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // groupBox1
             // 
@@ -128,7 +71,7 @@
             groupBox1.Size = new Size(837, 405);
             groupBox1.TabIndex = 113;
             groupBox1.TabStop = false;
-            groupBox1.Text = "Peticiones";
+            groupBox1.Text = "Facturas";
             // 
             // btnNext
             // 
@@ -164,25 +107,15 @@
             dgvPedidos.Size = new Size(800, 338);
             dgvPedidos.TabIndex = 69;
             // 
-            // btnAgregarRegistro
-            // 
-            btnAgregarRegistro.FlatAppearance.BorderSize = 0;
-            btnAgregarRegistro.Image = Properties.Resources.plus;
-            btnAgregarRegistro.Location = new Point(36, 199);
-            btnAgregarRegistro.Name = "btnAgregarRegistro";
-            btnAgregarRegistro.Size = new Size(72, 72);
-            btnAgregarRegistro.TabIndex = 114;
-            btnAgregarRegistro.UseVisualStyleBackColor = true;
-            // 
             // lblTituloRegistroPanel
             // 
             lblTituloRegistroPanel.AutoSize = true;
             lblTituloRegistroPanel.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblTituloRegistroPanel.Location = new Point(36, 151);
             lblTituloRegistroPanel.Name = "lblTituloRegistroPanel";
-            lblTituloRegistroPanel.Size = new Size(311, 41);
+            lblTituloRegistroPanel.Size = new Size(316, 41);
             lblTituloRegistroPanel.TabIndex = 115;
-            lblTituloRegistroPanel.Text = "Registros de Pedidos";
+            lblTituloRegistroPanel.Text = "Registros de Facturas";
             // 
             // pictureBox1
             // 
@@ -207,56 +140,142 @@
             // btnVisualizarRegistro
             // 
             btnVisualizarRegistro.Image = Properties.Resources.file__1_;
-            btnVisualizarRegistro.Location = new Point(114, 199);
+            btnVisualizarRegistro.Location = new Point(36, 199);
             btnVisualizarRegistro.Name = "btnVisualizarRegistro";
             btnVisualizarRegistro.Size = new Size(72, 72);
             btnVisualizarRegistro.TabIndex = 121;
             btnVisualizarRegistro.UseVisualStyleBackColor = true;
             // 
-            // Pedidos
+            // topBarMenu
+            // 
+            topBarMenu.BackColor = Color.FromArgb(31, 19, 10);
+            topBarMenu.Controls.Add(btnFactura);
+            topBarMenu.Controls.Add(pictureBox2);
+            topBarMenu.Controls.Add(btnPDVPanel);
+            topBarMenu.Controls.Add(lblTITULO);
+            topBarMenu.Dock = DockStyle.Top;
+            topBarMenu.Location = new Point(0, 0);
+            topBarMenu.Name = "topBarMenu";
+            topBarMenu.Size = new Size(901, 81);
+            topBarMenu.TabIndex = 122;
+            // 
+            // btnFactura
+            // 
+            btnFactura.BackColor = Color.White;
+            btnFactura.FlatAppearance.BorderSize = 0;
+            btnFactura.FlatStyle = FlatStyle.Flat;
+            btnFactura.ForeColor = SystemColors.ActiveCaptionText;
+            btnFactura.Location = new Point(716, 45);
+            btnFactura.Name = "btnFactura";
+            btnFactura.Size = new Size(152, 36);
+            btnFactura.TabIndex = 99;
+            btnFactura.Text = "FACTURAS";
+            btnFactura.UseVisualStyleBackColor = false;
+            // 
+            // pictureBox2
+            // 
+            pictureBox2.Image = Properties.Resources.invoice;
+            pictureBox2.Location = new Point(36, 29);
+            pictureBox2.Name = "pictureBox2";
+            pictureBox2.Size = new Size(67, 40);
+            pictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox2.TabIndex = 97;
+            pictureBox2.TabStop = false;
+            // 
+            // btnPDVPanel
+            // 
+            btnPDVPanel.BackColor = Color.Transparent;
+            btnPDVPanel.FlatAppearance.BorderSize = 0;
+            btnPDVPanel.FlatStyle = FlatStyle.Flat;
+            btnPDVPanel.ForeColor = Color.WhiteSmoke;
+            btnPDVPanel.Location = new Point(558, 45);
+            btnPDVPanel.Name = "btnPDVPanel";
+            btnPDVPanel.Size = new Size(152, 36);
+            btnPDVPanel.TabIndex = 98;
+            btnPDVPanel.Text = "PUNTO DE VENTA";
+            btnPDVPanel.UseVisualStyleBackColor = false;
+            btnPDVPanel.Click += btnUsuarioPanel_Click;
+            // 
+            // lblTITULO
+            // 
+            lblTITULO.AutoSize = true;
+            lblTITULO.BackColor = Color.Transparent;
+            lblTITULO.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblTITULO.ForeColor = Color.Transparent;
+            lblTITULO.Location = new Point(109, 34);
+            lblTITULO.Name = "lblTITULO";
+            lblTITULO.Size = new Size(129, 31);
+            lblTITULO.TabIndex = 3;
+            lblTITULO.Text = "FACTURAS";
+            lblTITULO.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // btnRefreshDG
+            // 
+            btnRefreshDG.FlatAppearance.BorderSize = 0;
+            btnRefreshDG.FlatStyle = FlatStyle.Flat;
+            btnRefreshDG.Image = Properties.Resources.refresh;
+            btnRefreshDG.Location = new Point(683, 256);
+            btnRefreshDG.Name = "btnRefreshDG";
+            btnRefreshDG.Size = new Size(29, 29);
+            btnRefreshDG.TabIndex = 124;
+            btnRefreshDG.UseVisualStyleBackColor = true;
+            // 
+            // cbxFiltro
+            // 
+            cbxFiltro.FormattingEnabled = true;
+            cbxFiltro.Location = new Point(720, 255);
+            cbxFiltro.Margin = new Padding(3, 3, 6, 3);
+            cbxFiltro.Name = "cbxFiltro";
+            cbxFiltro.RightToLeft = RightToLeft.Yes;
+            cbxFiltro.Size = new Size(138, 28);
+            cbxFiltro.Sorted = true;
+            cbxFiltro.TabIndex = 123;
+            cbxFiltro.Text = "Filtro";
+            // 
+            // Factura
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
             ClientSize = new Size(901, 725);
-            Controls.Add(btnVisualizarRegistro);
-            Controls.Add(btnEditarUsuario);
-            Controls.Add(btnEliminarUsuario);
+            Controls.Add(btnRefreshDG);
+            Controls.Add(cbxFiltro);
             Controls.Add(topBarMenu);
+            Controls.Add(btnVisualizarRegistro);
+            Controls.Add(btnEliminarUsuario);
             Controls.Add(groupBox1);
-            Controls.Add(btnAgregarRegistro);
             Controls.Add(lblTituloRegistroPanel);
             Controls.Add(pictureBox1);
             Controls.Add(txtBuscarUsuario);
-            Name = "Pedidos";
+            Name = "Factura";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Pedidos";
-            topBarMenu.ResumeLayout(false);
-            topBarMenu.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)dgvPedidos).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            topBarMenu.ResumeLayout(false);
+            topBarMenu.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
-
-        private Button btnEditarUsuario;
         private Button btnEliminarUsuario;
-        private Panel topBarMenu;
-        private PictureBox pictureBox2;
-        private Button btnUsuarioPanel;
-        private Label lblTITULO;
         private GroupBox groupBox1;
         private Button btnNext;
         private Button btnAtras;
         private DataGridView dgvPedidos;
-        private Button btnAgregarRegistro;
         private Label lblTituloRegistroPanel;
         private PictureBox pictureBox1;
         private TextBox txtBuscarUsuario;
         private Button btnVisualizarRegistro;
+        private Panel topBarMenu;
+        private Button btnFactura;
+        private PictureBox pictureBox2;
+        private Button btnPDVPanel;
+        private Label lblTITULO;
+        public Button btnRefreshDG;
+        public ComboBox cbxFiltro;
     }
 }

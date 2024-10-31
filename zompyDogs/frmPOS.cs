@@ -53,7 +53,7 @@ namespace zompyDogs
             int buttonHeight = 80;
             int buttonWidth = 150;
             int yOffset = -2;
-      
+
             foreach (DataRow row in dataTable.Rows)
             {
                 Button btnCategory = new Button();
@@ -170,6 +170,20 @@ namespace zompyDogs
             }
         }
 
-
+        private void button2_Click(object sender, EventArgs e)
+        {
+            if (FormPrincipal != null)
+            {
+                FormPrincipal.AbrirFormsHija(new Factura { FormPrincipal = FormPrincipal });
+            }
+            else if (EmpleadoFormPrincipal != null)
+            {
+                EmpleadoFormPrincipal.AbrirFormsHijaEmpleado(new Factura { EmpleadoFormPrincipal = EmpleadoFormPrincipal });
+            }
+            else
+            {
+                MessageBox.Show("Formulario es nulo");
+            }
+        }
     }
 }

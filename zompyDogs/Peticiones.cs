@@ -89,6 +89,7 @@ namespace zompyDogs
                 peticionesRegistro.btnGuardarUser.Text = "GUARDAR";
                 peticionesRegistro.btnCancelar.Text = "CANCELAR";
 
+                //metodo para guardar
                 peticionesRegistro.btnGuardarUser.Click += (s, args) =>
                 {
                     

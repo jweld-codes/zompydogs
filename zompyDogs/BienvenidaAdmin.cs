@@ -102,7 +102,11 @@ namespace zompyDogs
         private void btnPOS_Click(object sender, EventArgs e)
         {
             CambiarColorBoton((Button)sender);
-            AbrirFormsHija(new frmPOS());
+            frmPOS fmPuntoDeVenta = new frmPOS
+            {
+                FormPrincipal = this
+            };
+            AbrirFormsHija(fmPuntoDeVenta);
         }
 
         private void btnMenu_Click(object sender, EventArgs e)
@@ -118,7 +122,7 @@ namespace zompyDogs
         private void btnPedidos_Click_1(object sender, EventArgs e)
         {
             CambiarColorBoton((Button)sender);
-            AbrirFormsHija(new Pedidos());
+            AbrirFormsHija(new Factura());
         }
 
         private void btnInicio_Click(object sender, EventArgs e)

@@ -31,7 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EmpleadoBienvenida));
             sidebarMenu = new Panel();
             btnInicio = new Button();
-            btnPedidos = new Button();
             lblCerrarSession = new Label();
             lblNombreSideBar = new Label();
             pictureBox3 = new PictureBox();
@@ -48,7 +47,6 @@
             // 
             sidebarMenu.BackColor = Color.FromArgb(31, 19, 10);
             sidebarMenu.Controls.Add(btnInicio);
-            sidebarMenu.Controls.Add(btnPedidos);
             sidebarMenu.Controls.Add(lblCerrarSession);
             sidebarMenu.Controls.Add(lblNombreSideBar);
             sidebarMenu.Controls.Add(pictureBox3);
@@ -69,29 +67,13 @@
             btnInicio.ForeColor = SystemColors.Control;
             btnInicio.Image = Properties.Resources.home__4_;
             btnInicio.ImageAlign = ContentAlignment.MiddleLeft;
-            btnInicio.Location = new Point(46, 217);
+            btnInicio.Location = new Point(35, 228);
             btnInicio.Name = "btnInicio";
-            btnInicio.Size = new Size(167, 51);
+            btnInicio.Size = new Size(178, 51);
             btnInicio.TabIndex = 19;
             btnInicio.Text = "Inicio";
             btnInicio.UseVisualStyleBackColor = false;
             btnInicio.Click += btnInicio_Click;
-            // 
-            // btnPedidos
-            // 
-            btnPedidos.BackColor = Color.Transparent;
-            btnPedidos.FlatAppearance.BorderSize = 0;
-            btnPedidos.FlatStyle = FlatStyle.Flat;
-            btnPedidos.ForeColor = SystemColors.ButtonFace;
-            btnPedidos.Image = (Image)resources.GetObject("btnPedidos.Image");
-            btnPedidos.ImageAlign = ContentAlignment.MiddleLeft;
-            btnPedidos.Location = new Point(48, 274);
-            btnPedidos.Name = "btnPedidos";
-            btnPedidos.Size = new Size(167, 51);
-            btnPedidos.TabIndex = 17;
-            btnPedidos.Text = "Pedidos";
-            btnPedidos.UseVisualStyleBackColor = false;
-            btnPedidos.Click += btnPedidos_Click;
             // 
             // lblCerrarSession
             // 
@@ -137,9 +119,9 @@
             btnMenu.ForeColor = SystemColors.ButtonFace;
             btnMenu.Image = (Image)resources.GetObject("btnMenu.Image");
             btnMenu.ImageAlign = ContentAlignment.MiddleLeft;
-            btnMenu.Location = new Point(48, 388);
+            btnMenu.Location = new Point(35, 342);
             btnMenu.Name = "btnMenu";
-            btnMenu.Size = new Size(167, 51);
+            btnMenu.Size = new Size(178, 51);
             btnMenu.TabIndex = 12;
             btnMenu.Text = "Menú";
             btnMenu.UseVisualStyleBackColor = false;
@@ -153,11 +135,12 @@
             btnPOS.ForeColor = SystemColors.ButtonFace;
             btnPOS.Image = (Image)resources.GetObject("btnPOS.Image");
             btnPOS.ImageAlign = ContentAlignment.MiddleLeft;
-            btnPOS.Location = new Point(46, 331);
+            btnPOS.Location = new Point(35, 285);
             btnPOS.Name = "btnPOS";
-            btnPOS.Size = new Size(167, 51);
+            btnPOS.Size = new Size(178, 51);
             btnPOS.TabIndex = 11;
             btnPOS.Text = "      PUNTO DE VENTA";
+            btnPOS.TextAlign = ContentAlignment.MiddleRight;
             btnPOS.UseVisualStyleBackColor = false;
             btnPOS.Click += btnPOS_Click;
             // 
@@ -202,7 +185,6 @@
         #endregion
 
         private Panel sidebarMenu;
-        private Button btnPedidos;
         private Label lblCerrarSession;
         public Label lblNombreSideBar;
         private PictureBox pictureBox3;

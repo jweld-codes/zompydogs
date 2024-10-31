@@ -8,10 +8,14 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using zompyDogs.CRUD.AGREGAR;
+using zompyDogs.CRUD.REGISTROS;
 using ZompyDogsDAO;
+// using ZompyDogsDAO.UsuarioDAO;
 using ZompyDogsLib;
 using ZompyDogsLib.Controladores;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.ExplorerBar;
+using static ZompyDogsDAO.PeticionesValidaciones;
+using static ZompyDogsDAO.UsuarioDAO;
 
 namespace zompyDogs
 {
@@ -28,6 +32,7 @@ namespace zompyDogs
             dgvEmpleados.Hide();
             dgvAdminis.Hide();
             dgvProveedor.Hide();
+
         }
 
         private void CargarUsuarios()
@@ -62,16 +67,52 @@ namespace zompyDogs
         {
             if (isUser == true)
             {
-                UsuarioRegistro addNuevoRegistro = new UsuarioRegistro();
-                addNuevoRegistro.lblTituloRegistro.Text = "Agregar Nuevo Registro";
-                addNuevoRegistro.btnGuardarUser.Text = "GUARDAR";
+                var usuarioGuardar = new UsuarioRegistro();
+                usuarioGuardar.Show();
+                usuarioGuardar.lblTituloRegistro.Text = "Agregar Nuevo Registro";
+                usuarioGuardar.btnGuardarUser.Text = "GUARDAR";
 
-                addNuevoRegistro.Show();
-            } else
+                //llamar el metodo guardar usuario
+                usuarioGuardar.btnGuardarUser.Click += (s, args) =>
+                {
+                    DetalleUsuario nuevoDetalleUsuario = new DetalleUsuario
+                    {
+                        primerNombre = usuarioGuardar.txtPrimNombre.Text,
+                        segundoNombre = usuarioGuardar.txtSegNombre.Text,
+                        primerApellido = usuarioGuardar.txtPrimApellido.Text,
+                        segundoApellido = usuarioGuardar.txtSegApellido.Text,
+                        codigoCedula = usuarioGuardar.txtCedula.Text,
+                        fechaNacimiento = usuarioGuardar.dtpFechaNacimiento.Value,
+                        estadoCivil = usuarioGuardar.cbxEsatdoCivil.SelectedItem?.ToString() ?? string.Empty,
+                        telefono = usuarioGuardar.txtTelefono.Text,
+                        direccion = usuarioGuardar.txtDireccion.Text,
+                        codigoPuesto = usuarioGuardar.cbPuesto.SelectedValue != null? Convert.ToInt32(usuarioGuardar.cbPuesto.SelectedValue): 1,
+                        codigoUsuario = usuarioGuardar.txtCodigoGenerado.Text,
+                    };
+
+                    try
+                    {
+                        UsuarioDAO.GuardarDetalleUsuario(nuevoDetalleUsuario);
+
+                        MessageBox.Show("Usuario Registrado con Éxito.");
+                        CargarUsuarios();
+                        CargarUsuariosAdministradores();
+                        CargarUsuariosEmpleados();
+                    }
+                    catch
+                    {
+                        MessageBox.Show("Error al actualizar el Usuario.");
+
+                    }
+                };
+            } 
+                else
             {
                 ProveedorRegistro frmProveedorRegistro = new ProveedorRegistro();
                 frmProveedorRegistro.lblTituloRegistro.Text = "Agregar Nuevo Proveedor";
                 frmProveedorRegistro.btnGuardarUser.Text = "GUARDAR";
+
+                //llamar metodo para guardar proveedor
 
                 frmProveedorRegistro.Show();
 

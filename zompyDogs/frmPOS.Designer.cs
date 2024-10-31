@@ -31,6 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPOS));
             DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             topBarMenu = new Panel();
+            button2 = new Button();
             pictureBox2 = new PictureBox();
             btnUsuarioPanel = new Button();
             lblTITULO = new Label();
@@ -68,7 +69,6 @@
             btnAtras = new Button();
             lblPrecioPlatilo = new Label();
             label2 = new Label();
-            button2 = new Button();
             topBarMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             panel1.SuspendLayout();
@@ -96,6 +96,20 @@
             topBarMenu.Name = "topBarMenu";
             topBarMenu.Size = new Size(901, 81);
             topBarMenu.TabIndex = 106;
+            // 
+            // button2
+            // 
+            button2.BackColor = Color.Transparent;
+            button2.FlatAppearance.BorderSize = 0;
+            button2.FlatStyle = FlatStyle.Flat;
+            button2.ForeColor = SystemColors.ButtonHighlight;
+            button2.Location = new Point(716, 45);
+            button2.Name = "button2";
+            button2.Size = new Size(152, 36);
+            button2.TabIndex = 99;
+            button2.Text = "FACTURAS";
+            button2.UseVisualStyleBackColor = false;
+            button2.Click += button2_Click;
             // 
             // pictureBox2
             // 
@@ -487,19 +501,6 @@
             label2.TabIndex = 2;
             label2.Text = "L.";
             // 
-            // button2
-            // 
-            button2.BackColor = Color.Transparent;
-            button2.FlatAppearance.BorderSize = 0;
-            button2.FlatStyle = FlatStyle.Flat;
-            button2.ForeColor = SystemColors.ButtonHighlight;
-            button2.Location = new Point(716, 45);
-            button2.Name = "button2";
-            button2.Size = new Size(152, 36);
-            button2.TabIndex = 99;
-            button2.Text = "FACTURAS";
-            button2.UseVisualStyleBackColor = false;
-            // 
             // frmPOS
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -535,7 +536,7 @@
         #endregion
         private Panel topBarMenu;
         private PictureBox pictureBox2;
-        private Button btnUsuarioPanel;
+        public Button btnUsuarioPanel;
         private Label lblTITULO;
         private Panel panel1;
         private Button btnConfirmarPedido;
@@ -571,6 +572,6 @@
         private Button btnEliminarOrden;
         private GroupBox groupBox1;
         private Panel panel2;
-        private Button button2;
+        public Button button2;
     }
 }

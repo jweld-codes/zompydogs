@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data;
 using System.Data.SqlClient;
+using static ZompyDogsDAO.UsuarioDAO;
 
 namespace ZompyDogsDAO
 {
@@ -215,6 +216,61 @@ namespace ZompyDogsDAO
             }
 
             return dtpDetallesUsuarios;
+        }
+
+        public class DetalleUsuario
+        {
+
+            public string primerNombre { get; set; }
+            public string segundoNombre { get; set; }
+            public string primerApellido { get; set; }
+            public string segundoApellido { get; set; }
+            public string codigoCedula { get; set; }
+            public DateTime fechaNacimiento { get; set; }
+            public string estadoCivil { get; set; }
+            public string telefono { get; set; }
+            public string direccion { get; set; }
+            public int codigoPuesto { get; set; }
+            public string codigoUsuario { get; set; }
+        }
+
+        public static void GuardarDetalleUsuario(DetalleUsuario detalleusuario)
+        {
+            string query = "INSERT INTO DetalleUsuario ( primNombreUsuario, segNombreUsuario, primApellidoUsuario, segApellido, codigoCedula, fechaNacimiento, estadoCivil, telefono, direccion, codigoPuesto, codigoUsuario) VALUES ( @primern, @segundon, @primera, @segundoa, @codice, @fechanac, @civil, @tele, @direcc, @codpu, @codius)";
+
+            using (SqlConnection conn = new SqlConnection(con_string))
+            {
+                using (SqlCommand cmd = new SqlCommand(query, conn))
+                {
+
+                    cmd.Parameters.AddWithValue("@primern", detalleusuario.primerNombre);
+                    cmd.Parameters.AddWithValue("@segundon", detalleusuario.segundoNombre);
+                    cmd.Parameters.AddWithValue("@primera", detalleusuario.primerApellido);
+                    cmd.Parameters.AddWithValue("@segundoa", detalleusuario.segundoApellido);
+                    cmd.Parameters.AddWithValue("@codice", detalleusuario.codigoCedula);
+                    cmd.Parameters.AddWithValue("@fechanac", detalleusuario.fechaNacimiento);
+                    cmd.Parameters.AddWithValue("@civil", detalleusuario.estadoCivil);
+                    cmd.Parameters.AddWithValue("@tele", detalleusuario.telefono);
+                    cmd.Parameters.AddWithValue("@direcc", detalleusuario.direccion);
+                    cmd.Parameters.AddWithValue("@codpu", Convert.ToInt32(detalleusuario.codigoPuesto));
+                    cmd.Parameters.AddWithValue("@codius", detalleusuario.codigoUsuario);
+
+                    try
+                    {
+                        conn.Open();
+                        int rowsAffected = cmd.ExecuteNonQuery();
+
+                        if (rowsAffected == 0)
+                        {
+                            Console.WriteLine("No se insertó ningún registro en la base de datos.");
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        Console.WriteLine("Error al guardar el usuario: " + ex.Message);
+                    }
+                }
+            }
         }
 
 
