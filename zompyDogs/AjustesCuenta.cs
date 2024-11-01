@@ -15,6 +15,11 @@ namespace zompyDogs
         public AjustesCuenta()
         {
             InitializeComponent();
+
+            gbxDatosPersonales.Show();
+            gbxDatosUsuarios.Hide();
+            rectanglePanel1.Show();
+            rectanglePanel2.Hide();
         }
 
         private void btnEditarUsuario_Click(object sender, EventArgs e)
@@ -23,6 +28,24 @@ namespace zompyDogs
             addNuevoRegistro.lblTituloRegistro.Text = "Editar Cuenta";
             addNuevoRegistro.btnGuardarUser.Text = "EDITAR";
             addNuevoRegistro.Show();
+        }
+
+        private void btnDatosPersonales_Click(object sender, EventArgs e)
+        {
+            gbxDatosPersonales.Show();
+            gbxDatosUsuarios.Hide();
+
+            rectanglePanel1.Show();
+            rectanglePanel2.Hide();
+        }
+
+        private void btnDatosUsuarios_Click(object sender, EventArgs e)
+        {
+            gbxDatosPersonales.Hide();
+            gbxDatosUsuarios.Show();
+
+            rectanglePanel1.Hide();
+            rectanglePanel2.Show();
         }
     }
 }

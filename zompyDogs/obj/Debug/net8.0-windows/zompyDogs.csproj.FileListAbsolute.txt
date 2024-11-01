@@ -167,3 +167,4 @@ C:\Users\jenni\Documents\GitHub\unirec\zompydogs\zompyDogs\obj\Debug\net8.0-wind
 C:\Users\jenni\Documents\GitHub\unirec\zompydogs\zompyDogs\obj\Debug\net8.0-windows\zompyDogs.pdb
 C:\Users\jenni\Documents\GitHub\unirec\zompydogs\zompyDogs\obj\Debug\net8.0-windows\zompyDogs.genruntimeconfig.cache
 C:\Users\jenni\Documents\GitHub\unirec\zompydogs\zompyDogs\obj\Debug\net8.0-windows\ref\zompyDogs.dll
+C:\Users\jenni\Documents\GitHub\unirec\zompydogs\zompyDogs\obj\Debug\net8.0-windows\zompyDogs.CRUD.REGISTROS.ProductoRegistro.resources
