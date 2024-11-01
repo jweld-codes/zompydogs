@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using ZompyDogsDAO;
+using zompyDogs.CRUD.REGISTROS;
 
 namespace zompyDogs
 {
@@ -35,7 +36,7 @@ namespace zompyDogs
             {
                 FormPrincipal.AbrirFormsHija(new LibretaMenu { FormPrincipal = FormPrincipal });
             }
-            else if(EmpleadoFormPrincipal != null)
+            else if (EmpleadoFormPrincipal != null)
             {
                 EmpleadoFormPrincipal.AbrirFormsHijaEmpleado(new LibretaMenu { EmpleadoFormPrincipal = EmpleadoFormPrincipal });
             }
@@ -61,7 +62,10 @@ namespace zompyDogs
             botonActivo.ForeColor = Color.Black;
         }
 
-
-
+        private void btnAgregarNuevoUsuario_Click(object sender, EventArgs e)
+        {
+            MenuRegistro fmMenuRegistro = new MenuRegistro();
+            fmMenuRegistro.Show();
+        }
     }
 }

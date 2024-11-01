@@ -352,6 +352,7 @@
             btnAgregarNuevoUsuario.Size = new Size(72, 72);
             btnAgregarNuevoUsuario.TabIndex = 114;
             btnAgregarNuevoUsuario.UseVisualStyleBackColor = true;
+            btnAgregarNuevoUsuario.Click += btnAgregarNuevoUsuario_Click;
             // 
             // lblTituloRegistroPanel
             // 

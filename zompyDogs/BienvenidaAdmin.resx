@@ -118,30 +118,6 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="btnPedidos.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAA
-        4wAAAOMBD+bfpwAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAQMSURBVFhHtVdb
-        bFRVFB0jYkJARYj8GD98RBPQJoYPYvhoSIzphwY103cbgkmtGCqNLRBiQXmYQMCqKa3FoHFeHSC0pmlr
-        yrOFWGr0u/IhBAIBohGK5dUHs1zrzi6dmd52HkxXsjK965yz9z7n7LPPqSdV5J7ErAI/ygsCCOcHcaQw
-        gCZvCMuteWZR5sMzBUH8TudgEH/T+R/8+7a+8wNo8ACPWNeZQaEfPXJYGESZSZ63mzGH2l4FQb3G5OyD
-        znPlhDP/xKQJcOZs6yavew9itqnZBfd7Cx1E6OBpk+LALSh1VsGHpSZlFzReTw7a5yRwhd5QAEV+vGlS
-        5qhoxmPFQcyPpbJdASTq4+QKvaUAmKTvJbaZ2dRh2Y1skfa2menUwEF3P27F/c+PAuOsPIxRZvlorBbL
-        DZ1RZzUd8XpZmMc0iDYznRwrf8RTMlTXDXz/2wRrOzBcEsLdWC2We3qjAew8Ga9XHMIgV6DPzCdHUQiv
-        yNC2Y/GGvjkN7Dger8VyXz+w5QjQzN9Yvepn/Ed758x8coyf95098YYyJbdkhPbumPnk4H4VKoCvOWM3
-        g+nyM26l7L2zH/PMxfRQpdOAxjPuBtPlVm6l7Hn9eNFcTA8mzJfk2D4XY5lQSekEkOqNyS34oTSEW27G
-        MmE9t1IB5PvxvrmYHqzpHasPYNDNWCrUyukEVbbiZnEId+TcOEBu1DE3V+5QFfzwcGYBKHFXhXHLcejH
-        X7TVxFNVx9l/pVpA/T75r8q1uZsMrsClde3pb0H9KV5EIdyjg2uOA5fHCYPKYfsZMsKq+oHJMYje6yPr
-        uzDm5mQqfscTU86Sq+C9Pjxn1lyR9y0eZyCd8sPf102O4t2fsIAN2JxQhpNx0y8Y1axSzfSSAJ5g/6vk
-        CZOi4BIuVgDbE8pwMpa1YIjjus2MK2h7kU4Yr+fn9c3V+lS+CsJ4wekgFPmwQuKuNMpww68PsnyNmZkE
-        zvhZtp8lh3TXSGMgL2kcA1ntdBKYqcUSdfG4OXPjbrsFyTzZ0GNGucDvL/StGfPv8+QNvZqkCepHTadi
-        s0kMIIhqCmjsc3fmxj3Mfo3hUVtpZpTtjdI4IT9/L5P/JCacvaZ1XGtNcm7COoqRdMpwE08A9zaisWbG
-        OU18ou1wHCjZfFhiLQ9AfZna4yqkHpQSWYiGqttxL1UW8aXEcQN8MT9qphxQy5vqWHKbGtg+zDFPmhQF
-        xbXkn+T1NHiD1D8mVWZmWjARX2P/YXKvSQ+JaAELkyPJLh1eyy+z3wXyIgNZaPLDg0s5l0Z7yQiTb78c
-        WZMDOeMKbWD7TS7/FSZfjjVlD/rP2ZIveiFxlmQ/qS0dI5WwbaoLNmRm4Lysg/hItyGddnG2LTol3gBe
-        tS4J8Hj+B6qgqGtSaRF7AAAAAElFTkSuQmCC
-</value>
-  </data>
   <data name="btnAjustesCuenta.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAA

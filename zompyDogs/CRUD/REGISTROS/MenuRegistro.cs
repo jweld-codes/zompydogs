@@ -16,5 +16,23 @@ namespace zompyDogs.CRUD.REGISTROS
         {
             InitializeComponent();
         }
+
+        private void btnSeleccionarImagen_Click(object sender, EventArgs e)
+        {
+            string projectPath = Directory.GetParent(Application.StartupPath).Parent.Parent.Parent.FullName;
+
+            OpenFileDialog ofdSeleccionarImagen = new OpenFileDialog();
+            ofdSeleccionarImagen.Filter = "Imagenes|*.jpg; *.png";
+            ofdSeleccionarImagen.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.MyPictures);
+            ofdSeleccionarImagen.Title = "Seleccionar Imagen";
+            
+
+            if (ofdSeleccionarImagen.ShowDialog() == DialogResult.OK)
+            {
+                pbxImagenSeleccionada.Image = Image.FromFile(ofdSeleccionarImagen.FileName);
+                txtImagenName.Text = ofdSeleccionarImagen.SafeFileName;
+                pbxImagenSeleccionada.SizeMode = PictureBoxSizeMode.Zoom;
+            }
+        }
     }
 }

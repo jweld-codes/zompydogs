@@ -17,7 +17,7 @@ namespace ZompyDogsDAO
         public static DataTable ObtenerAuditorias()
         {
             DataTable dtAuditoria = new DataTable();
-            string query = "SELECT Codigo, Accion, Descripcion, Fecha_De_Auditoria FROM v_AuditoriaxUsuario";
+            string query = "SELECT * FROM v_AuditoriaxUsuario";
 
             using (SqlConnection conn = new SqlConnection(con_string))
             {

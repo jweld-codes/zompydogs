@@ -75,13 +75,13 @@
             btnPedidos.FlatAppearance.BorderSize = 0;
             btnPedidos.FlatStyle = FlatStyle.Flat;
             btnPedidos.ForeColor = SystemColors.ButtonFace;
-            btnPedidos.Image = (Image)resources.GetObject("btnPedidos.Image");
+            btnPedidos.Image = Properties.Resources.invoice1;
             btnPedidos.ImageAlign = ContentAlignment.MiddleLeft;
             btnPedidos.Location = new Point(48, 557);
             btnPedidos.Name = "btnPedidos";
             btnPedidos.Size = new Size(167, 51);
             btnPedidos.TabIndex = 17;
-            btnPedidos.Text = "Pedidos";
+            btnPedidos.Text = "Reportes";
             btnPedidos.UseVisualStyleBackColor = false;
             btnPedidos.Click += btnPedidos_Click_1;
             // 
@@ -197,7 +197,7 @@
             btnProductos.Name = "btnProductos";
             btnProductos.Size = new Size(167, 51);
             btnProductos.TabIndex = 9;
-            btnProductos.Text = "Productos";
+            btnProductos.Text = "Inventario";
             btnProductos.UseVisualStyleBackColor = false;
             btnProductos.Click += btnProductos_Click;
             // 
