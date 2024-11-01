@@ -59,6 +59,8 @@
             label5 = new Label();
             textBox1 = new TextBox();
             panel1 = new Panel();
+            gbxActividades = new GroupBox();
+            dgvActividadesAuditoria = new DataGridView();
             gbxDatosUsuarios = new GroupBox();
             button2 = new Button();
             groupBox3 = new GroupBox();
@@ -90,6 +92,8 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             gbxDatosPersonales.SuspendLayout();
             panel1.SuspendLayout();
+            gbxActividades.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dgvActividadesAuditoria).BeginInit();
             gbxDatosUsuarios.SuspendLayout();
             groupBox3.SuspendLayout();
             SuspendLayout();
@@ -116,8 +120,9 @@
             btnEmpleadoPanel.Name = "btnEmpleadoPanel";
             btnEmpleadoPanel.Size = new Size(123, 36);
             btnEmpleadoPanel.TabIndex = 100;
-            btnEmpleadoPanel.Text = "Eliminar";
+            btnEmpleadoPanel.Text = "Actividades";
             btnEmpleadoPanel.UseVisualStyleBackColor = true;
+            btnEmpleadoPanel.Click += btnEmpleadoPanel_Click;
             // 
             // pictureBox2
             // 
@@ -141,6 +146,7 @@
             btnUsuarioPanel.TabIndex = 98;
             btnUsuarioPanel.Text = "Inicio";
             btnUsuarioPanel.UseVisualStyleBackColor = false;
+            btnUsuarioPanel.Click += btnUsuarioPanel_Click;
             // 
             // lblTITULO
             // 
@@ -382,12 +388,40 @@
             // panel1
             // 
             panel1.BorderStyle = BorderStyle.FixedSingle;
+            panel1.Controls.Add(gbxActividades);
             panel1.Controls.Add(gbxDatosUsuarios);
             panel1.Controls.Add(gbxDatosPersonales);
             panel1.Location = new Point(-12, 236);
             panel1.Name = "panel1";
             panel1.Size = new Size(933, 511);
             panel1.TabIndex = 113;
+            // 
+            // gbxActividades
+            // 
+            gbxActividades.Controls.Add(dgvActividadesAuditoria);
+            gbxActividades.Location = new Point(23, 46);
+            gbxActividades.Name = "gbxActividades";
+            gbxActividades.Size = new Size(865, 408);
+            gbxActividades.TabIndex = 117;
+            gbxActividades.TabStop = false;
+            gbxActividades.Text = "Actividades";
+            // 
+            // dgvActividadesAuditoria
+            // 
+            dgvActividadesAuditoria.AllowUserToAddRows = false;
+            dgvActividadesAuditoria.AllowUserToDeleteRows = false;
+            dgvActividadesAuditoria.AllowUserToOrderColumns = true;
+            dgvActividadesAuditoria.AllowUserToResizeColumns = false;
+            dgvActividadesAuditoria.AllowUserToResizeRows = false;
+            dgvActividadesAuditoria.BackgroundColor = SystemColors.Window;
+            dgvActividadesAuditoria.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvActividadesAuditoria.Location = new Point(23, 32);
+            dgvActividadesAuditoria.Name = "dgvActividadesAuditoria";
+            dgvActividadesAuditoria.ReadOnly = true;
+            dgvActividadesAuditoria.RowHeadersWidth = 51;
+            dgvActividadesAuditoria.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dgvActividadesAuditoria.Size = new Size(814, 331);
+            dgvActividadesAuditoria.TabIndex = 70;
             // 
             // gbxDatosUsuarios
             // 
@@ -681,6 +715,8 @@
             gbxDatosPersonales.ResumeLayout(false);
             gbxDatosPersonales.PerformLayout();
             panel1.ResumeLayout(false);
+            gbxActividades.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)dgvActividadesAuditoria).EndInit();
             gbxDatosUsuarios.ResumeLayout(false);
             gbxDatosUsuarios.PerformLayout();
             groupBox3.ResumeLayout(false);
@@ -748,5 +784,7 @@
         private Label label15;
         private TextBox textBox13;
         private Label label14;
+        private GroupBox gbxActividades;
+        public DataGridView dgvActividadesAuditoria;
     }
 }

@@ -18,6 +18,8 @@ namespace zompyDogs
 
             gbxDatosPersonales.Show();
             gbxDatosUsuarios.Hide();
+            gbxActividades.Hide();
+
             rectanglePanel1.Show();
             rectanglePanel2.Hide();
         }
@@ -46,6 +48,29 @@ namespace zompyDogs
 
             rectanglePanel1.Hide();
             rectanglePanel2.Show();
+        }
+
+        private void btnEmpleadoPanel_Click(object sender, EventArgs e)
+        {
+            gbxDatosPersonales.Hide();
+            gbxDatosUsuarios.Hide();
+            gbxActividades.Show();
+
+            rectanglePanel1.Hide();
+            rectanglePanel2.Hide();
+
+            btnDatosUsuarios.Hide();
+            btnDatosPersonales.Hide();
+        }
+
+        private void btnUsuarioPanel_Click(object sender, EventArgs e)
+        {
+            gbxDatosPersonales.Show();
+            gbxDatosUsuarios.Hide();
+            gbxActividades.Hide();
+
+            rectanglePanel1.Show();
+            rectanglePanel2.Hide();
         }
     }
 }
