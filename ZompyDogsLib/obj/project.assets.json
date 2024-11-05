@@ -8,19 +8,24 @@
     "net8.0": []
   },
   "packageFolders": {
-    "C:\\Users\\oscar\\.nuget\\packages\\": {}
+    "C:\\Users\\Guillermo\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\oscar\\Documents\\GitHub\\zompydogs\\ZompyDogsLib\\ZompyDogsLib.csproj",
+      "projectUniqueName": "C:\\Users\\Guillermo\\OneDrive\\Documentos\\GitHub\\zompydogs\\ZompyDogsLib\\ZompyDogsLib.csproj",
       "projectName": "ZompyDogsLib",
-      "projectPath": "C:\\Users\\oscar\\Documents\\GitHub\\zompydogs\\ZompyDogsLib\\ZompyDogsLib.csproj",
-      "packagesPath": "C:\\Users\\oscar\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\oscar\\Documents\\GitHub\\zompydogs\\ZompyDogsLib\\obj\\",
+      "projectPath": "C:\\Users\\Guillermo\\OneDrive\\Documentos\\GitHub\\zompydogs\\ZompyDogsLib\\ZompyDogsLib.csproj",
+      "packagesPath": "C:\\Users\\Guillermo\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Guillermo\\OneDrive\\Documentos\\GitHub\\zompydogs\\ZompyDogsLib\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\oscar\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Guillermo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -67,7 +72,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.303/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
