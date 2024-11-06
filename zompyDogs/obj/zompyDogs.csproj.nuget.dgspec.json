@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\jenni\\Documents\\GitHub\\unirec\\zompydogs\\zompyDogs\\zompyDogs.csproj": {}
+    "C:\\Users\\Guillermo\\OneDrive\\Documentos\\GitHub\\zompydogs\\zompyDogs\\zompyDogs.csproj": {}
   },
   "projects": {
-    "C:\\Users\\jenni\\Documents\\GitHub\\unirec\\zompydogs\\ZompyDogsDAO\\ZompyDogsDAO.csproj": {
+    "C:\\Users\\Guillermo\\OneDrive\\Documentos\\GitHub\\zompydogs\\ZompyDogsDAO\\ZompyDogsDAO.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\jenni\\Documents\\GitHub\\unirec\\zompydogs\\ZompyDogsDAO\\ZompyDogsDAO.csproj",
+        "projectUniqueName": "C:\\Users\\Guillermo\\OneDrive\\Documentos\\GitHub\\zompydogs\\ZompyDogsDAO\\ZompyDogsDAO.csproj",
         "projectName": "ZompyDogsDAO",
-        "projectPath": "C:\\Users\\jenni\\Documents\\GitHub\\unirec\\zompydogs\\ZompyDogsDAO\\ZompyDogsDAO.csproj",
-        "packagesPath": "C:\\Users\\jenni\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\jenni\\Documents\\GitHub\\unirec\\zompydogs\\ZompyDogsDAO\\obj\\",
+        "projectPath": "C:\\Users\\Guillermo\\OneDrive\\Documentos\\GitHub\\zompydogs\\ZompyDogsDAO\\ZompyDogsDAO.csproj",
+        "packagesPath": "C:\\Users\\Guillermo\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Guillermo\\OneDrive\\Documentos\\GitHub\\zompydogs\\ZompyDogsDAO\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\jenni\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Guillermo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -22,6 +26,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -48,14 +53,6 @@
             "Microsoft.Data.SqlClient": {
               "target": "Package",
               "version": "[5.2.2, )"
-            },
-            "Microsoft.Extensions.Configuration": {
-              "target": "Package",
-              "version": "[8.0.0, )"
-            },
-            "Microsoft.Extensions.Configuration.Json": {
-              "target": "Package",
-              "version": "[8.0.1, )"
             },
             "System.Data.SqlClient": {
               "target": "Package",
@@ -78,21 +75,25 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.302/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.303/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\jenni\\Documents\\GitHub\\unirec\\zompydogs\\ZompyDogsLib\\ZompyDogsLib.csproj": {
+    "C:\\Users\\Guillermo\\OneDrive\\Documentos\\GitHub\\zompydogs\\ZompyDogsLib\\ZompyDogsLib.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\jenni\\Documents\\GitHub\\unirec\\zompydogs\\ZompyDogsLib\\ZompyDogsLib.csproj",
+        "projectUniqueName": "C:\\Users\\Guillermo\\OneDrive\\Documentos\\GitHub\\zompydogs\\ZompyDogsLib\\ZompyDogsLib.csproj",
         "projectName": "ZompyDogsLib",
-        "projectPath": "C:\\Users\\jenni\\Documents\\GitHub\\unirec\\zompydogs\\ZompyDogsLib\\ZompyDogsLib.csproj",
-        "packagesPath": "C:\\Users\\jenni\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\jenni\\Documents\\GitHub\\unirec\\zompydogs\\ZompyDogsLib\\obj\\",
+        "projectPath": "C:\\Users\\Guillermo\\OneDrive\\Documentos\\GitHub\\zompydogs\\ZompyDogsLib\\ZompyDogsLib.csproj",
+        "packagesPath": "C:\\Users\\Guillermo\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Guillermo\\OneDrive\\Documentos\\GitHub\\zompydogs\\ZompyDogsLib\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\jenni\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Guillermo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -100,6 +101,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -138,21 +140,25 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.302/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.303/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\jenni\\Documents\\GitHub\\unirec\\zompydogs\\zompyDogs\\zompyDogs.csproj": {
+    "C:\\Users\\Guillermo\\OneDrive\\Documentos\\GitHub\\zompydogs\\zompyDogs\\zompyDogs.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\jenni\\Documents\\GitHub\\unirec\\zompydogs\\zompyDogs\\zompyDogs.csproj",
+        "projectUniqueName": "C:\\Users\\Guillermo\\OneDrive\\Documentos\\GitHub\\zompydogs\\zompyDogs\\zompyDogs.csproj",
         "projectName": "zompyDogs",
-        "projectPath": "C:\\Users\\jenni\\Documents\\GitHub\\unirec\\zompydogs\\zompyDogs\\zompyDogs.csproj",
-        "packagesPath": "C:\\Users\\jenni\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\jenni\\Documents\\GitHub\\unirec\\zompydogs\\zompyDogs\\obj\\",
+        "projectPath": "C:\\Users\\Guillermo\\OneDrive\\Documentos\\GitHub\\zompydogs\\zompyDogs\\zompyDogs.csproj",
+        "packagesPath": "C:\\Users\\Guillermo\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Guillermo\\OneDrive\\Documentos\\GitHub\\zompydogs\\zompyDogs\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\jenni\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Guillermo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -160,17 +166,18 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net8.0-windows7.0": {
             "targetAlias": "net8.0-windows",
             "projectReferences": {
-              "C:\\Users\\jenni\\Documents\\GitHub\\unirec\\zompydogs\\ZompyDogsDAO\\ZompyDogsDAO.csproj": {
-                "projectPath": "C:\\Users\\jenni\\Documents\\GitHub\\unirec\\zompydogs\\ZompyDogsDAO\\ZompyDogsDAO.csproj"
+              "C:\\Users\\Guillermo\\OneDrive\\Documentos\\GitHub\\zompydogs\\ZompyDogsDAO\\ZompyDogsDAO.csproj": {
+                "projectPath": "C:\\Users\\Guillermo\\OneDrive\\Documentos\\GitHub\\zompydogs\\ZompyDogsDAO\\ZompyDogsDAO.csproj"
               },
-              "C:\\Users\\jenni\\Documents\\GitHub\\unirec\\zompydogs\\ZompyDogsLib\\ZompyDogsLib.csproj": {
-                "projectPath": "C:\\Users\\jenni\\Documents\\GitHub\\unirec\\zompydogs\\ZompyDogsLib\\ZompyDogsLib.csproj"
+              "C:\\Users\\Guillermo\\OneDrive\\Documentos\\GitHub\\zompydogs\\ZompyDogsLib\\ZompyDogsLib.csproj": {
+                "projectPath": "C:\\Users\\Guillermo\\OneDrive\\Documentos\\GitHub\\zompydogs\\ZompyDogsLib\\ZompyDogsLib.csproj"
               }
             }
           }
@@ -193,14 +200,6 @@
             "Microsoft.Data.SqlClient": {
               "target": "Package",
               "version": "[5.2.2, )"
-            },
-            "Microsoft.Extensions.Configuration": {
-              "target": "Package",
-              "version": "[8.0.0, )"
-            },
-            "Microsoft.Extensions.Configuration.Json": {
-              "target": "Package",
-              "version": "[8.0.1, )"
             },
             "System.Data.SqlClient": {
               "target": "Package",
@@ -226,7 +225,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.302/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.303/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
