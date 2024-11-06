@@ -28,9 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             groupBox2 = new GroupBox();
-            txtCodigoGenerado = new TextBox();
+            tmEnd = new DateTimePicker();
+            tmBegin = new DateTimePicker();
+            cbxEstado = new ComboBox();
+            label5 = new Label();
+            cbxRoles = new ComboBox();
+            label4 = new Label();
+            txtCodigoGeneradoPuesto = new TextBox();
             txtDiasLaborales = new TextBox();
             txtDescripcion = new TextBox();
             label2 = new Label();
@@ -44,14 +50,13 @@
             chbxMiercoles = new CheckBox();
             chbxMartes = new CheckBox();
             chbxLunes = new CheckBox();
-            cbHorasLaborales = new ComboBox();
             label14 = new Label();
             txtSalario = new TextBox();
             label13 = new Label();
             btnCancelar = new Button();
-            btnGuardarUser = new Button();
+            btnGuardarPuesto = new Button();
             dgvPuestos = new DataGridView();
-            button1 = new Button();
+            btnEliminar = new Button();
             label3 = new Label();
             groupBox2.SuspendLayout();
             groupBox3.SuspendLayout();
@@ -60,37 +65,103 @@
             // 
             // groupBox2
             // 
-            groupBox2.Controls.Add(txtCodigoGenerado);
+            groupBox2.Controls.Add(tmEnd);
+            groupBox2.Controls.Add(tmBegin);
+            groupBox2.Controls.Add(cbxEstado);
+            groupBox2.Controls.Add(label5);
+            groupBox2.Controls.Add(cbxRoles);
+            groupBox2.Controls.Add(label4);
+            groupBox2.Controls.Add(txtCodigoGeneradoPuesto);
             groupBox2.Controls.Add(txtDiasLaborales);
             groupBox2.Controls.Add(txtDescripcion);
             groupBox2.Controls.Add(label2);
             groupBox2.Controls.Add(txtNombrePuesto);
             groupBox2.Controls.Add(label1);
             groupBox2.Controls.Add(groupBox3);
-            groupBox2.Controls.Add(cbHorasLaborales);
             groupBox2.Controls.Add(label14);
             groupBox2.Controls.Add(txtSalario);
             groupBox2.Controls.Add(label13);
             groupBox2.Location = new Point(12, 12);
             groupBox2.Name = "groupBox2";
-            groupBox2.Size = new Size(448, 338);
+            groupBox2.Size = new Size(448, 420);
             groupBox2.TabIndex = 101;
             groupBox2.TabStop = false;
             groupBox2.Text = "Registro de Puesto";
             // 
-            // txtCodigoGenerado
+            // tmEnd
             // 
-            txtCodigoGenerado.BorderStyle = BorderStyle.FixedSingle;
-            txtCodigoGenerado.Enabled = false;
-            txtCodigoGenerado.Location = new Point(213, 0);
-            txtCodigoGenerado.Name = "txtCodigoGenerado";
-            txtCodigoGenerado.ReadOnly = true;
-            txtCodigoGenerado.Size = new Size(229, 27);
-            txtCodigoGenerado.TabIndex = 135;
+            tmEnd.Format = DateTimePickerFormat.Time;
+            tmEnd.Location = new Point(333, 355);
+            tmEnd.MaxDate = new DateTime(2050, 12, 31, 0, 0, 0, 0);
+            tmEnd.MinDate = new DateTime(1970, 1, 1, 0, 0, 0, 0);
+            tmEnd.Name = "tmEnd";
+            tmEnd.ShowUpDown = true;
+            tmEnd.Size = new Size(85, 27);
+            tmEnd.TabIndex = 141;
+            tmEnd.Value = new DateTime(2024, 11, 6, 0, 0, 0, 0);
+            // 
+            // tmBegin
+            // 
+            tmBegin.Format = DateTimePickerFormat.Time;
+            tmBegin.Location = new Point(217, 355);
+            tmBegin.Name = "tmBegin";
+            tmBegin.ShowUpDown = true;
+            tmBegin.Size = new Size(88, 27);
+            tmBegin.TabIndex = 140;
+            tmBegin.Value = new DateTime(2024, 11, 6, 7, 0, 0, 0);
+            // 
+            // cbxEstado
+            // 
+            cbxEstado.FormattingEnabled = true;
+            cbxEstado.ItemHeight = 20;
+            cbxEstado.Items.AddRange(new object[] { "ACTIVO", "INACTIVO" });
+            cbxEstado.Location = new Point(15, 307);
+            cbxEstado.Name = "cbxEstado";
+            cbxEstado.Size = new Size(180, 28);
+            cbxEstado.TabIndex = 139;
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Location = new Point(15, 282);
+            label5.Name = "label5";
+            label5.Size = new Size(54, 20);
+            label5.TabIndex = 138;
+            label5.Text = "Estado";
+            // 
+            // cbxRoles
+            // 
+            cbxRoles.FormattingEnabled = true;
+            cbxRoles.ItemHeight = 20;
+            cbxRoles.Items.AddRange(new object[] { "7:00 AM - 5:00 PM", "5:00 PM - 11:00 PM", "8:00 AM - 3:00 PM", "6:00 AM - 12:00 PM" });
+            cbxRoles.Location = new Point(15, 235);
+            cbxRoles.Name = "cbxRoles";
+            cbxRoles.Size = new Size(180, 28);
+            cbxRoles.TabIndex = 137;
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Location = new Point(15, 210);
+            label4.Name = "label4";
+            label4.Size = new Size(31, 20);
+            label4.TabIndex = 136;
+            label4.Text = "Rol";
+            // 
+            // txtCodigoGeneradoPuesto
+            // 
+            txtCodigoGeneradoPuesto.BorderStyle = BorderStyle.FixedSingle;
+            txtCodigoGeneradoPuesto.Enabled = false;
+            txtCodigoGeneradoPuesto.Location = new Point(213, 0);
+            txtCodigoGeneradoPuesto.Name = "txtCodigoGeneradoPuesto";
+            txtCodigoGeneradoPuesto.ReadOnly = true;
+            txtCodigoGeneradoPuesto.Size = new Size(229, 27);
+            txtCodigoGeneradoPuesto.TabIndex = 135;
             // 
             // txtDiasLaborales
             // 
             txtDiasLaborales.BorderStyle = BorderStyle.FixedSingle;
+            txtDiasLaborales.Enabled = false;
             txtDiasLaborales.Location = new Point(213, 292);
             txtDiasLaborales.Multiline = true;
             txtDiasLaborales.Name = "txtDiasLaborales";
@@ -219,20 +290,10 @@
             chbxLunes.Text = "Lunes";
             chbxLunes.UseVisualStyleBackColor = true;
             // 
-            // cbHorasLaborales
-            // 
-            cbHorasLaborales.FormattingEnabled = true;
-            cbHorasLaborales.ItemHeight = 20;
-            cbHorasLaborales.Items.AddRange(new object[] { "7:00 AM - 5:00 PM", "5:00 PM - 11:00 PM", "8:00 AM - 3:00 PM", "6:00 AM - 12:00 PM" });
-            cbHorasLaborales.Location = new Point(15, 240);
-            cbHorasLaborales.Name = "cbHorasLaborales";
-            cbHorasLaborales.Size = new Size(180, 28);
-            cbHorasLaborales.TabIndex = 122;
-            // 
             // label14
             // 
             label14.AutoSize = true;
-            label14.Location = new Point(15, 215);
+            label14.Location = new Point(216, 332);
             label14.Name = "label14";
             label14.Size = new Size(48, 20);
             label14.TabIndex = 121;
@@ -266,17 +327,19 @@
             btnCancelar.TabIndex = 104;
             btnCancelar.Text = "CANCELAR";
             btnCancelar.UseVisualStyleBackColor = false;
+            btnCancelar.Click += btnCancelar_Click;
             // 
-            // btnGuardarUser
+            // btnGuardarPuesto
             // 
-            btnGuardarUser.BackColor = Color.FromArgb(251, 147, 32);
-            btnGuardarUser.ForeColor = SystemColors.ControlLightLight;
-            btnGuardarUser.Location = new Point(477, 262);
-            btnGuardarUser.Name = "btnGuardarUser";
-            btnGuardarUser.Size = new Size(148, 45);
-            btnGuardarUser.TabIndex = 103;
-            btnGuardarUser.Text = "CONFIRMAR";
-            btnGuardarUser.UseVisualStyleBackColor = false;
+            btnGuardarPuesto.BackColor = Color.FromArgb(251, 147, 32);
+            btnGuardarPuesto.ForeColor = SystemColors.ControlLightLight;
+            btnGuardarPuesto.Location = new Point(477, 262);
+            btnGuardarPuesto.Name = "btnGuardarPuesto";
+            btnGuardarPuesto.Size = new Size(148, 45);
+            btnGuardarPuesto.TabIndex = 103;
+            btnGuardarPuesto.Text = "CONFIRMAR";
+            btnGuardarPuesto.UseVisualStyleBackColor = false;
+            btnGuardarPuesto.Click += btnGuardarPuesto_Click;
             // 
             // dgvPuestos
             // 
@@ -286,14 +349,14 @@
             dgvPuestos.AllowUserToResizeColumns = false;
             dgvPuestos.AllowUserToResizeRows = false;
             dgvPuestos.BackgroundColor = SystemColors.Window;
-            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = SystemColors.ControlDarkDark;
-            dataGridViewCellStyle1.Font = new Font("Segoe UI", 9F);
-            dataGridViewCellStyle1.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
-            dgvPuestos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = SystemColors.ControlDarkDark;
+            dataGridViewCellStyle2.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle2.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
+            dgvPuestos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             dgvPuestos.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvPuestos.Location = new Point(477, 72);
             dgvPuestos.Name = "dgvPuestos";
@@ -303,16 +366,16 @@
             dgvPuestos.Size = new Size(486, 177);
             dgvPuestos.TabIndex = 105;
             // 
-            // button1
+            // btnEliminar
             // 
-            button1.BackColor = Color.FromArgb(255, 49, 54);
-            button1.ForeColor = SystemColors.ControlLightLight;
-            button1.Location = new Point(797, 262);
-            button1.Name = "button1";
-            button1.Size = new Size(160, 45);
-            button1.TabIndex = 106;
-            button1.Text = "ELIMINAR";
-            button1.UseVisualStyleBackColor = false;
+            btnEliminar.BackColor = Color.FromArgb(255, 49, 54);
+            btnEliminar.ForeColor = SystemColors.ControlLightLight;
+            btnEliminar.Location = new Point(797, 262);
+            btnEliminar.Name = "btnEliminar";
+            btnEliminar.Size = new Size(160, 45);
+            btnEliminar.TabIndex = 106;
+            btnEliminar.Text = "ELIMINAR";
+            btnEliminar.UseVisualStyleBackColor = false;
             // 
             // label3
             // 
@@ -329,12 +392,12 @@
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
-            ClientSize = new Size(987, 364);
+            ClientSize = new Size(987, 444);
             Controls.Add(label3);
-            Controls.Add(button1);
+            Controls.Add(btnEliminar);
             Controls.Add(dgvPuestos);
             Controls.Add(btnCancelar);
-            Controls.Add(btnGuardarUser);
+            Controls.Add(btnGuardarPuesto);
             Controls.Add(groupBox2);
             Name = "PuestosRegistro";
             StartPosition = FormStartPosition.CenterScreen;
@@ -362,16 +425,21 @@
         public CheckBox chbxMiercoles;
         public CheckBox chbxMartes;
         public CheckBox chbxLunes;
-        public ComboBox cbHorasLaborales;
         private Label label14;
         public TextBox txtSalario;
         private Label label13;
         public Button btnCancelar;
-        public Button btnGuardarUser;
+        public Button btnGuardarPuesto;
         private DataGridView dgvPuestos;
-        public Button button1;
+        public Button btnEliminar;
         private Label label3;
         public TextBox txtDiasLaborales;
-        public TextBox txtCodigoGenerado;
+        public TextBox txtCodigoGeneradoPuesto;
+        public ComboBox cbxRoles;
+        private Label label4;
+        public ComboBox cbxEstado;
+        private Label label5;
+        public DateTimePicker tmEnd;
+        public DateTimePicker tmBegin;
     }
 }

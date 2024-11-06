@@ -432,8 +432,20 @@ namespace ZompyDogsDAO
             public string EstadoProv { get; set; }
             public string CodigoProv { get; set; }
         }
-        
-        
+        public class PuestoREF
+        {
+            public string Puesto { get; set; }
+            public string Descripcion { get; set; }
+            public Decimal Salario { get; set; }
+            public TimeSpan? HoralaboralInicio { get; set; }
+            public TimeSpan? HoraLaboralTermina { get; set; }
+            public string DiasLaborales { get; set; }
+            public string CodigoPuesto { get; set; }
+            public int CodigoRol { get; set; }
+            public string Estado { get; set; }
+        }
+
+
         /* --------------  OBTENER ID DEL PROXIMO DETALLE DE USUARIOS ------------------- */
         public static int ObtenerSiguienteID()
         {
@@ -717,9 +729,41 @@ namespace ZompyDogsDAO
             }
         }
 
-        
-        
+
+
         /* --------------  CRUD PARA PUESTO ------------------- */
+        public static void GuardarPuesto(PuestoREF puestoAdd)
+        {
+            string query = "INSERT INTO Puestos (puesto, descripcion, salario, horalaboralInicio, diasLaborales, codigoPuesto, codigoRol, estado, horaLaboralTermina) " +
+                           "VALUES (@puestoName, @puestoDesc, @puestoSalario, @horalaboralInicio, @puestoDias, @codiPuesto, @codiRol, @puestoEstado, @horaLaboralTermina)";
+
+            using (SqlConnection conn = new SqlConnection(con_string))
+            {
+                using (SqlCommand cmd = new SqlCommand(query, conn))
+                {
+                    cmd.Parameters.AddWithValue("@puestoName", puestoAdd.Puesto);
+                    cmd.Parameters.AddWithValue("@puestoDesc", puestoAdd.Descripcion);
+                    cmd.Parameters.AddWithValue("@puestoSalario", puestoAdd.Salario);
+                    cmd.Parameters.AddWithValue("@horalaboralInicio", puestoAdd.HoralaboralInicio);
+                    cmd.Parameters.AddWithValue("@puestoDias", puestoAdd.DiasLaborales);
+                    cmd.Parameters.AddWithValue("@codiPuesto", puestoAdd.CodigoPuesto);
+                    cmd.Parameters.AddWithValue("@codiRol", puestoAdd.CodigoRol);
+                    cmd.Parameters.AddWithValue("@puestoEstado", puestoAdd.Estado);
+                    cmd.Parameters.AddWithValue("@horaLaboralTermina", puestoAdd.HoraLaboralTermina);
+
+                    try
+                    {
+                        conn.Open();
+                        cmd.ExecuteNonQuery();
+                    }
+                    catch (Exception ex)
+                    {
+                        Console.WriteLine("Error al guardar el puesto: " + ex.Message);
+                        throw;
+                    }
+                }
+            }
+        }
 
 
 
@@ -731,7 +775,7 @@ namespace ZompyDogsDAO
             using (SqlConnection conn = new SqlConnection(con_string))
             {
                 conn.Open();
-                string query = "SELECT IdPuesto, puesto FROM Puestos Where codigoRol = 2";
+                string query = "SELECT IdPuesto, puesto FROM Puestos Where codigoRol = 2 AND estado = 'ACTIVO'";
                 using (SqlCommand cmd = new SqlCommand(query, conn))
                 {
                     SqlDataAdapter adapter = new SqlDataAdapter(cmd);
@@ -746,7 +790,7 @@ namespace ZompyDogsDAO
             using (SqlConnection conn = new SqlConnection(con_string))
             {
                 conn.Open();
-                string query = "SELECT IdPuesto, puesto FROM Puestos Where codigoRol = 1";
+                string query = "SELECT IdPuesto, puesto FROM Puestos Where codigoRol = 1 AND estado = 'ACTIVO'";
                 using (SqlCommand cmd = new SqlCommand(query, conn))
                 {
                     SqlDataAdapter adapter = new SqlDataAdapter(cmd);
