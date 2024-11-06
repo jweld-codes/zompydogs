@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AjustesCuenta));
             topBarMenu = new Panel();
+            btnPeticiones = new Button();
             btnEmpleadoPanel = new Button();
             pictureBox2 = new PictureBox();
             btnUsuarioPanel = new Button();
@@ -59,8 +60,6 @@
             label5 = new Label();
             textBox1 = new TextBox();
             panel1 = new Panel();
-            gbxActividades = new GroupBox();
-            dgvActividadesAuditoria = new DataGridView();
             gbxDatosUsuarios = new GroupBox();
             button2 = new Button();
             groupBox3 = new GroupBox();
@@ -92,8 +91,6 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             gbxDatosPersonales.SuspendLayout();
             panel1.SuspendLayout();
-            gbxActividades.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dgvActividadesAuditoria).BeginInit();
             gbxDatosUsuarios.SuspendLayout();
             groupBox3.SuspendLayout();
             SuspendLayout();
@@ -101,6 +98,7 @@
             // topBarMenu
             // 
             topBarMenu.BackColor = Color.FromArgb(31, 19, 10);
+            topBarMenu.Controls.Add(btnPeticiones);
             topBarMenu.Controls.Add(btnEmpleadoPanel);
             topBarMenu.Controls.Add(pictureBox2);
             topBarMenu.Controls.Add(btnUsuarioPanel);
@@ -111,12 +109,25 @@
             topBarMenu.Size = new Size(901, 81);
             topBarMenu.TabIndex = 106;
             // 
+            // btnPeticiones
+            // 
+            btnPeticiones.FlatAppearance.BorderSize = 0;
+            btnPeticiones.FlatStyle = FlatStyle.Flat;
+            btnPeticiones.ForeColor = SystemColors.ControlLightLight;
+            btnPeticiones.Location = new Point(741, 45);
+            btnPeticiones.Name = "btnPeticiones";
+            btnPeticiones.Size = new Size(123, 36);
+            btnPeticiones.TabIndex = 101;
+            btnPeticiones.Text = "Peticiones";
+            btnPeticiones.UseVisualStyleBackColor = true;
+            btnPeticiones.Click += btnPeticiones_Click;
+            // 
             // btnEmpleadoPanel
             // 
             btnEmpleadoPanel.FlatAppearance.BorderSize = 0;
             btnEmpleadoPanel.FlatStyle = FlatStyle.Flat;
             btnEmpleadoPanel.ForeColor = SystemColors.ControlLightLight;
-            btnEmpleadoPanel.Location = new Point(726, 45);
+            btnEmpleadoPanel.Location = new Point(607, 45);
             btnEmpleadoPanel.Name = "btnEmpleadoPanel";
             btnEmpleadoPanel.Size = new Size(123, 36);
             btnEmpleadoPanel.TabIndex = 100;
@@ -140,7 +151,7 @@
             btnUsuarioPanel.FlatAppearance.BorderSize = 0;
             btnUsuarioPanel.FlatStyle = FlatStyle.Flat;
             btnUsuarioPanel.ForeColor = SystemColors.ActiveCaptionText;
-            btnUsuarioPanel.Location = new Point(568, 45);
+            btnUsuarioPanel.Location = new Point(449, 45);
             btnUsuarioPanel.Name = "btnUsuarioPanel";
             btnUsuarioPanel.Size = new Size(152, 36);
             btnUsuarioPanel.TabIndex = 98;
@@ -388,40 +399,12 @@
             // panel1
             // 
             panel1.BorderStyle = BorderStyle.FixedSingle;
-            panel1.Controls.Add(gbxActividades);
             panel1.Controls.Add(gbxDatosUsuarios);
             panel1.Controls.Add(gbxDatosPersonales);
             panel1.Location = new Point(-12, 236);
             panel1.Name = "panel1";
             panel1.Size = new Size(933, 511);
             panel1.TabIndex = 113;
-            // 
-            // gbxActividades
-            // 
-            gbxActividades.Controls.Add(dgvActividadesAuditoria);
-            gbxActividades.Location = new Point(23, 46);
-            gbxActividades.Name = "gbxActividades";
-            gbxActividades.Size = new Size(865, 408);
-            gbxActividades.TabIndex = 117;
-            gbxActividades.TabStop = false;
-            gbxActividades.Text = "Actividades";
-            // 
-            // dgvActividadesAuditoria
-            // 
-            dgvActividadesAuditoria.AllowUserToAddRows = false;
-            dgvActividadesAuditoria.AllowUserToDeleteRows = false;
-            dgvActividadesAuditoria.AllowUserToOrderColumns = true;
-            dgvActividadesAuditoria.AllowUserToResizeColumns = false;
-            dgvActividadesAuditoria.AllowUserToResizeRows = false;
-            dgvActividadesAuditoria.BackgroundColor = SystemColors.Window;
-            dgvActividadesAuditoria.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvActividadesAuditoria.Location = new Point(23, 32);
-            dgvActividadesAuditoria.Name = "dgvActividadesAuditoria";
-            dgvActividadesAuditoria.ReadOnly = true;
-            dgvActividadesAuditoria.RowHeadersWidth = 51;
-            dgvActividadesAuditoria.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgvActividadesAuditoria.Size = new Size(814, 331);
-            dgvActividadesAuditoria.TabIndex = 70;
             // 
             // gbxDatosUsuarios
             // 
@@ -715,8 +698,6 @@
             gbxDatosPersonales.ResumeLayout(false);
             gbxDatosPersonales.PerformLayout();
             panel1.ResumeLayout(false);
-            gbxActividades.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)dgvActividadesAuditoria).EndInit();
             gbxDatosUsuarios.ResumeLayout(false);
             gbxDatosUsuarios.PerformLayout();
             groupBox3.ResumeLayout(false);
@@ -784,7 +765,6 @@
         private Label label15;
         private TextBox textBox13;
         private Label label14;
-        private GroupBox gbxActividades;
-        public DataGridView dgvActividadesAuditoria;
+        private Button btnPeticiones;
     }
 }

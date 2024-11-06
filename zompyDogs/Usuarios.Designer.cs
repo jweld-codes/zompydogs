@@ -36,8 +36,6 @@
             dgvProveedor = new DataGridView();
             dgvEmpleados = new DataGridView();
             dgvAdminis = new DataGridView();
-            btnNext = new Button();
-            btnAtras = new Button();
             btnAgregarNuevoUsuario = new Button();
             lblTituloRegistroPanel = new Label();
             topBarMenu = new Panel();
@@ -52,6 +50,8 @@
             lblBreadCrumbUser = new Label();
             label1 = new Label();
             btnVisualizarRegistro = new Button();
+            btnRefreshDG = new Button();
+            cbxFiltro = new ComboBox();
             ((System.ComponentModel.ISupportInitialize)dgvUsuarios).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             groupBox1.SuspendLayout();
@@ -75,8 +75,10 @@
             dgvUsuarios.Name = "dgvUsuarios";
             dgvUsuarios.ReadOnly = true;
             dgvUsuarios.RowHeadersWidth = 51;
+            dgvUsuarios.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dgvUsuarios.Size = new Size(800, 338);
             dgvUsuarios.TabIndex = 69;
+            dgvUsuarios.CellClick += dgvUsuarios_CellClick;
             // 
             // pictureBox1
             // 
@@ -97,15 +99,14 @@
             txtBuscarUsuario.PlaceholderText = "Buscar Usuario";
             txtBuscarUsuario.Size = new Size(479, 27);
             txtBuscarUsuario.TabIndex = 64;
+            txtBuscarUsuario.TextChanged += txtBuscarUsuario_TextChanged;
             // 
             // groupBox1
             // 
+            groupBox1.Controls.Add(dgvUsuarios);
             groupBox1.Controls.Add(dgvProveedor);
             groupBox1.Controls.Add(dgvEmpleados);
             groupBox1.Controls.Add(dgvAdminis);
-            groupBox1.Controls.Add(btnNext);
-            groupBox1.Controls.Add(btnAtras);
-            groupBox1.Controls.Add(dgvUsuarios);
             groupBox1.Location = new Point(21, 279);
             groupBox1.Name = "groupBox1";
             groupBox1.Size = new Size(837, 405);
@@ -161,24 +162,6 @@
             dgvAdminis.Size = new Size(800, 338);
             dgvAdminis.TabIndex = 72;
             // 
-            // btnNext
-            // 
-            btnNext.Image = Properties.Resources.arrow;
-            btnNext.Location = new Point(51, 370);
-            btnNext.Name = "btnNext";
-            btnNext.Size = new Size(36, 29);
-            btnNext.TabIndex = 71;
-            btnNext.UseVisualStyleBackColor = true;
-            // 
-            // btnAtras
-            // 
-            btnAtras.Image = Properties.Resources.left_arrow;
-            btnAtras.Location = new Point(15, 370);
-            btnAtras.Name = "btnAtras";
-            btnAtras.Size = new Size(36, 29);
-            btnAtras.TabIndex = 70;
-            btnAtras.UseVisualStyleBackColor = true;
-            // 
             // btnAgregarNuevoUsuario
             // 
             btnAgregarNuevoUsuario.Image = Properties.Resources.plus;
@@ -225,7 +208,7 @@
             btnPrveedores.TabIndex = 101;
             btnPrveedores.Text = "Proveedores";
             btnPrveedores.UseVisualStyleBackColor = true;
-            //btnPrveedores.Click += btnPrveedores_Click;
+            btnPrveedores.Click += btnPrveedores_Click;
             // 
             // btnEmpleadoPanel
             // 
@@ -238,7 +221,7 @@
             btnEmpleadoPanel.TabIndex = 100;
             btnEmpleadoPanel.Text = "Empleados";
             btnEmpleadoPanel.UseVisualStyleBackColor = true;
-          //  btnEmpleadoPanel.Click += btnEmpleadoPanel_Click;
+            btnEmpleadoPanel.Click += btnEmpleadoPanel_Click;
             // 
             // btnAdminPanel
             // 
@@ -251,7 +234,7 @@
             btnAdminPanel.TabIndex = 99;
             btnAdminPanel.Text = "Administradores";
             btnAdminPanel.UseVisualStyleBackColor = true;
-          //  btnAdminPanel.Click += btnAdminPanel_Click;
+            btnAdminPanel.Click += btnAdminPanel_Click;
             // 
             // pictureBox2
             // 
@@ -275,7 +258,7 @@
             btnUsuarioPanel.TabIndex = 98;
             btnUsuarioPanel.Text = "Usuarios";
             btnUsuarioPanel.UseVisualStyleBackColor = false;
-          //  btnUsuarioPanel.Click += btnUsuarioPanel_Click;
+            btnUsuarioPanel.Click += btnUsuarioPanel_Click;
             // 
             // lblTITULO
             // 
@@ -298,7 +281,7 @@
             btnEditarUsuario.Size = new Size(72, 72);
             btnEditarUsuario.TabIndex = 100;
             btnEditarUsuario.UseVisualStyleBackColor = true;
-          //  btnEditarUsuario.Click += btnEditarUsuario_Click;
+            btnEditarUsuario.Click += btnEditarUsuario_Click;
             // 
             // btnEliminarUsuario
             // 
@@ -308,7 +291,7 @@
             btnEliminarUsuario.Size = new Size(72, 72);
             btnEliminarUsuario.TabIndex = 99;
             btnEliminarUsuario.UseVisualStyleBackColor = true;
-          //  btnEliminarUsuario.Click += btnEliminarUsuario_Click;
+            btnEliminarUsuario.Click += btnEliminarUsuario_Click;
             // 
             // lblBreadCrumbUser
             // 
@@ -340,12 +323,40 @@
             btnVisualizarRegistro.TabIndex = 116;
             btnVisualizarRegistro.UseVisualStyleBackColor = true;
             // 
+            // btnRefreshDG
+            // 
+            btnRefreshDG.FlatAppearance.BorderSize = 0;
+            btnRefreshDG.FlatStyle = FlatStyle.Flat;
+            btnRefreshDG.Image = Properties.Resources.refresh;
+            btnRefreshDG.Location = new Point(661, 246);
+            btnRefreshDG.Name = "btnRefreshDG";
+            btnRefreshDG.Size = new Size(29, 29);
+            btnRefreshDG.TabIndex = 118;
+            btnRefreshDG.UseVisualStyleBackColor = true;
+            btnRefreshDG.Click += btnRefreshDG_Click;
+            // 
+            // cbxFiltro
+            // 
+            cbxFiltro.FormattingEnabled = true;
+            cbxFiltro.Items.AddRange(new object[] { "Activo", "Inactivo" });
+            cbxFiltro.Location = new Point(698, 245);
+            cbxFiltro.Margin = new Padding(3, 3, 6, 3);
+            cbxFiltro.Name = "cbxFiltro";
+            cbxFiltro.RightToLeft = RightToLeft.Yes;
+            cbxFiltro.Size = new Size(138, 28);
+            cbxFiltro.Sorted = true;
+            cbxFiltro.TabIndex = 117;
+            cbxFiltro.Text = "Filtro";
+            cbxFiltro.SelectedIndexChanged += cbxFiltro_SelectedIndexChanged;
+            // 
             // Usuarios
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.Window;
             ClientSize = new Size(901, 725);
+            Controls.Add(btnRefreshDG);
+            Controls.Add(cbxFiltro);
             Controls.Add(btnVisualizarRegistro);
             Controls.Add(btnEditarUsuario);
             Controls.Add(btnEliminarUsuario);
@@ -377,8 +388,6 @@
         private PictureBox pictureBox1;
         private TextBox txtBuscarUsuario;
         private GroupBox groupBox1;
-        private Button btnNext;
-        private Button btnAtras;
         private Button btnAgregarNuevoUsuario;
         private Label lblTituloRegistroPanel;
         private Panel topBarMenu;
@@ -396,5 +405,7 @@
         private DataGridView dgvProveedor;
         private Button btnPrveedores;
         private Button btnVisualizarRegistro;
+        public Button btnRefreshDG;
+        public ComboBox cbxFiltro;
     }
 }

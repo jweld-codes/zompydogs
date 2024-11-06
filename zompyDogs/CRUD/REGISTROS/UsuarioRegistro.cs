@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ZompyDogsDAO;
 using ZompyDogsLib.Controladores;
 
 namespace zompyDogs
@@ -26,8 +27,30 @@ namespace zompyDogs
             _controladorGeneradorCodigo = new ControladorGeneradoresDeCodigo();
 
             GeneradordeCodigoUsuarioFromForm();
+            CargarPuestosComboBox();
+            CargarRolesComboBox();
+
+            int siguienteID = UsuarioDAO.ObtenerSiguienteID();
+            lblidDetalleUsuario.Text = siguienteID.ToString();
+
         }
 
+        private void CargarPuestosComboBox()
+        {
+            DataTable dtPuestos = UsuarioDAO.ObtenerPuestosParaComboBox();
+
+            cbPuesto.DataSource = dtPuestos;
+            cbPuesto.DisplayMember = "puesto";
+            cbPuesto.ValueMember = "IdPuesto";
+        }
+        private void CargarRolesComboBox()
+        {
+            DataTable dtRoles = UsuarioDAO.ObtenerRolesParaComboBox();
+
+            cbxRol.DataSource = dtRoles;
+            cbxRol.DisplayMember = "Rol";
+            cbxRol.ValueMember = "Id_Rol";
+        }
         private void GeneradordeCodigoUsuarioFromForm()
         {
             nuevoCodigoUsuario = _controladorGeneradorCodigo.GeneradordeCodigoUsuario();
@@ -66,6 +89,11 @@ namespace zompyDogs
         {
             isTheUsername = false;
             GeneradordeNombreDeUsuarioYClave();
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            this.Hide();
         }
     }
 }

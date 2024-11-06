@@ -1,10 +1,12 @@
 ﻿using System.Data;
 using System.Data.SqlClient;
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.Configuration.Json;
 namespace ZompyDogsDAO
 {
     public class UsuarioValidaciones
     {
-        public static readonly string con_string = "Data Source=DESKTOP-8B6OMJK;Initial Catalog=DB_ZompyDogs;Integrated Security=True;Encrypt=False;";
+        public static readonly string con_string = "Data Source=MACARENA\\SQLEXPRESS;Initial Catalog=DB_ZompyDogs;Integrated Security=True;Encrypt=False";
         public static SqlConnection conn = new SqlConnection(con_string);
 
         // Metodo para validar el usuario y obtener sus datos
@@ -14,14 +16,16 @@ namespace ZompyDogsDAO
             string nombreUser,
             string apeUser,
             string username,
+            //string password,
             int idEmpleado
-            ) IsValidUser(string user, string password)
+            ) IsValidUser(string user, string clave)
         {
             bool isValid = false;
             bool isAdmin = false;
             string nombreUser = string.Empty;
             string apeUser = string.Empty;
             string username = string.Empty;
+            //string password = string.Empty;
             int idEmpleado = 0;
 
             try
@@ -32,11 +36,11 @@ namespace ZompyDogsDAO
                 string query = @"
                     SELECT Nombre_Usuario, Apellido_Usuario,Usuario,IDUsuario, RolId 
                     FROM v_DetallesUsuarios
-                    WHERE Usuario = @user AND Clave = @password
+                    WHERE Usuario = @user
                 ";
                 SqlCommand cmd = new SqlCommand(query, conn);
                 cmd.Parameters.AddWithValue("@user", user);
-                cmd.Parameters.AddWithValue("@password", password);
+                //cmd.Parameters.AddWithValue("@password", clave);
 
                 SqlDataReader reader = cmd.ExecuteReader();
 
@@ -48,6 +52,7 @@ namespace ZompyDogsDAO
                         nombreUser = reader["Nombre_Usuario"].ToString();
                         apeUser = reader["Apellido_Usuario"].ToString();
                         username = reader["Usuario"].ToString();
+                       // password = reader["Clave"].ToString();
                         idEmpleado = reader.GetInt32(reader.GetOrdinal("IDUsuario"));
 
                         if (reader["RolId"] != DBNull.Value && Convert.ToInt32(reader["RolId"]) == 1)
@@ -56,6 +61,7 @@ namespace ZompyDogsDAO
                         }
                     }
                 }
+
 
                 reader.Close();
             }
@@ -72,7 +78,7 @@ namespace ZompyDogsDAO
                 }
             }
 
-            return (isValid, isAdmin, nombreUser, apeUser, username, idEmpleado);
+            return (isValid, isAdmin, nombreUser, apeUser, username,idEmpleado);
         }
 
             public static (bool existeUsuario, string nombreUsuario, string rolUsuario) 

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ZompyDogsDAO")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1efc008ebed5fea6cf5e883a5bc057ba07556215")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+74233149b3c77d92042e5db194e40bbe84c3f2f8")]
 [assembly: System.Reflection.AssemblyProductAttribute("ZompyDogsDAO")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ZompyDogsDAO")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

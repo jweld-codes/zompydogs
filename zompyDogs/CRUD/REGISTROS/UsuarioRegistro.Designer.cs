@@ -50,8 +50,6 @@
             txtSegNombre = new TextBox();
             label2 = new Label();
             groupBox2 = new GroupBox();
-            comboBox1 = new ComboBox();
-            label1 = new Label();
             btnGeneradorPassword = new Button();
             btnGeneradorUsername = new Button();
             txtPassword = new TextBox();
@@ -66,7 +64,6 @@
             chbxMiercoles = new CheckBox();
             chbxMartes = new CheckBox();
             chbxLunes = new CheckBox();
-            dtpFechaRegistro = new DateTimePicker();
             cbHorasLaborales = new ComboBox();
             label14 = new Label();
             txtSalario = new TextBox();
@@ -78,6 +75,11 @@
             label11 = new Label();
             btnGuardarUser = new Button();
             btnCancelar = new Button();
+            label1 = new Label();
+            lblidDetalleUsuario = new Label();
+            dtpFechaRegistro = new DateTimePicker();
+            cbxEstado = new ComboBox();
+            label17 = new Label();
             groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
             groupBox3.SuspendLayout();
@@ -294,8 +296,9 @@
             // 
             // groupBox2
             // 
-            groupBox2.Controls.Add(comboBox1);
-            groupBox2.Controls.Add(label1);
+            groupBox2.Controls.Add(cbxEstado);
+            groupBox2.Controls.Add(label17);
+            groupBox2.Controls.Add(dtpFechaRegistro);
             groupBox2.Controls.Add(btnGeneradorPassword);
             groupBox2.Controls.Add(btnGeneradorUsername);
             groupBox2.Controls.Add(txtPassword);
@@ -303,7 +306,6 @@
             groupBox2.Controls.Add(txtUsername);
             groupBox2.Controls.Add(label15);
             groupBox2.Controls.Add(groupBox3);
-            groupBox2.Controls.Add(dtpFechaRegistro);
             groupBox2.Controls.Add(cbHorasLaborales);
             groupBox2.Controls.Add(label14);
             groupBox2.Controls.Add(txtSalario);
@@ -319,25 +321,6 @@
             groupBox2.TabIndex = 100;
             groupBox2.TabStop = false;
             groupBox2.Text = "Datos de Usuario";
-            // 
-            // comboBox1
-            // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.ItemHeight = 20;
-            comboBox1.Items.AddRange(new object[] { "ACTIVO", "INACTIVO" });
-            comboBox1.Location = new Point(144, 403);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(180, 28);
-            comboBox1.TabIndex = 116;
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Location = new Point(13, 407);
-            label1.Name = "label1";
-            label1.Size = new Size(125, 20);
-            label1.TabIndex = 115;
-            label1.Text = "Estado de Cuenta";
             // 
             // btnGeneradorPassword
             // 
@@ -365,6 +348,7 @@
             txtPassword.Location = new Point(213, 323);
             txtPassword.Multiline = true;
             txtPassword.Name = "txtPassword";
+            txtPassword.PasswordChar = '*';
             txtPassword.Size = new Size(180, 29);
             txtPassword.TabIndex = 126;
             // 
@@ -481,15 +465,6 @@
             chbxLunes.Text = "Lunes";
             chbxLunes.UseVisualStyleBackColor = true;
             // 
-            // dtpFechaRegistro
-            // 
-            dtpFechaRegistro.Enabled = false;
-            dtpFechaRegistro.Format = DateTimePickerFormat.Short;
-            dtpFechaRegistro.Location = new Point(267, 0);
-            dtpFechaRegistro.Name = "dtpFechaRegistro";
-            dtpFechaRegistro.Size = new Size(158, 27);
-            dtpFechaRegistro.TabIndex = 115;
-            // 
             // cbHorasLaborales
             // 
             cbHorasLaborales.FormattingEnabled = true;
@@ -595,6 +570,52 @@
             btnCancelar.TabIndex = 102;
             btnCancelar.Text = "CANCELAR";
             btnCancelar.UseVisualStyleBackColor = false;
+            btnCancelar.Click += btnCancelar_Click;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new Point(574, 10);
+            label1.Name = "label1";
+            label1.Size = new Size(129, 20);
+            label1.TabIndex = 115;
+            label1.Text = "ID DetalleUsuario:";
+            // 
+            // lblidDetalleUsuario
+            // 
+            lblidDetalleUsuario.AutoSize = true;
+            lblidDetalleUsuario.Location = new Point(697, 11);
+            lblidDetalleUsuario.Name = "lblidDetalleUsuario";
+            lblidDetalleUsuario.Size = new Size(17, 20);
+            lblidDetalleUsuario.TabIndex = 116;
+            lblidDetalleUsuario.Text = "0";
+            // 
+            // dtpFechaRegistro
+            // 
+            dtpFechaRegistro.Format = DateTimePickerFormat.Short;
+            dtpFechaRegistro.Location = new Point(308, 0);
+            dtpFechaRegistro.Name = "dtpFechaRegistro";
+            dtpFechaRegistro.Size = new Size(125, 27);
+            dtpFechaRegistro.TabIndex = 115;
+            // 
+            // cbxEstado
+            // 
+            cbxEstado.FormattingEnabled = true;
+            cbxEstado.ItemHeight = 20;
+            cbxEstado.Items.AddRange(new object[] { "ACTIVO", "INACTIVO" });
+            cbxEstado.Location = new Point(15, 423);
+            cbxEstado.Name = "cbxEstado";
+            cbxEstado.Size = new Size(180, 28);
+            cbxEstado.TabIndex = 116;
+            // 
+            // label17
+            // 
+            label17.AutoSize = true;
+            label17.Location = new Point(15, 398);
+            label17.Name = "label17";
+            label17.Size = new Size(54, 20);
+            label17.TabIndex = 115;
+            label17.Text = "Estado";
             // 
             // UsuarioRegistro
             // 
@@ -602,6 +623,8 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.Window;
             ClientSize = new Size(955, 615);
+            Controls.Add(lblidDetalleUsuario);
+            Controls.Add(label1);
             Controls.Add(btnCancelar);
             Controls.Add(btnGuardarUser);
             Controls.Add(groupBox2);
@@ -647,9 +670,7 @@
         public ComboBox cbxRol;
         private Label label11;
         private Button button1;
-        public ComboBox cbPuesto;
         private Label label12;
-        public DateTimePicker dtpFechaRegistro;
         public ComboBox cbHorasLaborales;
         private Label label14;
         public TextBox txtSalario;
@@ -670,8 +691,12 @@
         public Button btnGeneradorUsername;
         public Button btnGuardarUser;
         public Button btnCancelar;
-        private ComboBox comboBox1;
-        private Label label1;
         public ComboBox cbxEsatdoCivil;
+        public ComboBox cbPuesto;
+        private Label label1;
+        public Label lblidDetalleUsuario;
+        public DateTimePicker dtpFechaRegistro;
+        public ComboBox cbxEstado;
+        private Label label17;
     }
 }

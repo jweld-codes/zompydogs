@@ -30,7 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BienvenidaAdmin));
             sidebarMenu = new Panel();
-            btnPedidos = new Button();
             btnAjustesCuenta = new Button();
             lblCerrarSession = new Label();
             lblNombreSideBar = new Label();
@@ -51,7 +50,6 @@
             // sidebarMenu
             // 
             sidebarMenu.BackColor = Color.FromArgb(31, 19, 10);
-            sidebarMenu.Controls.Add(btnPedidos);
             sidebarMenu.Controls.Add(btnAjustesCuenta);
             sidebarMenu.Controls.Add(lblCerrarSession);
             sidebarMenu.Controls.Add(lblNombreSideBar);
@@ -68,22 +66,6 @@
             sidebarMenu.Name = "sidebarMenu";
             sidebarMenu.Size = new Size(213, 772);
             sidebarMenu.TabIndex = 2;
-            // 
-            // btnPedidos
-            // 
-            btnPedidos.BackColor = Color.Transparent;
-            btnPedidos.FlatAppearance.BorderSize = 0;
-            btnPedidos.FlatStyle = FlatStyle.Flat;
-            btnPedidos.ForeColor = SystemColors.ButtonFace;
-            btnPedidos.Image = Properties.Resources.invoice1;
-            btnPedidos.ImageAlign = ContentAlignment.MiddleLeft;
-            btnPedidos.Location = new Point(48, 557);
-            btnPedidos.Name = "btnPedidos";
-            btnPedidos.Size = new Size(167, 51);
-            btnPedidos.TabIndex = 17;
-            btnPedidos.Text = "Reportes";
-            btnPedidos.UseVisualStyleBackColor = false;
-            btnPedidos.Click += btnPedidos_Click_1;
             // 
             // btnAjustesCuenta
             // 
@@ -284,7 +266,6 @@
         private Label lblCerrarSession;
         private PictureBox pictureBox3;
         private Button btnAjustesCuenta;
-        private Button btnPedidos;
         private Panel panelContenedor;
     }
 }

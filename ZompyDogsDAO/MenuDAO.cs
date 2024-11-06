@@ -10,8 +10,11 @@ namespace ZompyDogsDAO
 {
     public class MenuDAO
     {
-        private static readonly string con_string = "Data Source=\\SQLEXPRESS;Initial Catalog=DB_ZompyDogs;Integrated Security=True;Encrypt=False";
+        private static readonly string con_string = @"Data Source={ServidorJennifer}\\SQLEXPRESS;Initial Catalog=DB_ZompyDogs;Integrated Security=True;Encrypt=False";
+        
         public string ServidorOscar = "DESKTOP-8B6OMJK";
+        public string ServidorJennifer = "MACARENA";
+        public string ServidorGuillermo = "GUILLERMO-ORTEG";
         public static DataTable ObtenerPlatilloParaPanel()
         {
             using (SqlConnection conn = new SqlConnection(con_string))
@@ -35,5 +38,7 @@ namespace ZompyDogsDAO
                 return dtMenu;
             }
         }
+
+
     }
 }

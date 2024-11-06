@@ -152,7 +152,6 @@ C:\Users\jenni\Documents\GitHub\unirec\zompydogs\zompyDogs\obj\Debug\net8.0-wind
 C:\Users\jenni\Documents\GitHub\unirec\zompydogs\zompyDogs\obj\Debug\net8.0-windows\zompyDogs.PanelAdmin.resources
 C:\Users\jenni\Documents\GitHub\unirec\zompydogs\zompyDogs\obj\Debug\net8.0-windows\zompyDogs.PanelEmpleado.resources
 C:\Users\jenni\Documents\GitHub\unirec\zompydogs\zompyDogs\obj\Debug\net8.0-windows\zompyDogs.Peticiones.resources
-C:\Users\jenni\Documents\GitHub\unirec\zompydogs\zompyDogs\obj\Debug\net8.0-windows\zompyDogs.PeticionesEmp.resources
 C:\Users\jenni\Documents\GitHub\unirec\zompydogs\zompyDogs\obj\Debug\net8.0-windows\zompyDogs.Properties.Resources.resources
 C:\Users\jenni\Documents\GitHub\unirec\zompydogs\zompyDogs\obj\Debug\net8.0-windows\zompyDogs.Usuarios.resources
 C:\Users\jenni\Documents\GitHub\unirec\zompydogs\zompyDogs\obj\Debug\net8.0-windows\zompyDogs.csproj.GenerateResource.cache
@@ -255,3 +254,11 @@ C:\Users\oscar\Documents\GitHub\zompydogs\zompyDogs\obj\Debug\net8.0-windows\ref
 C:\Users\oscar\Documents\GitHub\zompydogs\zompyDogs\obj\Debug\net8.0-windows\zompyDogs.pdb
 C:\Users\oscar\Documents\GitHub\zompydogs\zompyDogs\obj\Debug\net8.0-windows\zompyDogs.genruntimeconfig.cache
 C:\Users\oscar\Documents\GitHub\zompydogs\zompyDogs\obj\Debug\net8.0-windows\ref\zompyDogs.dll
+C:\Users\jenni\Documents\GitHub\unirec\zompydogs\zompyDogs\bin\Debug\net8.0-windows\Microsoft.Extensions.Configuration.dll
+C:\Users\jenni\Documents\GitHub\unirec\zompydogs\zompyDogs\bin\Debug\net8.0-windows\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\Users\jenni\Documents\GitHub\unirec\zompydogs\zompyDogs\bin\Debug\net8.0-windows\Microsoft.Extensions.Configuration.FileExtensions.dll
+C:\Users\jenni\Documents\GitHub\unirec\zompydogs\zompyDogs\bin\Debug\net8.0-windows\Microsoft.Extensions.Configuration.Json.dll
+C:\Users\jenni\Documents\GitHub\unirec\zompydogs\zompyDogs\bin\Debug\net8.0-windows\Microsoft.Extensions.FileProviders.Abstractions.dll
+C:\Users\jenni\Documents\GitHub\unirec\zompydogs\zompyDogs\bin\Debug\net8.0-windows\Microsoft.Extensions.FileProviders.Physical.dll
+C:\Users\jenni\Documents\GitHub\unirec\zompydogs\zompyDogs\bin\Debug\net8.0-windows\Microsoft.Extensions.FileSystemGlobbing.dll
+C:\Users\jenni\Documents\GitHub\unirec\zompydogs\zompyDogs\bin\Debug\net8.0-windows\Microsoft.Extensions.Primitives.dll

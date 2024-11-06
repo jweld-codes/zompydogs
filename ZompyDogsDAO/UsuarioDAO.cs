@@ -143,6 +143,32 @@ namespace ZompyDogsDAO
             return dtpDetallesUsuarios;
         }
 
+        public static DataTable ObtenerDetalllesDeUsuariosParaEditar(string codigoUsuario)
+        {
+            DataTable dtpDetallesUsuarios = new DataTable();
+            string query = "SELECT * FROM v_DetallesUsuarios WHERE Codigo = @codigoUsuario";
+
+            using (SqlConnection conn = new SqlConnection(con_string))
+            {
+                SqlCommand cmd = new SqlCommand(query, conn);
+                cmd.Parameters.AddWithValue("@codigoUsuario", codigoUsuario);
+
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+
+                try
+                {
+                    conn.Open();
+                    da.Fill(dtpDetallesUsuarios);
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine("Error al obtener las descripciones de usuarios: " + ex.Message);
+                }
+            }
+
+            return dtpDetallesUsuarios;
+        }
+
         public static DataTable ObtenerDetalllesDeUsuariosEmpleados()
         {
             DataTable dtpDetallesUsuarios = new DataTable();
@@ -218,9 +244,48 @@ namespace ZompyDogsDAO
             return dtpDetallesUsuarios;
         }
 
+        public static DataTable BuscadorDeUsuarios(string valorBusqueda)
+        {
+            string query = "SELECT Codigo, Nombre_Completo, Usuario, RolUsuario FROM v_DetallesUsuarios WHERE Usuario LIKE @valorBusqueda OR Nombre_Completo LIKE @valorBusqueda OR Codigo LIKE @valorBusqueda";
+
+            using (SqlConnection connection = new SqlConnection(con_string))
+            {
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@valorBusqueda", "%" + valorBusqueda + "%");
+                    SqlDataAdapter adapter = new SqlDataAdapter(command);
+                    DataTable resultados = new DataTable();
+                    adapter.Fill(resultados);
+                    return resultados;
+                }
+            }
+        }
+        public static DataTable FiltroDeUsuarios(string estadoDT)
+        {
+            DataTable dtFiltro = new DataTable();
+            string query = "SELECT Codigo, Nombre_Completo, Usuario, Telefono, Puesto, Salario, RolUsuario, Estado FROM v_DetallesUsuarios WHERE estado = @estadoDT";
+
+            using (SqlConnection conn = new SqlConnection(con_string))
+            {
+                SqlCommand cmd = new SqlCommand(query, conn);
+                cmd.Parameters.AddWithValue("@estadoDT", estadoDT);
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+
+                try
+                {
+                    conn.Open();
+                    da.Fill(dtFiltro);
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine("Error al obtener las descripciones de usuarios: " + ex.Message);
+                }
+            }
+
+            return dtFiltro;
+        }
         public class DetalleUsuario
         {
-
             public string primerNombre { get; set; }
             public string segundoNombre { get; set; }
             public string primerApellido { get; set; }
@@ -234,15 +299,53 @@ namespace ZompyDogsDAO
             public string codigoUsuario { get; set; }
         }
 
+        public class UsuarioRegistro
+        {
+            public string UserName { get; set; }
+            public string PassWord { get; set; }
+            public DateTime FechaRegistro { get; set; }
+            public int CodigoRol { get; set; }
+
+            public int CodigoDetalleUsuario { get; set; } 
+
+            public string Estado { get; set; }
+        }
+
+        public static int ObtenerSiguienteID()
+        {
+            int siguienteID = 1;
+            try
+            {
+                using (SqlConnection conn = new SqlConnection(con_string))
+                {
+                    conn.Open();
+                    string query = "SELECT MAX(Id_DetalleUsuario) FROM DetalleUsuario";
+                    using (SqlCommand cmd = new SqlCommand(query, conn))
+                    {
+                        var resultado = cmd.ExecuteScalar();
+                        if (resultado != DBNull.Value)
+                        {
+                            siguienteID = Convert.ToInt32(resultado) + 1;
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error al obtener el siguiente ID: " + ex.Message);
+            }
+            return siguienteID;
+        }
+
         public static void GuardarDetalleUsuario(DetalleUsuario detalleusuario)
         {
-            string query = "INSERT INTO DetalleUsuario ( primNombreUsuario, segNombreUsuario, primApellidoUsuario, segApellido, codigoCedula, fechaNacimiento, estadoCivil, telefono, direccion, codigoPuesto, codigoUsuario) VALUES ( @primern, @segundon, @primera, @segundoa, @codice, @fechanac, @civil, @tele, @direcc, @codpu, @codius)";
+            string query = "INSERT INTO Usuario (primNombreUsuario, segNombreUsuario, primApellidoUsuario, segApellido, codigoCedula, fechaNacimiento, estadoCivil, telefono, direccion, codigoPuesto, codigoUsuario) VALUES (@primern, @segundon, @primera, @segundoa, @codice, @fechanac, @civil, @tele, @direcc, @codpu, @codius)";
 
             using (SqlConnection conn = new SqlConnection(con_string))
             {
                 using (SqlCommand cmd = new SqlCommand(query, conn))
                 {
-
+                    
                     cmd.Parameters.AddWithValue("@primern", detalleusuario.primerNombre);
                     cmd.Parameters.AddWithValue("@segundon", detalleusuario.segundoNombre);
                     cmd.Parameters.AddWithValue("@primera", detalleusuario.primerApellido);
@@ -273,6 +376,128 @@ namespace ZompyDogsDAO
             }
         }
 
+       public static void GuardarUsuario(UsuarioRegistro userAdd)
+        {
+            string query = "INSERT INTO Usuario (username, password, fechaRegistro, codigoRol, codigoDetalleUsuario, estado) VALUES (@nameuser, @claveuser, @fechareg, @codiRol, @codiDetalle, @estado)";
+
+            using (SqlConnection conn = new SqlConnection(con_string))
+            {
+                using (SqlCommand cmd = new SqlCommand(query, conn))
+                {
+
+                    cmd.Parameters.AddWithValue("@nameuser", userAdd.UserName);
+                    cmd.Parameters.AddWithValue("@claveuser", userAdd.PassWord);
+                    cmd.Parameters.AddWithValue("@fechareg", userAdd.FechaRegistro);
+                    cmd.Parameters.AddWithValue("@codiRol", Convert.ToInt32(userAdd.CodigoRol));
+                    cmd.Parameters.AddWithValue("@codiDetalle", Convert.ToInt32(userAdd.CodigoDetalleUsuario));
+                    cmd.Parameters.AddWithValue("@estado", userAdd.Estado);
+
+                    try
+                    {
+                        conn.Open();
+                        int rowsAffected = cmd.ExecuteNonQuery();
+
+                        if (rowsAffected == 0)
+                        {
+                            Console.WriteLine("No se insertó ningún registro en la base de datos.");
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        Console.WriteLine("Error al guardar el usuario: " + ex.Message);
+                    }
+                }
+            }
+        }
+
+        public static bool EliminarUsuario(string codigoUsuario)
+        {
+            string query = "DELETE FROM DetalleUsuario WHERE codigoUsuario = @codigoUsuario";
+
+            using (SqlConnection conn = new SqlConnection(con_string))
+            {
+                SqlCommand cmd = new SqlCommand(query, conn);
+                cmd.Parameters.AddWithValue("@codigoUsuario", codigoUsuario);
+
+                try
+                {
+                    conn.Open();
+                    int filasAfectadas = cmd.ExecuteNonQuery();
+
+                    return filasAfectadas > 0;
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine("Error al eliminar la petición: " + ex.Message);
+                    return false;
+                }
+            }
+        }
+
+        public static DataTable ObtenerPuestosParaComboBox()
+        {
+            DataTable dtPuestos = new DataTable();
+            using (SqlConnection conn = new SqlConnection(con_string))
+            {
+                conn.Open();
+                string query = "SELECT IdPuesto, puesto FROM Puestos";
+                using (SqlCommand cmd = new SqlCommand(query, conn))
+                {
+                    SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+                    adapter.Fill(dtPuestos);
+                }
+            }
+            return dtPuestos;
+        }
+        public static DataTable ObtenerRolesParaComboBox()
+        {
+            DataTable dtRoles = new DataTable();
+            using (SqlConnection conn = new SqlConnection(con_string))
+            {
+                conn.Open();
+                string query = "SELECT Id_Rol, Rol FROM Rol";
+                using (SqlCommand cmd = new SqlCommand(query, conn))
+                {
+                    SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+                    adapter.Fill(dtRoles);
+                }
+            }
+            return dtRoles;
+        }
+
+        public static bool ActualizarDetalleUsuario(DetalleUsuario detalleUsuario)
+        {
+            string query = "UPDATE DetalleUsuario SET primNombreUsuario = @primNombreUsuario,segNombreUsuario = @segNombreUsuario, primApellidoUsuario = @primApellidoUsuario, segApellido = @segApellido, codigoCedula = @codigoCedula, fechaNacimiento = @fechaNacimiento, estadoCivil = @estadoCivil, telefono = @telefono, direccion = @direccion WHERE codigoUsuario = @codigoUsuario";
+
+            using (SqlConnection conn = new SqlConnection(con_string))
+            {
+                SqlCommand cmd = new SqlCommand(query, conn);
+                cmd.Parameters.AddWithValue("@primNombreUsuario", detalleUsuario.primerNombre);
+                cmd.Parameters.AddWithValue("@segNombreUsuario", detalleUsuario.segundoNombre);
+                cmd.Parameters.AddWithValue("@primApellidoUsuario", detalleUsuario.primerApellido);
+                cmd.Parameters.AddWithValue("@segApellido", detalleUsuario.segundoApellido);
+                cmd.Parameters.AddWithValue("@codigoCedula", detalleUsuario.codigoCedula);
+                cmd.Parameters.AddWithValue("@fechaNacimiento", detalleUsuario.fechaNacimiento);
+                cmd.Parameters.AddWithValue("@estadoCivil", detalleUsuario.estadoCivil);
+                cmd.Parameters.AddWithValue("@telefono", detalleUsuario.telefono);
+                cmd.Parameters.AddWithValue("@direccion", detalleUsuario.direccion);
+                cmd.Parameters.AddWithValue("@codigoPuesto", detalleUsuario.codigoPuesto);
+                cmd.Parameters.AddWithValue("@codigoUsuario", detalleUsuario.codigoUsuario);
+
+                try
+                {
+                    conn.Open();
+                    int filasAfectadas = cmd.ExecuteNonQuery();
+                    return filasAfectadas > 0;
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine("Error al actualizar el usuario: " + ex.Message);
+                    Console.WriteLine("Detalles de la excepción: " + ex.ToString());
+                    return false;
+                }
+            }
+        }
 
 
     }

@@ -16,7 +16,6 @@ namespace zompyDogs
     public partial class Peticiones : Form
     {
         public EmpleadoBienvenida EmpleadoFormPrincipal { get; set; }
-
         public BienvenidaAdmin FormPrincipal { get; set; }
 
         PeticionRecuperacionDeContraseña frmSolicitudDeRecuperacionCuenta;

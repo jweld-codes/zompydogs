@@ -17,6 +17,7 @@ namespace zompyDogs
     public partial class Login : Form
     {
         private Peticiones frmPeticionesAdmin;
+
         public Login()
         {
             InitializeComponent();
@@ -28,9 +29,14 @@ namespace zompyDogs
         {
             var (isValid, isAdmin, nombreUser, apeUser, username, idEmpleado) = UsuarioValidaciones.IsValidUser(txtUser.Text, txtPassword.Text);
 
+            string validUser = txtUser.Text;
+            string validpassword = txtPassword.Text;
+
             if (!isValid)
             {
                 MessageBox.Show("Usuario o Clave Incorrecto. Intentar Nuevamente");
+                txtPassword.Text = "";
+                txtUser.Text = "";
             }
             else
             {
@@ -52,7 +58,7 @@ namespace zompyDogs
                     frmBienvenidaAdmin.AbrirFormsHija(frmPanelAdmin);
                     frmBienvenidaAdmin.Show();
 
-                   // MessageBox.Show($"rolID: {rolId}");
+                    //MessageBox.Show($"rolID: {rolId}");
 
                     this.Hide();
                 }
@@ -66,9 +72,6 @@ namespace zompyDogs
                     PanelEmpleado frmPanelEmpleado = new PanelEmpleado();
                     frmPanelEmpleado.NombreUsuarioEmpleado = $"{nombreUser} {apeUser}";
                     frmPanelEmpleado.InicializarEmpleado(idEmpleado);
-
-                    PeticionesEmp frmPeticionesEmp = new PeticionesEmp(idEmpleado);
-                    frmPeticionesEmp.IdEmpleado = idEmpleado;
 
                    // MessageBox.Show($"rolID: {rolId}");
 

@@ -1,74 +1,29 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\oscar\\Documents\\GitHub\\zompydogs\\",
+  "WorkspaceRootPath": "C:\\Users\\jenni\\Documents\\GitHub\\unirec\\zompydogs\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{B810D24A-95D4-4ADD-BFE2-CC53185D2745}|ZompyDogsDAO\\ZompyDogsDAO.csproj|c:\\users\\oscar\\documents\\github\\zompydogs\\zompydogsdao\\usuariovalidaciones.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B810D24A-95D4-4ADD-BFE2-CC53185D2745}|ZompyDogsDAO\\ZompyDogsDAO.csproj|solutionrelative:zompydogsdao\\usuariovalidaciones.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0FF8C824-BB57-4887-AB3F-C44B540E93EA}|zompyDogs\\zompyDogs.csproj|C:\\Users\\jenni\\Documents\\GitHub\\unirec\\zompydogs\\zompydogs\\usuarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{0FF8C824-BB57-4887-AB3F-C44B540E93EA}|zompyDogs\\zompyDogs.csproj|solutionrelative:zompydogs\\usuarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0FF8C824-BB57-4887-AB3F-C44B540E93EA}|zompyDogs\\zompyDogs.csproj|c:\\users\\oscar\\documents\\github\\zompydogs\\zompydogs\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0FF8C824-BB57-4887-AB3F-C44B540E93EA}|zompyDogs\\zompyDogs.csproj|solutionrelative:zompydogs\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B810D24A-95D4-4ADD-BFE2-CC53185D2745}|ZompyDogsDAO\\ZompyDogsDAO.csproj|c:\\users\\oscar\\documents\\github\\zompydogs\\zompydogsdao\\usuariodao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{B810D24A-95D4-4ADD-BFE2-CC53185D2745}|ZompyDogsDAO\\ZompyDogsDAO.csproj|c:\\users\\jenni\\documents\\github\\unirec\\zompydogs\\zompydogsdao\\usuariodao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B810D24A-95D4-4ADD-BFE2-CC53185D2745}|ZompyDogsDAO\\ZompyDogsDAO.csproj|solutionrelative:zompydogsdao\\usuariodao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B810D24A-95D4-4ADD-BFE2-CC53185D2745}|ZompyDogsDAO\\ZompyDogsDAO.csproj|c:\\users\\oscar\\documents\\github\\zompydogs\\zompydogsdao\\menudao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B810D24A-95D4-4ADD-BFE2-CC53185D2745}|ZompyDogsDAO\\ZompyDogsDAO.csproj|solutionrelative:zompydogsdao\\menudao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0FF8C824-BB57-4887-AB3F-C44B540E93EA}|zompyDogs\\zompyDogs.csproj|c:\\users\\jenni\\documents\\github\\unirec\\zompydogs\\zompydogs\\usuarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0FF8C824-BB57-4887-AB3F-C44B540E93EA}|zompyDogs\\zompyDogs.csproj|solutionrelative:zompydogs\\usuarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0FF8C824-BB57-4887-AB3F-C44B540E93EA}|zompyDogs\\zompyDogs.csproj|C:\\Users\\oscar\\Documents\\GitHub\\zompydogs\\zompydogs\\bienvenidaadmin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{0FF8C824-BB57-4887-AB3F-C44B540E93EA}|zompyDogs\\zompyDogs.csproj|solutionrelative:zompydogs\\bienvenidaadmin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{0FF8C824-BB57-4887-AB3F-C44B540E93EA}|zompyDogs\\zompyDogs.csproj|c:\\users\\jenni\\documents\\github\\unirec\\zompydogs\\zompydogs\\crud\\registros\\usuarioregistro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0FF8C824-BB57-4887-AB3F-C44B540E93EA}|zompyDogs\\zompyDogs.csproj|solutionrelative:zompydogs\\crud\\registros\\usuarioregistro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0FF8C824-BB57-4887-AB3F-C44B540E93EA}|zompyDogs\\zompyDogs.csproj|C:\\Users\\oscar\\Documents\\GitHub\\zompydogs\\zompydogs\\ajustescuenta.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{0FF8C824-BB57-4887-AB3F-C44B540E93EA}|zompyDogs\\zompyDogs.csproj|solutionrelative:zompydogs\\ajustescuenta.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{0FF8C824-BB57-4887-AB3F-C44B540E93EA}|zompyDogs\\zompyDogs.csproj|c:\\users\\jenni\\documents\\github\\unirec\\zompydogs\\zompydogs\\crud\\registros\\usuarioregistro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{0FF8C824-BB57-4887-AB3F-C44B540E93EA}|zompyDogs\\zompyDogs.csproj|solutionrelative:zompydogs\\crud\\registros\\usuarioregistro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0FF8C824-BB57-4887-AB3F-C44B540E93EA}|zompyDogs\\zompyDogs.csproj|c:\\users\\oscar\\documents\\github\\zompydogs\\zompydogs\\crud\\registros\\menuregistro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0FF8C824-BB57-4887-AB3F-C44B540E93EA}|zompyDogs\\zompyDogs.csproj|solutionrelative:zompydogs\\crud\\registros\\menuregistro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0FF8C824-BB57-4887-AB3F-C44B540E93EA}|zompyDogs\\zompyDogs.csproj|c:\\users\\oscar\\documents\\github\\zompydogs\\zompydogs\\libretamenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0FF8C824-BB57-4887-AB3F-C44B540E93EA}|zompyDogs\\zompyDogs.csproj|solutionrelative:zompydogs\\libretamenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0FF8C824-BB57-4887-AB3F-C44B540E93EA}|zompyDogs\\zompyDogs.csproj|C:\\Users\\oscar\\Documents\\GitHub\\zompydogs\\zompydogs\\menu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{0FF8C824-BB57-4887-AB3F-C44B540E93EA}|zompyDogs\\zompyDogs.csproj|solutionrelative:zompydogs\\menu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0FF8C824-BB57-4887-AB3F-C44B540E93EA}|zompyDogs\\zompyDogs.csproj|c:\\users\\oscar\\documents\\github\\zompydogs\\zompydogs\\menu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0FF8C824-BB57-4887-AB3F-C44B540E93EA}|zompyDogs\\zompyDogs.csproj|solutionrelative:zompydogs\\menu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0FF8C824-BB57-4887-AB3F-C44B540E93EA}|zompyDogs\\zompyDogs.csproj|C:\\Users\\oscar\\Documents\\GitHub\\zompydogs\\zompydogs\\crud\\registros\\menuregistro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{0FF8C824-BB57-4887-AB3F-C44B540E93EA}|zompyDogs\\zompyDogs.csproj|solutionrelative:zompydogs\\crud\\registros\\menuregistro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0FF8C824-BB57-4887-AB3F-C44B540E93EA}|zompyDogs\\zompyDogs.csproj|C:\\Users\\oscar\\Documents\\GitHub\\zompydogs\\zompydogs\\libretamenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{0FF8C824-BB57-4887-AB3F-C44B540E93EA}|zompyDogs\\zompyDogs.csproj|solutionrelative:zompydogs\\libretamenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0FF8C824-BB57-4887-AB3F-C44B540E93EA}|zompyDogs\\zompyDogs.csproj|c:\\users\\oscar\\documents\\github\\zompydogs\\zompydogs\\peticiones.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0FF8C824-BB57-4887-AB3F-C44B540E93EA}|zompyDogs\\zompyDogs.csproj|solutionrelative:zompydogs\\peticiones.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0FF8C824-BB57-4887-AB3F-C44B540E93EA}|zompyDogs\\zompyDogs.csproj|c:\\users\\oscar\\documents\\github\\zompydogs\\zompydogs\\reportes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0FF8C824-BB57-4887-AB3F-C44B540E93EA}|zompyDogs\\zompyDogs.csproj|solutionrelative:zompydogs\\reportes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0FF8C824-BB57-4887-AB3F-C44B540E93EA}|zompyDogs\\zompyDogs.csproj|C:\\Users\\oscar\\Documents\\GitHub\\zompydogs\\zompydogs\\peticiones.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{0FF8C824-BB57-4887-AB3F-C44B540E93EA}|zompyDogs\\zompyDogs.csproj|solutionrelative:zompydogs\\peticiones.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0FF8C824-BB57-4887-AB3F-C44B540E93EA}|zompyDogs\\zompyDogs.csproj|C:\\Users\\oscar\\Documents\\GitHub\\zompydogs\\zompydogs\\inventario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{0FF8C824-BB57-4887-AB3F-C44B540E93EA}|zompyDogs\\zompyDogs.csproj|solutionrelative:zompydogs\\inventario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0FF8C824-BB57-4887-AB3F-C44B540E93EA}|zompyDogs\\zompyDogs.csproj|c:\\users\\oscar\\documents\\github\\zompydogs\\zompydogs\\ajustescuenta.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0FF8C824-BB57-4887-AB3F-C44B540E93EA}|zompyDogs\\zompyDogs.csproj|solutionrelative:zompydogs\\ajustescuenta.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/MACARENA_SQLEXPRESS/DB_ZompyDogs/True/SqlTable/dbo.DetalleUsuario.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
     }
   ],
   "DocumentGroupContainers": [
@@ -78,220 +33,80 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 2,
           "Children": [
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{6324226f-61b6-4f28-92ee-18d4b5fe1e48}"
-            },
-            {
               "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "Peticiones.cs",
-              "DocumentMoniker": "C:\\Users\\oscar\\Documents\\GitHub\\zompydogs\\zompyDogs\\Peticiones.cs",
-              "RelativeDocumentMoniker": "zompyDogs\\Peticiones.cs",
-              "ToolTip": "C:\\Users\\oscar\\Documents\\GitHub\\zompydogs\\zompyDogs\\Peticiones.cs",
-              "RelativeToolTip": "zompyDogs\\Peticiones.cs",
-              "ViewState": "AQIAABgAAAAAAAAAAAAYwCwAAAALAAAA",
+              "DocumentIndex": 3,
+              "Title": "UsuarioRegistro.cs",
+              "DocumentMoniker": "C:\\Users\\jenni\\Documents\\GitHub\\unirec\\zompydogs\\zompyDogs\\CRUD\\REGISTROS\\UsuarioRegistro.cs",
+              "RelativeDocumentMoniker": "zompyDogs\\CRUD\\REGISTROS\\UsuarioRegistro.cs",
+              "ToolTip": "C:\\Users\\jenni\\Documents\\GitHub\\unirec\\zompydogs\\zompyDogs\\CRUD\\REGISTROS\\UsuarioRegistro.cs",
+              "RelativeToolTip": "zompyDogs\\CRUD\\REGISTROS\\UsuarioRegistro.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAACIAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-01T02:02:43.441Z",
+              "WhenOpened": "2024-11-06T02:39:31.302Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "AjustesCuenta.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\oscar\\Documents\\GitHub\\zompydogs\\zompyDogs\\AjustesCuenta.cs",
-              "RelativeDocumentMoniker": "zompyDogs\\AjustesCuenta.cs",
-              "ToolTip": "C:\\Users\\oscar\\Documents\\GitHub\\zompydogs\\zompyDogs\\AjustesCuenta.cs [Dise\u00F1o]",
-              "RelativeToolTip": "zompyDogs\\AjustesCuenta.cs [Dise\u00F1o]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-01T00:26:12.595Z",
-              "EditorCaption": " [Dise\u00F1o]"
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "BienvenidaAdmin.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\oscar\\Documents\\GitHub\\zompydogs\\zompyDogs\\BienvenidaAdmin.cs",
-              "RelativeDocumentMoniker": "zompyDogs\\BienvenidaAdmin.cs",
-              "ToolTip": "C:\\Users\\oscar\\Documents\\GitHub\\zompydogs\\zompyDogs\\BienvenidaAdmin.cs [Dise\u00F1o]",
-              "RelativeToolTip": "zompyDogs\\BienvenidaAdmin.cs [Dise\u00F1o]",
+              "Title": "UsuarioRegistro.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\jenni\\Documents\\GitHub\\unirec\\zompydogs\\zompyDogs\\CRUD\\REGISTROS\\UsuarioRegistro.cs",
+              "RelativeDocumentMoniker": "zompyDogs\\CRUD\\REGISTROS\\UsuarioRegistro.cs",
+              "ToolTip": "C:\\Users\\jenni\\Documents\\GitHub\\unirec\\zompydogs\\zompyDogs\\CRUD\\REGISTROS\\UsuarioRegistro.cs [Dise\u00F1o]",
+              "RelativeToolTip": "zompyDogs\\CRUD\\REGISTROS\\UsuarioRegistro.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-01T01:34:34.961Z",
+              "WhenOpened": "2024-11-06T01:53:25.289Z",
               "EditorCaption": " [Dise\u00F1o]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "MenuDAO.cs",
-              "DocumentMoniker": "C:\\Users\\oscar\\Documents\\GitHub\\zompydogs\\ZompyDogsDAO\\MenuDAO.cs",
-              "RelativeDocumentMoniker": "ZompyDogsDAO\\MenuDAO.cs",
-              "ToolTip": "C:\\Users\\oscar\\Documents\\GitHub\\zompydogs\\ZompyDogsDAO\\MenuDAO.cs",
-              "RelativeToolTip": "ZompyDogsDAO\\MenuDAO.cs",
-              "ViewState": "AgIAABQAAAAAAAAAAAAtwCEAAAAQAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "Usuarios.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\jenni\\Documents\\GitHub\\unirec\\zompydogs\\zompyDogs\\Usuarios.cs",
+              "RelativeDocumentMoniker": "zompyDogs\\Usuarios.cs",
+              "ToolTip": "C:\\Users\\jenni\\Documents\\GitHub\\unirec\\zompydogs\\zompyDogs\\Usuarios.cs [Dise\u00F1o]",
+              "RelativeToolTip": "zompyDogs\\Usuarios.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-01T02:09:51.045Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-04T22:26:06.745Z",
+              "EditorCaption": " [Dise\u00F1o]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "UsuarioValidaciones.cs",
-              "DocumentMoniker": "C:\\Users\\oscar\\Documents\\GitHub\\zompydogs\\ZompyDogsDAO\\UsuarioValidaciones.cs",
-              "RelativeDocumentMoniker": "ZompyDogsDAO\\UsuarioValidaciones.cs",
-              "ToolTip": "C:\\Users\\oscar\\Documents\\GitHub\\zompydogs\\ZompyDogsDAO\\UsuarioValidaciones.cs*",
-              "RelativeToolTip": "ZompyDogsDAO\\UsuarioValidaciones.cs*",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAACUAAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "Usuarios.cs",
+              "DocumentMoniker": "C:\\Users\\jenni\\Documents\\GitHub\\unirec\\zompydogs\\zompyDogs\\Usuarios.cs",
+              "RelativeDocumentMoniker": "zompyDogs\\Usuarios.cs",
+              "ToolTip": "C:\\Users\\jenni\\Documents\\GitHub\\unirec\\zompydogs\\zompyDogs\\Usuarios.cs",
+              "RelativeToolTip": "zompyDogs\\Usuarios.cs",
+              "ViewState": "AQIAAHQAAAAAAAAAAAAowIMAAAAWAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-01T03:18:15.036Z",
+              "WhenOpened": "2024-11-04T22:10:42.966Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\oscar\\Documents\\GitHub\\zompydogs\\zompyDogs\\Program.cs",
-              "RelativeDocumentMoniker": "zompyDogs\\Program.cs",
-              "ToolTip": "C:\\Users\\oscar\\Documents\\GitHub\\zompydogs\\zompyDogs\\Program.cs",
-              "RelativeToolTip": "zompyDogs\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAlAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-01T03:20:57.986Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
               "Title": "UsuarioDAO.cs",
-              "DocumentMoniker": "C:\\Users\\oscar\\Documents\\GitHub\\zompydogs\\ZompyDogsDAO\\UsuarioDAO.cs",
+              "DocumentMoniker": "C:\\Users\\jenni\\Documents\\GitHub\\unirec\\zompydogs\\ZompyDogsDAO\\UsuarioDAO.cs",
               "RelativeDocumentMoniker": "ZompyDogsDAO\\UsuarioDAO.cs",
-              "ToolTip": "C:\\Users\\oscar\\Documents\\GitHub\\zompydogs\\ZompyDogsDAO\\UsuarioDAO.cs",
+              "ToolTip": "C:\\Users\\jenni\\Documents\\GitHub\\unirec\\zompydogs\\ZompyDogsDAO\\UsuarioDAO.cs",
               "RelativeToolTip": "ZompyDogsDAO\\UsuarioDAO.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AQIAACcBAAAAAAAAAAAmwC4BAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-01T03:17:48.185Z",
+              "WhenOpened": "2024-11-06T02:02:39.426Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "MenuRegistro.cs",
-              "DocumentMoniker": "C:\\Users\\oscar\\Documents\\GitHub\\zompydogs\\zompyDogs\\CRUD\\REGISTROS\\MenuRegistro.cs",
-              "RelativeDocumentMoniker": "zompyDogs\\CRUD\\REGISTROS\\MenuRegistro.cs",
-              "ToolTip": "C:\\Users\\oscar\\Documents\\GitHub\\zompydogs\\zompyDogs\\CRUD\\REGISTROS\\MenuRegistro.cs",
-              "RelativeToolTip": "zompyDogs\\CRUD\\REGISTROS\\MenuRegistro.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAACIAAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-01T02:10:28.816Z",
+              "DocumentIndex": 5,
+              "Title": "dbo.DetalleUsuario [Datos]",
+              "DocumentMoniker": "ViewDataWindow_MSSQL__/MACARENA_SQLEXPRESS/DB_ZompyDogs/True/SqlTable/dbo.DetalleUsuario.sql",
+              "ToolTip": "dbo.DetalleUsuario [Datos]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2024-11-06T02:15:30.054Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "MenuRegistro.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\oscar\\Documents\\GitHub\\zompydogs\\zompyDogs\\CRUD\\REGISTROS\\MenuRegistro.cs",
-              "RelativeDocumentMoniker": "zompyDogs\\CRUD\\REGISTROS\\MenuRegistro.cs",
-              "ToolTip": "C:\\Users\\jenni\\Documents\\GitHub\\unirec\\zompydogs\\zompyDogs\\CRUD\\REGISTROS\\MenuRegistro.cs [Dise\u00F1o]",
-              "RelativeToolTip": "..\\..\\..\\..\\jenni\\Documents\\GitHub\\unirec\\zompydogs\\zompyDogs\\CRUD\\REGISTROS\\MenuRegistro.cs [Dise\u00F1o]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-01T02:06:38.868Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "Menu.cs",
-              "DocumentMoniker": "C:\\Users\\oscar\\Documents\\GitHub\\zompydogs\\zompyDogs\\Menu.cs",
-              "RelativeDocumentMoniker": "zompyDogs\\Menu.cs",
-              "ToolTip": "C:\\Users\\oscar\\Documents\\GitHub\\zompydogs\\zompyDogs\\Menu.cs",
-              "RelativeToolTip": "zompyDogs\\Menu.cs",
-              "ViewState": "AQIAAC8AAAAAAAAAAAAswEMAAAAiAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-01T02:17:30.485Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Menu.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\oscar\\Documents\\GitHub\\zompydogs\\zompyDogs\\Menu.cs",
-              "RelativeDocumentMoniker": "zompyDogs\\Menu.cs",
-              "ToolTip": "C:\\Users\\jenni\\Documents\\GitHub\\unirec\\zompydogs\\zompyDogs\\Menu.cs [Dise\u00F1o]",
-              "RelativeToolTip": "..\\..\\..\\..\\jenni\\Documents\\GitHub\\unirec\\zompydogs\\zompyDogs\\Menu.cs [Dise\u00F1o]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-01T02:17:21.639Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "LibretaMenu.cs",
-              "DocumentMoniker": "C:\\Users\\oscar\\Documents\\GitHub\\zompydogs\\zompyDogs\\LibretaMenu.cs",
-              "RelativeDocumentMoniker": "zompyDogs\\LibretaMenu.cs",
-              "ToolTip": "C:\\Users\\oscar\\Documents\\GitHub\\zompydogs\\zompyDogs\\LibretaMenu.cs",
-              "RelativeToolTip": "zompyDogs\\LibretaMenu.cs",
-              "ViewState": "AQIAADQAAAAAAAAAAAAkwD8AAAAVAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-01T02:13:47.763Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "Reportes.cs",
-              "DocumentMoniker": "C:\\Users\\oscar\\Documents\\GitHub\\zompydogs\\zompyDogs\\Reportes.cs",
-              "RelativeDocumentMoniker": "zompyDogs\\Reportes.cs",
-              "ToolTip": "C:\\Users\\oscar\\Documents\\GitHub\\zompydogs\\zompyDogs\\Reportes.cs",
-              "RelativeToolTip": "zompyDogs\\Reportes.cs",
-              "ViewState": "AQIAAAsAAAAAAAAAAAAqwBgAAABBAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-01T01:59:17.668Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "LibretaMenu.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\oscar\\Documents\\GitHub\\zompydogs\\zompyDogs\\LibretaMenu.cs",
-              "RelativeDocumentMoniker": "zompyDogs\\LibretaMenu.cs",
-              "ToolTip": "C:\\Users\\jenni\\Documents\\GitHub\\unirec\\zompydogs\\zompyDogs\\LibretaMenu.cs [Dise\u00F1o]",
-              "RelativeToolTip": "..\\..\\..\\..\\jenni\\Documents\\GitHub\\unirec\\zompydogs\\zompyDogs\\LibretaMenu.cs [Dise\u00F1o]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-01T01:43:44.598Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "Inventario.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\oscar\\Documents\\GitHub\\zompydogs\\zompyDogs\\Inventario.cs",
-              "RelativeDocumentMoniker": "zompyDogs\\Inventario.cs",
-              "ToolTip": "C:\\Users\\oscar\\Documents\\GitHub\\zompydogs\\zompyDogs\\Inventario.cs [Dise\u00F1o]",
-              "RelativeToolTip": "zompyDogs\\Inventario.cs [Dise\u00F1o]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-01T01:41:23.823Z",
-              "EditorCaption": " [Dise\u00F1o]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "Peticiones.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\oscar\\Documents\\GitHub\\zompydogs\\zompyDogs\\Peticiones.cs",
-              "RelativeDocumentMoniker": "zompyDogs\\Peticiones.cs",
-              "ToolTip": "C:\\Users\\jenni\\Documents\\GitHub\\unirec\\zompydogs\\zompyDogs\\Peticiones.cs [Dise\u00F1o]",
-              "RelativeToolTip": "..\\..\\..\\..\\jenni\\Documents\\GitHub\\unirec\\zompydogs\\zompyDogs\\Peticiones.cs [Dise\u00F1o]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-01T01:19:36.918Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "AjustesCuenta.cs",
-              "DocumentMoniker": "C:\\Users\\oscar\\Documents\\GitHub\\zompydogs\\zompyDogs\\AjustesCuenta.cs",
-              "RelativeDocumentMoniker": "zompyDogs\\AjustesCuenta.cs",
-              "ToolTip": "C:\\Users\\oscar\\Documents\\GitHub\\zompydogs\\zompyDogs\\AjustesCuenta.cs",
-              "RelativeToolTip": "zompyDogs\\AjustesCuenta.cs",
-              "ViewState": "AQIAACEAAAAAAAAAAAAYwD4AAAAmAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-01T00:55:11.587Z"
             }
           ]
         }

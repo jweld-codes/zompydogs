@@ -68,7 +68,6 @@
             btnGuardarUser.TabIndex = 109;
             btnGuardarUser.Text = "GUARDAR";
             btnGuardarUser.UseVisualStyleBackColor = false;
-            btnGuardarUser.Click += btnGuardarUser_Click;
             // 
             // groupBox1
             // 

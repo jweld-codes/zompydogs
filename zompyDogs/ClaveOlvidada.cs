@@ -29,8 +29,8 @@ namespace zompyDogs
 
         private void btnRegresar_Click(object sender, EventArgs e)
         {
-            Login frmLogin = new Login();
-            frmLogin.Show();
+         //   Login frmLogin = new Login();
+           // frmLogin.Show();
             this.Close();
         }
 

@@ -111,17 +111,5 @@ namespace zompyDogs
             lblCerrarSession.ForeColor = Color.White;
         }
 
-        private void btnPeticiones_Click(object sender, EventArgs e)
-        {
-            CambiarColorBoton((Button)sender);
-
-            PeticionesEmp PeticionesEmpForm = new PeticionesEmp(IdEmpleado)
-            {
-                EmpleadoFormPrincipal = this
-            };
-            AbrirFormsHijaEmpleado(PeticionesEmpForm);
-
-            AbrirFormsHijaEmpleado(new PeticionesEmp(IdEmpleado));
-        }
     }
 }
