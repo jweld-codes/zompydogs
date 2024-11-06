@@ -37,13 +37,17 @@
             label1 = new Label();
             panel1 = new Panel();
             flpLibreta = new FlowLayoutPanel();
-            categoryPanel = new Panel();
-            label2 = new Label();
+            panel = new Panel();
+            categoryPanelIN = new Panel();
             btnCategory = new Button();
+            panel2 = new Panel();
+            label2 = new Label();
             topBarMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             panel1.SuspendLayout();
-            categoryPanel.SuspendLayout();
+            panel.SuspendLayout();
+            categoryPanelIN.SuspendLayout();
+            panel2.SuspendLayout();
             SuspendLayout();
             // 
             // topBarMenu
@@ -150,36 +154,54 @@
             flpLibreta.Size = new Size(738, 589);
             flpLibreta.TabIndex = 128;
             // 
-            // categoryPanel
+            // panel
             // 
-            categoryPanel.BorderStyle = BorderStyle.FixedSingle;
-            categoryPanel.Controls.Add(label2);
-            categoryPanel.Controls.Add(btnCategory);
-            categoryPanel.Dock = DockStyle.Left;
-            categoryPanel.Location = new Point(0, 136);
-            categoryPanel.Name = "categoryPanel";
-            categoryPanel.Size = new Size(157, 589);
-            categoryPanel.TabIndex = 129;
+            panel.BorderStyle = BorderStyle.FixedSingle;
+            panel.Controls.Add(categoryPanelIN);
+            panel.Controls.Add(panel2);
+            panel.Dock = DockStyle.Left;
+            panel.Location = new Point(0, 136);
+            panel.Name = "panel";
+            panel.Size = new Size(157, 589);
+            panel.TabIndex = 129;
             // 
-            // label2
+            // categoryPanelIN
             // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label2.Location = new Point(11, 25);
-            label2.Name = "label2";
-            label2.Size = new Size(133, 28);
-            label2.TabIndex = 0;
-            label2.Text = "CATEGORIAS";
+            categoryPanelIN.Controls.Add(btnCategory);
+            categoryPanelIN.Dock = DockStyle.Fill;
+            categoryPanelIN.Location = new Point(0, 65);
+            categoryPanelIN.Name = "categoryPanelIN";
+            categoryPanelIN.Size = new Size(155, 522);
+            categoryPanelIN.TabIndex = 0;
             // 
             // btnCategory
             // 
             btnCategory.BackColor = Color.Green;
             btnCategory.ForeColor = SystemColors.Control;
-            btnCategory.Location = new Point(6, 64);
+            btnCategory.Location = new Point(6, 6);
             btnCategory.Name = "btnCategory";
             btnCategory.Size = new Size(141, 72);
             btnCategory.TabIndex = 0;
             btnCategory.UseVisualStyleBackColor = false;
+            // 
+            // panel2
+            // 
+            panel2.Controls.Add(label2);
+            panel2.Dock = DockStyle.Top;
+            panel2.Location = new Point(0, 0);
+            panel2.Name = "panel2";
+            panel2.Size = new Size(155, 65);
+            panel2.TabIndex = 1;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label2.Location = new Point(10, 18);
+            label2.Name = "label2";
+            label2.Size = new Size(133, 28);
+            label2.TabIndex = 0;
+            label2.Text = "CATEGORIAS";
             // 
             // LibretaMenu
             // 
@@ -187,7 +209,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.Window;
             ClientSize = new Size(901, 725);
-            Controls.Add(categoryPanel);
+            Controls.Add(panel);
             Controls.Add(flpLibreta);
             Controls.Add(panel1);
             Controls.Add(topBarMenu);
@@ -198,8 +220,10 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
-            categoryPanel.ResumeLayout(false);
-            categoryPanel.PerformLayout();
+            panel.ResumeLayout(false);
+            categoryPanelIN.ResumeLayout(false);
+            panel2.ResumeLayout(false);
+            panel2.PerformLayout();
             ResumeLayout(false);
         }
 
@@ -213,8 +237,10 @@
         private Label lblBreadCrumbUser;
         private Label label1;
         private FlowLayoutPanel flpLibreta;
-        private Panel categoryPanel;
+        private Panel panel;
         private Label label2;
         private Button btnCategory;
+        private Panel categoryPanelIN;
+        private Panel panel2;
     }
 }

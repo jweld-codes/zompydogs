@@ -1,10 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace ZompyDogsDAO
 {
@@ -22,6 +24,35 @@ namespace ZompyDogsDAO
                 return dtProductos;
             }
         }
+
+        public class PedidoDetalle
+        {
+            public string CodigoPedido { get; set; }
+            public string CodigoEmpleado { get; set; }
+            public string EmpleadoNombre { get; set; }
+            public DateTime FechaDelPedido { get; set; }
+            public int TotalDeProductos { get; set; }
+            public decimal Precio_Unitario { get; set; }
+            public decimal Sub_Total { get; set; }
+            public decimal I_S_V { get; set; }
+            public decimal TOTAL_Pagar { get; set; }
+            public string MetodoDePago { get; set; }
+            public string Estado { get; set; }
+        }
+
+        public class PlatilloDetalle
+        {
+            public string Codigo { get; set; }
+            public string PlatilloNombre { get; set; }
+            public string Descripcion { get; set; }
+            public int Categoria { get; set; }
+            public int Cantidad { get; set; }
+            public decimal Precio_Unitario { get; set; }
+            public string ImagenPlatillo { get; set; }
+            public decimal TotalProducto { get; set; }
+        }
+
+        public BindingList<PlatilloDetalle> platillosLista = new BindingList<PlatilloDetalle>();
 
     }
 }

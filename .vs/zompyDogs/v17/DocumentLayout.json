@@ -3,30 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\jenni\\Documents\\GitHub\\unirec\\zompydogs\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{0FF8C824-BB57-4887-AB3F-C44B540E93EA}|zompyDogs\\zompyDogs.csproj|c:\\users\\jenni\\documents\\github\\unirec\\zompydogs\\zompydogs\\crud\\registros\\puestosregistro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0FF8C824-BB57-4887-AB3F-C44B540E93EA}|zompyDogs\\zompyDogs.csproj|solutionrelative:zompydogs\\crud\\registros\\puestosregistro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0FF8C824-BB57-4887-AB3F-C44B540E93EA}|zompyDogs\\zompyDogs.csproj|c:\\users\\jenni\\documents\\github\\unirec\\zompydogs\\zompydogs\\frmpos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0FF8C824-BB57-4887-AB3F-C44B540E93EA}|zompyDogs\\zompyDogs.csproj|solutionrelative:zompydogs\\frmpos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B810D24A-95D4-4ADD-BFE2-CC53185D2745}|ZompyDogsDAO\\ZompyDogsDAO.csproj|c:\\users\\jenni\\documents\\github\\unirec\\zompydogs\\zompydogsdao\\usuariodao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B810D24A-95D4-4ADD-BFE2-CC53185D2745}|ZompyDogsDAO\\ZompyDogsDAO.csproj|solutionrelative:zompydogsdao\\usuariodao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B810D24A-95D4-4ADD-BFE2-CC53185D2745}|ZompyDogsDAO\\ZompyDogsDAO.csproj|c:\\users\\jenni\\documents\\github\\unirec\\zompydogs\\zompydogsdao\\pedidosdao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B810D24A-95D4-4ADD-BFE2-CC53185D2745}|ZompyDogsDAO\\ZompyDogsDAO.csproj|solutionrelative:zompydogsdao\\pedidosdao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0FF8C824-BB57-4887-AB3F-C44B540E93EA}|zompyDogs\\zompyDogs.csproj|c:\\users\\jenni\\documents\\github\\unirec\\zompydogs\\zompydogs\\crud\\registros\\puestosregistro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{0FF8C824-BB57-4887-AB3F-C44B540E93EA}|zompyDogs\\zompyDogs.csproj|solutionrelative:zompydogs\\crud\\registros\\puestosregistro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0FF8C824-BB57-4887-AB3F-C44B540E93EA}|zompyDogs\\zompyDogs.csproj|c:\\users\\jenni\\documents\\github\\unirec\\zompydogs\\zompydogs\\crud\\registros\\usuarioregistro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{0FF8C824-BB57-4887-AB3F-C44B540E93EA}|zompyDogs\\zompyDogs.csproj|solutionrelative:zompydogs\\crud\\registros\\usuarioregistro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/MACARENA_SQLEXPRESS/DB_ZompyDogs/True/SqlTable/dbo.Puestos.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0FF8C824-BB57-4887-AB3F-C44B540E93EA}|zompyDogs\\zompyDogs.csproj|c:\\users\\jenni\\documents\\github\\unirec\\zompydogs\\zompydogs\\usuarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0FF8C824-BB57-4887-AB3F-C44B540E93EA}|zompyDogs\\zompyDogs.csproj|solutionrelative:zompydogs\\usuarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/MACARENA_SQLEXPRESS/DB_ZompyDogs/True/SqlTable/dbo.DetalleUsuario.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
+      "AbsoluteMoniker": "D:0:0:{0FF8C824-BB57-4887-AB3F-C44B540E93EA}|zompyDogs\\zompyDogs.csproj|c:\\users\\jenni\\documents\\github\\unirec\\zompydogs\\zompydogs\\frmpos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{0FF8C824-BB57-4887-AB3F-C44B540E93EA}|zompyDogs\\zompyDogs.csproj|solutionrelative:zompydogs\\frmpos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -40,85 +26,40 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "dbo.Puestos [Datos]",
-              "DocumentMoniker": "ViewDataWindow_MSSQL__/MACARENA_SQLEXPRESS/DB_ZompyDogs/True/SqlTable/dbo.Puestos.sql",
-              "ToolTip": "dbo.Puestos [Datos]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
-              "WhenOpened": "2024-11-06T11:08:54.42Z",
-              "EditorCaption": ""
+              "DocumentIndex": 2,
+              "Title": "frmPOS.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\jenni\\Documents\\GitHub\\unirec\\zompydogs\\zompyDogs\\frmPOS.cs",
+              "RelativeDocumentMoniker": "zompyDogs\\frmPOS.cs",
+              "ToolTip": "C:\\Users\\jenni\\Documents\\GitHub\\unirec\\zompydogs\\zompyDogs\\frmPOS.cs [Dise\u00F1o]",
+              "RelativeToolTip": "zompyDogs\\frmPOS.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-06T21:50:52.098Z",
+              "EditorCaption": " [Dise\u00F1o]"
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "PuestosRegistro.cs",
-              "DocumentMoniker": "C:\\Users\\jenni\\Documents\\GitHub\\unirec\\zompydogs\\zompyDogs\\CRUD\\REGISTROS\\PuestosRegistro.cs",
-              "RelativeDocumentMoniker": "zompyDogs\\CRUD\\REGISTROS\\PuestosRegistro.cs",
-              "ToolTip": "C:\\Users\\jenni\\Documents\\GitHub\\unirec\\zompydogs\\zompyDogs\\CRUD\\REGISTROS\\PuestosRegistro.cs",
-              "RelativeToolTip": "zompyDogs\\CRUD\\REGISTROS\\PuestosRegistro.cs",
-              "ViewState": "AQIAAFIAAAAAAAAAAAAowGAAAABLAAAA",
+              "Title": "frmPOS.cs",
+              "DocumentMoniker": "C:\\Users\\jenni\\Documents\\GitHub\\unirec\\zompydogs\\zompyDogs\\frmPOS.cs",
+              "RelativeDocumentMoniker": "zompyDogs\\frmPOS.cs",
+              "ToolTip": "C:\\Users\\jenni\\Documents\\GitHub\\unirec\\zompydogs\\zompyDogs\\frmPOS.cs",
+              "RelativeToolTip": "zompyDogs\\frmPOS.cs",
+              "ViewState": "AQIAAPQAAAAAAAAAAAAuwAsBAABBAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-06T10:30:17.814Z",
+              "WhenOpened": "2024-11-06T21:38:02.908Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "PuestosRegistro.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\jenni\\Documents\\GitHub\\unirec\\zompydogs\\zompyDogs\\CRUD\\REGISTROS\\PuestosRegistro.cs",
-              "RelativeDocumentMoniker": "zompyDogs\\CRUD\\REGISTROS\\PuestosRegistro.cs",
-              "ToolTip": "C:\\Users\\jenni\\Documents\\GitHub\\unirec\\zompydogs\\zompyDogs\\CRUD\\REGISTROS\\PuestosRegistro.cs [Dise\u00F1o]",
-              "RelativeToolTip": "zompyDogs\\CRUD\\REGISTROS\\PuestosRegistro.cs [Dise\u00F1o]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-06T10:30:06.168Z",
-              "EditorCaption": " [Dise\u00F1o]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "UsuarioRegistro.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\jenni\\Documents\\GitHub\\unirec\\zompydogs\\zompyDogs\\CRUD\\REGISTROS\\UsuarioRegistro.cs",
-              "RelativeDocumentMoniker": "zompyDogs\\CRUD\\REGISTROS\\UsuarioRegistro.cs",
-              "ToolTip": "C:\\Users\\jenni\\Documents\\GitHub\\unirec\\zompydogs\\zompyDogs\\CRUD\\REGISTROS\\UsuarioRegistro.cs [Dise\u00F1o]",
-              "RelativeToolTip": "zompyDogs\\CRUD\\REGISTROS\\UsuarioRegistro.cs [Dise\u00F1o]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-06T09:03:04.609Z",
-              "EditorCaption": " [Dise\u00F1o]"
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "UsuarioDAO.cs",
-              "DocumentMoniker": "C:\\Users\\jenni\\Documents\\GitHub\\unirec\\zompydogs\\ZompyDogsDAO\\UsuarioDAO.cs",
-              "RelativeDocumentMoniker": "ZompyDogsDAO\\UsuarioDAO.cs",
-              "ToolTip": "C:\\Users\\jenni\\Documents\\GitHub\\unirec\\zompydogs\\ZompyDogsDAO\\UsuarioDAO.cs",
-              "RelativeToolTip": "ZompyDogsDAO\\UsuarioDAO.cs",
-              "ViewState": "AQIAAOMCAAAAAAAAAAAcwP0CAAAJAAAA",
+              "Title": "PedidosDAO.cs",
+              "DocumentMoniker": "C:\\Users\\jenni\\Documents\\GitHub\\unirec\\zompydogs\\ZompyDogsDAO\\PedidosDAO.cs",
+              "RelativeDocumentMoniker": "ZompyDogsDAO\\PedidosDAO.cs",
+              "ToolTip": "C:\\Users\\jenni\\Documents\\GitHub\\unirec\\zompydogs\\ZompyDogsDAO\\PedidosDAO.cs",
+              "RelativeToolTip": "ZompyDogsDAO\\PedidosDAO.cs",
+              "ViewState": "AQIAACUAAAAAAAAAAAA/wDUAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-06T07:01:49.077Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Usuarios.cs",
-              "DocumentMoniker": "C:\\Users\\jenni\\Documents\\GitHub\\unirec\\zompydogs\\zompyDogs\\Usuarios.cs",
-              "RelativeDocumentMoniker": "zompyDogs\\Usuarios.cs",
-              "ToolTip": "C:\\Users\\jenni\\Documents\\GitHub\\unirec\\zompydogs\\zompyDogs\\Usuarios.cs",
-              "RelativeToolTip": "zompyDogs\\Usuarios.cs",
-              "ViewState": "AQIAABgAAAAAAAAAAAAewB4AAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-06T04:17:54.028Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "dbo.DetalleUsuario [Datos]",
-              "DocumentMoniker": "ViewDataWindow_MSSQL__/MACARENA_SQLEXPRESS/DB_ZompyDogs/True/SqlTable/dbo.DetalleUsuario.sql",
-              "ToolTip": "dbo.DetalleUsuario [Datos]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
-              "WhenOpened": "2024-11-06T08:57:42.243Z",
+              "WhenOpened": "2024-11-06T21:32:06.16Z",
               "EditorCaption": ""
             }
           ]

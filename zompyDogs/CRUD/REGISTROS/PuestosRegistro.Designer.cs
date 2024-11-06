@@ -56,8 +56,10 @@
             btnCancelar = new Button();
             btnGuardarPuesto = new Button();
             dgvPuestos = new DataGridView();
-            btnEliminar = new Button();
             label3 = new Label();
+            btnEditarPuesto = new Button();
+            btnEliminarUsuario = new Button();
+            btnAgregarNuevoPuesto = new Button();
             groupBox2.SuspendLayout();
             groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvPuestos).BeginInit();
@@ -321,11 +323,11 @@
             // 
             btnCancelar.BackColor = Color.FromArgb(255, 49, 54);
             btnCancelar.ForeColor = SystemColors.ControlLightLight;
-            btnCancelar.Location = new Point(631, 262);
+            btnCancelar.Location = new Point(797, 420);
             btnCancelar.Name = "btnCancelar";
-            btnCancelar.Size = new Size(160, 45);
+            btnCancelar.Size = new Size(148, 45);
             btnCancelar.TabIndex = 104;
-            btnCancelar.Text = "CANCELAR";
+            btnCancelar.Text = "Cancelar";
             btnCancelar.UseVisualStyleBackColor = false;
             btnCancelar.Click += btnCancelar_Click;
             // 
@@ -333,11 +335,11 @@
             // 
             btnGuardarPuesto.BackColor = Color.FromArgb(251, 147, 32);
             btnGuardarPuesto.ForeColor = SystemColors.ControlLightLight;
-            btnGuardarPuesto.Location = new Point(477, 262);
+            btnGuardarPuesto.Location = new Point(644, 420);
             btnGuardarPuesto.Name = "btnGuardarPuesto";
             btnGuardarPuesto.Size = new Size(148, 45);
             btnGuardarPuesto.TabIndex = 103;
-            btnGuardarPuesto.Text = "CONFIRMAR";
+            btnGuardarPuesto.Text = "Guardar";
             btnGuardarPuesto.UseVisualStyleBackColor = false;
             btnGuardarPuesto.Click += btnGuardarPuesto_Click;
             // 
@@ -365,17 +367,7 @@
             dgvPuestos.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dgvPuestos.Size = new Size(486, 177);
             dgvPuestos.TabIndex = 105;
-            // 
-            // btnEliminar
-            // 
-            btnEliminar.BackColor = Color.FromArgb(255, 49, 54);
-            btnEliminar.ForeColor = SystemColors.ControlLightLight;
-            btnEliminar.Location = new Point(797, 262);
-            btnEliminar.Name = "btnEliminar";
-            btnEliminar.Size = new Size(160, 45);
-            btnEliminar.TabIndex = 106;
-            btnEliminar.Text = "ELIMINAR";
-            btnEliminar.UseVisualStyleBackColor = false;
+            dgvPuestos.CellClick += dgvPuestos_CellClick;
             // 
             // label3
             // 
@@ -387,14 +379,46 @@
             label3.TabIndex = 134;
             label3.Text = "*Seleccione una fila para editar el puesto*";
             // 
+            // btnEditarPuesto
+            // 
+            btnEditarPuesto.Image = Properties.Resources.pen__1_;
+            btnEditarPuesto.Location = new Point(555, 268);
+            btnEditarPuesto.Name = "btnEditarPuesto";
+            btnEditarPuesto.Size = new Size(72, 72);
+            btnEditarPuesto.TabIndex = 138;
+            btnEditarPuesto.UseVisualStyleBackColor = true;
+            btnEditarPuesto.Click += btnEditarPuesto_Click;
+            // 
+            // btnEliminarUsuario
+            // 
+            btnEliminarUsuario.Image = Properties.Resources.bin;
+            btnEliminarUsuario.Location = new Point(633, 268);
+            btnEliminarUsuario.Name = "btnEliminarUsuario";
+            btnEliminarUsuario.Size = new Size(72, 72);
+            btnEliminarUsuario.TabIndex = 137;
+            btnEliminarUsuario.UseVisualStyleBackColor = true;
+            btnEliminarUsuario.Click += btnEliminarUsuario_Click;
+            // 
+            // btnAgregarNuevoPuesto
+            // 
+            btnAgregarNuevoPuesto.Image = Properties.Resources.plus;
+            btnAgregarNuevoPuesto.Location = new Point(477, 268);
+            btnAgregarNuevoPuesto.Name = "btnAgregarNuevoPuesto";
+            btnAgregarNuevoPuesto.Size = new Size(72, 72);
+            btnAgregarNuevoPuesto.TabIndex = 136;
+            btnAgregarNuevoPuesto.UseVisualStyleBackColor = true;
+            btnAgregarNuevoPuesto.Click += btnAgregarNuevoPuesto_Click;
+            // 
             // PuestosRegistro
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
-            ClientSize = new Size(987, 444);
+            ClientSize = new Size(987, 487);
+            Controls.Add(btnEditarPuesto);
+            Controls.Add(btnEliminarUsuario);
+            Controls.Add(btnAgregarNuevoPuesto);
             Controls.Add(label3);
-            Controls.Add(btnEliminar);
             Controls.Add(dgvPuestos);
             Controls.Add(btnCancelar);
             Controls.Add(btnGuardarPuesto);
@@ -431,7 +455,6 @@
         public Button btnCancelar;
         public Button btnGuardarPuesto;
         private DataGridView dgvPuestos;
-        public Button btnEliminar;
         private Label label3;
         public TextBox txtDiasLaborales;
         public TextBox txtCodigoGeneradoPuesto;
@@ -441,5 +464,8 @@
         private Label label5;
         public DateTimePicker tmEnd;
         public DateTimePicker tmBegin;
+        private Button btnEditarPuesto;
+        private Button btnEliminarUsuario;
+        private Button btnAgregarNuevoPuesto;
     }
 }

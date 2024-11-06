@@ -11,63 +11,77 @@ namespace ZompyDogsDAO
 
         // Metodo para validar el usuario y obtener sus datos
         public static (
-            bool isValid, 
-            bool isAdmin,
-            string nombreUser,
-            string apeUser,
-            string username,
-            //string password,
-            int idEmpleado
-            ) IsValidUser(string user, string clave)
+    bool isValid,
+    bool isAdmin,
+    string nombreUser,
+    string apeUser,
+    string username,
+    int idEmpleado
+) IsValidUser(string user, string clave)
         {
             bool isValid = false;
             bool isAdmin = false;
             string nombreUser = string.Empty;
             string apeUser = string.Empty;
             string username = string.Empty;
-            //string password = string.Empty;
             int idEmpleado = 0;
 
             try
             {
-                conn.Open();
+                // Confirmamos los valores recibidos
+                Console.WriteLine("Intentando validar el usuario: " + user + " con la clave proporcionada.");
 
-                // Consulta para validar al usuario
+                conn.Open();
+                Console.WriteLine("Conexión a la base de datos establecida.");
+
+                // Consulta para validar el usuario y la clave
                 string query = @"
-                    SELECT Nombre_Usuario, Apellido_Usuario,Usuario,IDUsuario, RolId 
-                    FROM v_DetallesUsuarios
-                    WHERE Usuario = @user
-                ";
+            SELECT Nombre_Usuario, Apellido_Usuario, Usuario, IDUsuario, RolId 
+            FROM v_DetallesUsuarios
+            WHERE Usuario = @user AND Clave = @password
+        ";
+
                 SqlCommand cmd = new SqlCommand(query, conn);
                 cmd.Parameters.AddWithValue("@user", user);
-                //cmd.Parameters.AddWithValue("@password", clave);
+                cmd.Parameters.AddWithValue("@password", clave);
+
+                // Confirmamos los parámetros establecidos en la consulta
+                System.Diagnostics.Debug.WriteLine("Parámetros asignados: usuario = " + user + ", clave = " + clave);
 
                 SqlDataReader reader = cmd.ExecuteReader();
+                System.Diagnostics.Debug.WriteLine("Consulta ejecutada.");
 
                 if (reader.HasRows)
                 {
                     isValid = true;
+                    System.Diagnostics.Debug.WriteLine("Usuario encontrado en la base de datos.");
+
                     while (reader.Read())
                     {
+
                         nombreUser = reader["Nombre_Usuario"].ToString();
                         apeUser = reader["Apellido_Usuario"].ToString();
                         username = reader["Usuario"].ToString();
-                       // password = reader["Clave"].ToString();
                         idEmpleado = reader.GetInt32(reader.GetOrdinal("IDUsuario"));
+
+                        System.Diagnostics.Debug.WriteLine("Datos obtenidos: Nombre = " + nombreUser + ", Apellido = " + apeUser + ", Usuario = " + username);
 
                         if (reader["RolId"] != DBNull.Value && Convert.ToInt32(reader["RolId"]) == 1)
                         {
                             isAdmin = true;
+                            System.Diagnostics.Debug.WriteLine("El usuario tiene permisos de administrador.");
                         }
                     }
                 }
-
+                else
+                {
+                    Console.WriteLine("Usuario o contraseña incorrectos. No se encontraron filas.");
+                }
 
                 reader.Close();
             }
             catch (Exception ex)
             {
-                // Manejo de excepción
                 Console.WriteLine("Error: " + ex.Message);
             }
             finally
@@ -75,75 +89,11 @@ namespace ZompyDogsDAO
                 if (conn.State == ConnectionState.Open)
                 {
                     conn.Close();
+                    Console.WriteLine("Conexión cerrada.");
                 }
             }
 
-            return (isValid, isAdmin, nombreUser, apeUser, username,idEmpleado);
+            return (isValid, isAdmin, nombreUser, apeUser, username, idEmpleado);
         }
-
-            public static (bool existeUsuario, string nombreUsuario, string rolUsuario) 
-            ObtenerUsuarioParaPeticionRegistro(int idUsuario)
-            {
-            bool existeUsuario = false;
-            string nombreUsuario = string.Empty;
-            string rolUsuario = string.Empty;
-
-            try
-            {
-                using (SqlConnection conn = new SqlConnection(con_string))
-                {
-                    conn.Open();
-
-                    // Consulta para obtener los detalles del usuario por su ID
-                    string query = @"
-                        SELECT Usuario, RolId 
-                        FROM v_DetallesUsuarios 
-                        WHERE IDUsuario = @idUsuario
-                    ";
-
-                    using (SqlCommand cmd = new SqlCommand(query, conn))
-                    {
-                        cmd.Parameters.AddWithValue("@idUsuario", idUsuario);
-
-                        SqlDataReader reader = cmd.ExecuteReader();
-
-                        if (reader.HasRows)
-                        {
-                            existeUsuario = true;
-                            while (reader.Read())
-                            {
-                                // Realiza la conversión directamente sobre el reader
-                                try
-                                {
-                                    idUsuario = reader["IDUsuario"] != DBNull.Value ? Convert.ToInt32(reader["IDUsuario"]) : 5;
-                                }
-                                catch (FormatException ex)
-                                {
-                                    // Manejar el error de formato
-                                    Console.WriteLine($"Error de formato al convertir IDUsuario: {ex.Message}");
-                                }
-                                catch (Exception ex)
-                                {
-                                    // Manejar cualquier otro error
-                                    Console.WriteLine($"Error inesperado: {ex.Message}");
-                                }
-                                nombreUsuario = reader["Usuario"].ToString();
-                                rolUsuario = reader["RolId"] != DBNull.Value ? reader["RolId"].ToString() : "No asignado";
-                            }
-                        }
-
-                        reader.Close();
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                // Manejo de errores
-                Console.WriteLine("Error al obtener usuario para petición registro: " + ex.Message);
-            }
-
-            return (existeUsuario, nombreUsuario, rolUsuario);
-        }
-
     }
 }

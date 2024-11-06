@@ -156,8 +156,8 @@ namespace zompyDogs
             }
 
             // Limpiar los controles existentes
-            categoryPanel.Controls.Clear();
-            categoryPanel.AutoScroll = true;
+            categoryPanelIN.Controls.Clear();
+            categoryPanelIN.AutoScroll = true;
 
             int buttonHeight = 80;
             int buttonWidth = 150;
@@ -173,7 +173,7 @@ namespace zompyDogs
                 btnCategory.Text = row["Categoria"].ToString();
 
                 // Asignar la ubicación
-                btnCategory.Location = new Point(-2, categoryPanel.Controls.Count * (buttonHeight + yOffset));
+                btnCategory.Location = new Point(-2, categoryPanelIN.Controls.Count * (buttonHeight + yOffset));
 
                 // Agregar evento de clic
                 btnCategory.Click += (sender, e) =>
@@ -182,7 +182,7 @@ namespace zompyDogs
                     CargarMenu(btnCategory.Text);
                 };
 
-                categoryPanel.Controls.Add(btnCategory);
+                categoryPanelIN.Controls.Add(btnCategory);
             }
         }
 

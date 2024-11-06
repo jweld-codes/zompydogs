@@ -296,6 +296,31 @@ namespace ZompyDogsDAO
 
             return dtpPuestos;
         }
+        public static DataTable ObtenerDetalllesPuestosParaEditar(string codigoPuesto)
+        {
+            DataTable dtpPuestos = new DataTable();
+            string query = "SELECT * FROM v_DetallesPuestos WHERE Codigo = @codiPuesto";
+
+            using (SqlConnection conn = new SqlConnection(con_string))
+            {
+                SqlCommand cmd = new SqlCommand(query, conn);
+                cmd.Parameters.AddWithValue("@codiPuesto", codigoPuesto);
+
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+
+                try
+                {
+                    conn.Open();
+                    da.Fill(dtpPuestos);
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine("Error al obtener las descripciones de puestos: " + ex.Message);
+                }
+            }
+
+            return dtpPuestos;
+        }
 
         /* --------------  BUSCADORES ------------------- */
         public static DataTable BuscadorDeUsuarios(string valorBusqueda)
@@ -633,8 +658,6 @@ namespace ZompyDogsDAO
             }
         }
         
-        
-        
         /* --------------  CRUD PARA PROVEEDORES ------------------- */
         //GUARDA LOS DATOS DE LOS PROVEEDORES
         public static void GuardarProveedor(ProveedorCrear proveedorAdd)
@@ -729,8 +752,6 @@ namespace ZompyDogsDAO
             }
         }
 
-
-
         /* --------------  CRUD PARA PUESTO ------------------- */
         public static void GuardarPuesto(PuestoREF puestoAdd)
         {
@@ -765,8 +786,71 @@ namespace ZompyDogsDAO
             }
         }
 
+        public static bool EliminarPuesto(string codigoPuesto)
+        {
+            string query = "DELETE FROM Puestos WHERE codigoPuesto = @codipuesto";
 
+            using (SqlConnection conn = new SqlConnection(con_string))
+            {
+                SqlCommand cmd = new SqlCommand(query, conn);
+                cmd.Parameters.AddWithValue("@codipuesto", codigoPuesto);
 
+                try
+                {
+                    conn.Open();
+                    int filasAfectadas = cmd.ExecuteNonQuery();
+
+                    return filasAfectadas > 0;
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine("Error al eliminar el puesto: " + ex.Message);
+                    return false;
+                }
+            }
+        }
+
+        public static bool ActualizarPuesto(PuestoREF puestoUpdate)
+        {
+            try
+            {
+                // Usamos parámetros para evitar SQL injection
+                string query = @"UPDATE Puestos 
+                         SET puesto = @Puesto, 
+                             descripcion = @Descripcion, 
+                             salario = @Salario, 
+                             horalaboralInicio = @HoraDeInicio, 
+                             diasLaborales = @DiasLaboral, 
+                             codigoRol = @codiRol, 
+                             estado = @Estado, 
+                             horaLaboralTermina = @HoraDeFin
+                         WHERE codigoPuesto = @codiPuesto";
+
+                // Crear la conexión a la base de datos
+                using (SqlConnection con = new SqlConnection(con_string))
+                {
+                    SqlCommand cmd = new SqlCommand(query, con);
+                    cmd.Parameters.AddWithValue("@codiPuesto", puestoUpdate.CodigoPuesto);
+                    cmd.Parameters.AddWithValue("@Puesto", puestoUpdate.Puesto);
+                    cmd.Parameters.AddWithValue("@Descripcion", puestoUpdate.Descripcion);
+                    cmd.Parameters.AddWithValue("@Salario", puestoUpdate.Salario);
+                    cmd.Parameters.AddWithValue("@HoraDeInicio", puestoUpdate.HoralaboralInicio);
+                    cmd.Parameters.AddWithValue("@DiasLaboral", puestoUpdate.DiasLaborales);
+                    cmd.Parameters.AddWithValue("@codiRol", puestoUpdate.CodigoRol);
+                    cmd.Parameters.AddWithValue("@Estado", puestoUpdate.Estado);
+                    cmd.Parameters.AddWithValue("@HoraDeFin", puestoUpdate.HoraLaboralTermina);
+
+                    con.Open();
+                    int rowsAffected = cmd.ExecuteNonQuery();
+                    return rowsAffected > 0;
+                }
+            }
+            catch (Exception ex)
+            {
+                // Manejar excepciones
+                throw new Exception("Error al actualizar el puesto: " + ex.Message);
+            }
+        }
 
         /* ------------------- EXTRAS ------------------------- */
         public static DataTable ObtenerPuestosDeEmpleadosParaComboBox()

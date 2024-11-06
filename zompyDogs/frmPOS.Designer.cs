@@ -28,8 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPOS));
-            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             topBarMenu = new Panel();
             button2 = new Button();
             pictureBox2 = new PictureBox();
@@ -39,21 +40,19 @@
             groupBox1 = new GroupBox();
             label15 = new Label();
             btnEliminarOrden = new Button();
-            textBox5 = new TextBox();
-            button1 = new Button();
-            textBox6 = new TextBox();
-            btnQtuMore = new Button();
+            txtPlatilloOrden = new TextBox();
+            btnConfirmarEdit = new Button();
+            txtCantidad = new TextBox();
+            btnQtyMore = new Button();
             btnQtyLess = new Button();
             dgvPedido = new DataGridView();
-            colProducto = new DataGridViewTextBoxColumn();
-            colCantidad = new DataGridViewTextBoxColumn();
-            colTotal = new DataGridViewTextBoxColumn();
             btnConfirmarPedido = new Button();
+            panel = new Panel();
             categoryPanel = new Panel();
+            panel6 = new Panel();
             label1 = new Label();
-            btnCategory = new Button();
             panel3 = new Panel();
-            label14 = new Label();
+            lblTotalAPagar = new Label();
             label13 = new Label();
             label12 = new Label();
             panelContenedrPOS = new Panel();
@@ -69,12 +68,14 @@
             btnAtras = new Button();
             lblPrecioPlatilo = new Label();
             label2 = new Label();
+            bnSrcPedidos = new BindingSource(components);
             topBarMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             panel1.SuspendLayout();
             groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvPedido).BeginInit();
-            categoryPanel.SuspendLayout();
+            panel.SuspendLayout();
+            panel6.SuspendLayout();
             panel3.SuspendLayout();
             panelContenedrPOS.SuspendLayout();
             flpPOSPanel.SuspendLayout();
@@ -82,6 +83,7 @@
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             panel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)bnSrcPedidos).BeginInit();
             SuspendLayout();
             // 
             // topBarMenu
@@ -162,10 +164,10 @@
             // 
             groupBox1.Controls.Add(label15);
             groupBox1.Controls.Add(btnEliminarOrden);
-            groupBox1.Controls.Add(textBox5);
-            groupBox1.Controls.Add(button1);
-            groupBox1.Controls.Add(textBox6);
-            groupBox1.Controls.Add(btnQtuMore);
+            groupBox1.Controls.Add(txtPlatilloOrden);
+            groupBox1.Controls.Add(btnConfirmarEdit);
+            groupBox1.Controls.Add(txtCantidad);
+            groupBox1.Controls.Add(btnQtyMore);
             groupBox1.Controls.Add(btnQtyLess);
             groupBox1.Location = new Point(5, 376);
             groupBox1.Name = "groupBox1";
@@ -193,42 +195,42 @@
             btnEliminarOrden.TabIndex = 6;
             btnEliminarOrden.UseVisualStyleBackColor = true;
             // 
-            // textBox5
+            // txtPlatilloOrden
             // 
-            textBox5.BorderStyle = BorderStyle.FixedSingle;
-            textBox5.Location = new Point(48, 53);
-            textBox5.Name = "textBox5";
-            textBox5.Size = new Size(136, 27);
-            textBox5.TabIndex = 2;
+            txtPlatilloOrden.BorderStyle = BorderStyle.FixedSingle;
+            txtPlatilloOrden.Location = new Point(48, 53);
+            txtPlatilloOrden.Name = "txtPlatilloOrden";
+            txtPlatilloOrden.Size = new Size(136, 27);
+            txtPlatilloOrden.TabIndex = 2;
             // 
-            // button1
+            // btnConfirmarEdit
             // 
-            button1.BackColor = SystemColors.Highlight;
-            button1.ForeColor = SystemColors.Control;
-            button1.Location = new Point(185, 97);
-            button1.Name = "button1";
-            button1.Size = new Size(116, 47);
-            button1.TabIndex = 5;
-            button1.Text = "Confirmar";
-            button1.UseVisualStyleBackColor = false;
+            btnConfirmarEdit.BackColor = SystemColors.Highlight;
+            btnConfirmarEdit.ForeColor = SystemColors.Control;
+            btnConfirmarEdit.Location = new Point(185, 97);
+            btnConfirmarEdit.Name = "btnConfirmarEdit";
+            btnConfirmarEdit.Size = new Size(116, 47);
+            btnConfirmarEdit.TabIndex = 5;
+            btnConfirmarEdit.Text = "Confirmar";
+            btnConfirmarEdit.UseVisualStyleBackColor = false;
             // 
-            // textBox6
+            // txtCantidad
             // 
-            textBox6.BorderStyle = BorderStyle.FixedSingle;
-            textBox6.Location = new Point(222, 53);
-            textBox6.Name = "textBox6";
-            textBox6.Size = new Size(48, 27);
-            textBox6.TabIndex = 3;
+            txtCantidad.BorderStyle = BorderStyle.FixedSingle;
+            txtCantidad.Location = new Point(222, 53);
+            txtCantidad.Name = "txtCantidad";
+            txtCantidad.Size = new Size(48, 27);
+            txtCantidad.TabIndex = 3;
             // 
-            // btnQtuMore
+            // btnQtyMore
             // 
-            btnQtuMore.FlatAppearance.BorderSize = 0;
-            btnQtuMore.Image = Properties.Resources.plus__1_;
-            btnQtuMore.Location = new Point(190, 51);
-            btnQtuMore.Name = "btnQtuMore";
-            btnQtuMore.Size = new Size(26, 29);
-            btnQtuMore.TabIndex = 5;
-            btnQtuMore.UseVisualStyleBackColor = true;
+            btnQtyMore.FlatAppearance.BorderSize = 0;
+            btnQtyMore.Image = Properties.Resources.plus__1_;
+            btnQtyMore.Location = new Point(190, 51);
+            btnQtyMore.Name = "btnQtyMore";
+            btnQtyMore.Size = new Size(26, 29);
+            btnQtyMore.TabIndex = 5;
+            btnQtyMore.UseVisualStyleBackColor = true;
             // 
             // btnQtyLess
             // 
@@ -250,44 +252,24 @@
             dgvPedido.BorderStyle = BorderStyle.None;
             dgvPedido.CellBorderStyle = DataGridViewCellBorderStyle.SunkenHorizontal;
             dgvPedido.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = SystemColors.Control;
-            dataGridViewCellStyle1.Font = new Font("Segoe UI", 9F);
-            dataGridViewCellStyle1.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = SystemColors.ControlLight;
-            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
-            dgvPedido.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = SystemColors.Control;
+            dataGridViewCellStyle2.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle2.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = SystemColors.ControlLight;
+            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
+            dgvPedido.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             dgvPedido.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvPedido.Columns.AddRange(new DataGridViewColumn[] { colProducto, colCantidad, colTotal });
             dgvPedido.GridColor = SystemColors.ScrollBar;
             dgvPedido.Location = new Point(5, 5);
             dgvPedido.Name = "dgvPedido";
             dgvPedido.RowHeadersVisible = false;
             dgvPedido.RowHeadersWidth = 51;
+            dgvPedido.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dgvPedido.Size = new Size(304, 337);
             dgvPedido.TabIndex = 0;
-            // 
-            // colProducto
-            // 
-            colProducto.HeaderText = "Producto";
-            colProducto.MinimumWidth = 6;
-            colProducto.Name = "colProducto";
-            colProducto.Width = 125;
-            // 
-            // colCantidad
-            // 
-            colCantidad.HeaderText = "Cantidad";
-            colCantidad.MinimumWidth = 6;
-            colCantidad.Name = "colCantidad";
-            colCantidad.Width = 125;
-            // 
-            // colTotal
-            // 
-            colTotal.HeaderText = "Total";
-            colTotal.MinimumWidth = 6;
-            colTotal.Name = "colTotal";
-            colTotal.Width = 125;
+            dgvPedido.CellClick += dgvPedido_CellClick;
             // 
             // btnConfirmarPedido
             // 
@@ -300,41 +282,48 @@
             btnConfirmarPedido.Text = "CONFIRMAR PEDIDO";
             btnConfirmarPedido.UseVisualStyleBackColor = false;
             // 
+            // panel
+            // 
+            panel.BorderStyle = BorderStyle.FixedSingle;
+            panel.Controls.Add(categoryPanel);
+            panel.Controls.Add(panel6);
+            panel.Dock = DockStyle.Left;
+            panel.Location = new Point(0, 0);
+            panel.Name = "panel";
+            panel.Size = new Size(153, 644);
+            panel.TabIndex = 2;
+            // 
             // categoryPanel
             // 
-            categoryPanel.BorderStyle = BorderStyle.FixedSingle;
-            categoryPanel.Controls.Add(label1);
-            categoryPanel.Controls.Add(btnCategory);
-            categoryPanel.Dock = DockStyle.Left;
-            categoryPanel.Location = new Point(0, 0);
+            categoryPanel.Dock = DockStyle.Fill;
+            categoryPanel.Location = new Point(0, 58);
             categoryPanel.Name = "categoryPanel";
-            categoryPanel.Size = new Size(153, 644);
-            categoryPanel.TabIndex = 2;
+            categoryPanel.Size = new Size(151, 584);
+            categoryPanel.TabIndex = 3;
+            // 
+            // panel6
+            // 
+            panel6.Controls.Add(label1);
+            panel6.Dock = DockStyle.Top;
+            panel6.Location = new Point(0, 0);
+            panel6.Name = "panel6";
+            panel6.Size = new Size(151, 58);
+            panel6.TabIndex = 2;
             // 
             // label1
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(11, 25);
+            label1.Location = new Point(9, 17);
             label1.Name = "label1";
             label1.Size = new Size(133, 28);
             label1.TabIndex = 0;
             label1.Text = "CATEGORIAS";
             // 
-            // btnCategory
-            // 
-            btnCategory.BackColor = Color.Green;
-            btnCategory.ForeColor = SystemColors.Control;
-            btnCategory.Location = new Point(6, 64);
-            btnCategory.Name = "btnCategory";
-            btnCategory.Size = new Size(141, 72);
-            btnCategory.TabIndex = 0;
-            btnCategory.UseVisualStyleBackColor = false;
-            // 
             // panel3
             // 
             panel3.BorderStyle = BorderStyle.FixedSingle;
-            panel3.Controls.Add(label14);
+            panel3.Controls.Add(lblTotalAPagar);
             panel3.Controls.Add(label13);
             panel3.Controls.Add(label12);
             panel3.Controls.Add(btnConfirmarPedido);
@@ -344,15 +333,15 @@
             panel3.Size = new Size(426, 63);
             panel3.TabIndex = 3;
             // 
-            // label14
+            // lblTotalAPagar
             // 
-            label14.AutoSize = true;
-            label14.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label14.Location = new Point(112, 17);
-            label14.Name = "label14";
-            label14.Size = new Size(57, 25);
-            label14.TabIndex = 4;
-            label14.Text = "00.00";
+            lblTotalAPagar.AutoSize = true;
+            lblTotalAPagar.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblTotalAPagar.Location = new Point(112, 17);
+            lblTotalAPagar.Name = "lblTotalAPagar";
+            lblTotalAPagar.Size = new Size(57, 25);
+            lblTotalAPagar.TabIndex = 4;
+            lblTotalAPagar.Text = "00.00";
             // 
             // label13
             // 
@@ -378,7 +367,7 @@
             panelContenedrPOS.Controls.Add(flpPOSPanel);
             panelContenedrPOS.Controls.Add(panel3);
             panelContenedrPOS.Controls.Add(panel1);
-            panelContenedrPOS.Controls.Add(categoryPanel);
+            panelContenedrPOS.Controls.Add(panel);
             panelContenedrPOS.Dock = DockStyle.Right;
             panelContenedrPOS.Location = new Point(0, 81);
             panelContenedrPOS.Name = "panelContenedrPOS";
@@ -518,8 +507,9 @@
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)dgvPedido).EndInit();
-            categoryPanel.ResumeLayout(false);
-            categoryPanel.PerformLayout();
+            panel.ResumeLayout(false);
+            panel6.ResumeLayout(false);
+            panel6.PerformLayout();
             panel3.ResumeLayout(false);
             panel3.PerformLayout();
             panelContenedrPOS.ResumeLayout(false);
@@ -530,6 +520,7 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
             panel5.ResumeLayout(false);
             panel5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)bnSrcPedidos).EndInit();
             ResumeLayout(false);
         }
 
@@ -540,13 +531,8 @@
         private Label lblTITULO;
         private Panel panel1;
         private Button btnConfirmarPedido;
-        private DataGridView dgvPedido;
-        private DataGridViewTextBoxColumn colProducto;
-        private DataGridViewTextBoxColumn colCantidad;
-        private DataGridViewTextBoxColumn colTotal;
-        private Panel categoryPanel;
+        private Panel panel;
         private Label label1;
-        private Button btnCategory;
         private Panel panel3;
         private Panel panelContenedrPOS;
         private FlowLayoutPanel flpPOSPanel;
@@ -560,18 +546,22 @@
         private TextBox textBox1;
         private Button btnNext;
         private Button btnAtras;
-        private Label label14;
+        private Label lblTotalAPagar;
         private Label label13;
         private Label label12;
-        private Button button1;
-        private Button btnQtuMore;
+        private Button btnConfirmarEdit;
+        private Button btnQtyMore;
         private Button btnQtyLess;
-        private TextBox textBox6;
-        private TextBox textBox5;
+        private TextBox txtCantidad;
+        private TextBox txtPlatilloOrden;
         private Label label15;
         private Button btnEliminarOrden;
         private GroupBox groupBox1;
         private Panel panel2;
         public Button button2;
+        private Panel categoryPanel;
+        private Panel panel6;
+        private BindingSource bnSrcPedidos;
+        public DataGridView dgvPedido;
     }
 }

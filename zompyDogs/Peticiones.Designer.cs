@@ -209,7 +209,7 @@
             btnActualizar.Size = new Size(72, 72);
             btnActualizar.TabIndex = 111;
             btnActualizar.UseVisualStyleBackColor = true;
-            btnActualizar.Click += btnActualizar_Click;
+          //  btnActualizar.Click += btnActualizar_Click;
             // 
             // btnRefreshDG
             // 

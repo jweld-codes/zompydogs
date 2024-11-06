@@ -214,10 +214,9 @@ namespace zompyDogs
             CargarPeticiones();
         }
 
-        private void btnActualizar_Click(object sender, EventArgs e)
+       /* private void btnActualizar_Click(object sender, EventArgs e)
         {
             PeticionesRegisro frmpeticionesRegistro = new PeticionesRegisro(2);
-            frmpeticionesRegistro.Guardar = 2;
 
             var peticionEditar = new PeticionesRegisro(IdEmpleado);
             peticionEditar.lblTituloRegistro.Text = "Editar Petición";
@@ -263,7 +262,7 @@ namespace zompyDogs
                     MessageBox.Show("Error al actualizar la petición.");
                 }
             };
-        }
+        }*/
 
         private void btnVisualizarRegistro_Click(object sender, EventArgs e)
         {

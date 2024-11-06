@@ -10,8 +10,9 @@ namespace ZompyDogsDAO
 {
     public class MenuDAO
     {
-        private static readonly string con_string = @"Data Source={ServidorJennifer}\\SQLEXPRESS;Initial Catalog=DB_ZompyDogs;Integrated Security=True;Encrypt=False";
-        
+        public static readonly string con_string = "Data Source=MACARENA\\SQLEXPRESS;Initial Catalog=DB_ZompyDogs;Integrated Security=True;Encrypt=False";
+        public static SqlConnection conn = new SqlConnection(con_string);
+
         public string ServidorOscar = "DESKTOP-8B6OMJK";
         public string ServidorJennifer = "MACARENA";
         public string ServidorGuillermo = "GUILLERMO-ORTEG";
