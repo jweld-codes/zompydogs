@@ -16,6 +16,9 @@
     <Compile Update="CRUD\REGISTROS\ProductoRegistro.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="CRUD\REGISTROS\PuestosRegistro.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="CRUD\REGISTROS\UsuarioRegistro.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -59,9 +62,6 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Peticiones.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="Reportes.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Usuarios.cs">

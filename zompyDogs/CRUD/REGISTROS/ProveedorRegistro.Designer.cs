@@ -28,18 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
-            btnGuardarUser = new Button();
+            btnGuardarProv = new Button();
             groupBox1 = new GroupBox();
             label10 = new Label();
             txtCodigoGenerado = new TextBox();
-            dtpFechaNacimiento = new DateTimePicker();
-            cbxEsatdoCivil = new ComboBox();
+            dtpFechaRegistro = new DateTimePicker();
+            cbxEstado = new ComboBox();
             label9 = new Label();
-            txtCedula = new TextBox();
+            txtNombreProv = new TextBox();
             label7 = new Label();
-            txtSegApellido = new TextBox();
+            txtEmail = new TextBox();
             label5 = new Label();
-            txtPrimApellido = new TextBox();
+            txtTelefono = new TextBox();
             label4 = new Label();
             txtSegNombre = new TextBox();
             label2 = new Label();
@@ -50,29 +50,29 @@
             groupBox1.SuspendLayout();
             SuspendLayout();
             // 
-            // btnGuardarUser
+            // btnGuardarProv
             // 
-            btnGuardarUser.BackColor = Color.FromArgb(251, 147, 32);
-            btnGuardarUser.ForeColor = SystemColors.ControlLightLight;
-            btnGuardarUser.Location = new Point(52, 475);
-            btnGuardarUser.Name = "btnGuardarUser";
-            btnGuardarUser.Size = new Size(177, 64);
-            btnGuardarUser.TabIndex = 104;
-            btnGuardarUser.Text = "GUARDAR";
-            btnGuardarUser.UseVisualStyleBackColor = false;
+            btnGuardarProv.BackColor = Color.FromArgb(251, 147, 32);
+            btnGuardarProv.ForeColor = SystemColors.ControlLightLight;
+            btnGuardarProv.Location = new Point(52, 475);
+            btnGuardarProv.Name = "btnGuardarProv";
+            btnGuardarProv.Size = new Size(177, 64);
+            btnGuardarProv.TabIndex = 104;
+            btnGuardarProv.Text = "GUARDAR";
+            btnGuardarProv.UseVisualStyleBackColor = false;
             // 
             // groupBox1
             // 
             groupBox1.Controls.Add(label10);
             groupBox1.Controls.Add(txtCodigoGenerado);
-            groupBox1.Controls.Add(dtpFechaNacimiento);
-            groupBox1.Controls.Add(cbxEsatdoCivil);
+            groupBox1.Controls.Add(dtpFechaRegistro);
+            groupBox1.Controls.Add(cbxEstado);
             groupBox1.Controls.Add(label9);
-            groupBox1.Controls.Add(txtCedula);
+            groupBox1.Controls.Add(txtNombreProv);
             groupBox1.Controls.Add(label7);
-            groupBox1.Controls.Add(txtSegApellido);
+            groupBox1.Controls.Add(txtEmail);
             groupBox1.Controls.Add(label5);
-            groupBox1.Controls.Add(txtPrimApellido);
+            groupBox1.Controls.Add(txtTelefono);
             groupBox1.Controls.Add(label4);
             groupBox1.Controls.Add(txtSegNombre);
             groupBox1.Controls.Add(label2);
@@ -104,23 +104,23 @@
             txtCodigoGenerado.Size = new Size(239, 27);
             txtCodigoGenerado.TabIndex = 105;
             // 
-            // dtpFechaNacimiento
+            // dtpFechaRegistro
             // 
-            dtpFechaNacimiento.Format = DateTimePickerFormat.Short;
-            dtpFechaNacimiento.Location = new Point(222, 69);
-            dtpFechaNacimiento.Name = "dtpFechaNacimiento";
-            dtpFechaNacimiento.Size = new Size(180, 27);
-            dtpFechaNacimiento.TabIndex = 113;
+            dtpFechaRegistro.Format = DateTimePickerFormat.Short;
+            dtpFechaRegistro.Location = new Point(222, 69);
+            dtpFechaRegistro.Name = "dtpFechaRegistro";
+            dtpFechaRegistro.Size = new Size(180, 27);
+            dtpFechaRegistro.TabIndex = 113;
             // 
-            // cbxEsatdoCivil
+            // cbxEstado
             // 
-            cbxEsatdoCivil.FormattingEnabled = true;
-            cbxEsatdoCivil.ItemHeight = 20;
-            cbxEsatdoCivil.Items.AddRange(new object[] { "ACTIVO", "INACTIVO" });
-            cbxEsatdoCivil.Location = new Point(19, 325);
-            cbxEsatdoCivil.Name = "cbxEsatdoCivil";
-            cbxEsatdoCivil.Size = new Size(180, 28);
-            cbxEsatdoCivil.TabIndex = 112;
+            cbxEstado.FormattingEnabled = true;
+            cbxEstado.ItemHeight = 20;
+            cbxEstado.Items.AddRange(new object[] { "ACTIVO", "INACTIVO" });
+            cbxEstado.Location = new Point(19, 325);
+            cbxEstado.Name = "cbxEstado";
+            cbxEstado.Size = new Size(180, 28);
+            cbxEstado.TabIndex = 112;
             // 
             // label9
             // 
@@ -131,14 +131,14 @@
             label9.TabIndex = 111;
             label9.Text = "Estado";
             // 
-            // txtCedula
+            // txtNombreProv
             // 
-            txtCedula.BorderStyle = BorderStyle.FixedSingle;
-            txtCedula.Location = new Point(19, 69);
-            txtCedula.Multiline = true;
-            txtCedula.Name = "txtCedula";
-            txtCedula.Size = new Size(180, 37);
-            txtCedula.TabIndex = 108;
+            txtNombreProv.BorderStyle = BorderStyle.FixedSingle;
+            txtNombreProv.Location = new Point(19, 69);
+            txtNombreProv.Multiline = true;
+            txtNombreProv.Name = "txtNombreProv";
+            txtNombreProv.Size = new Size(180, 37);
+            txtNombreProv.TabIndex = 108;
             // 
             // label7
             // 
@@ -149,14 +149,14 @@
             label7.TabIndex = 107;
             label7.Text = "Nombre del Proveedor";
             // 
-            // txtSegApellido
+            // txtEmail
             // 
-            txtSegApellido.BorderStyle = BorderStyle.FixedSingle;
-            txtSegApellido.Location = new Point(222, 240);
-            txtSegApellido.Multiline = true;
-            txtSegApellido.Name = "txtSegApellido";
-            txtSegApellido.Size = new Size(180, 37);
-            txtSegApellido.TabIndex = 104;
+            txtEmail.BorderStyle = BorderStyle.FixedSingle;
+            txtEmail.Location = new Point(222, 240);
+            txtEmail.Multiline = true;
+            txtEmail.Name = "txtEmail";
+            txtEmail.Size = new Size(180, 37);
+            txtEmail.TabIndex = 104;
             // 
             // label5
             // 
@@ -167,14 +167,14 @@
             label5.TabIndex = 103;
             label5.Text = "Correo Electrónico";
             // 
-            // txtPrimApellido
+            // txtTelefono
             // 
-            txtPrimApellido.BorderStyle = BorderStyle.FixedSingle;
-            txtPrimApellido.Location = new Point(19, 240);
-            txtPrimApellido.Multiline = true;
-            txtPrimApellido.Name = "txtPrimApellido";
-            txtPrimApellido.Size = new Size(180, 37);
-            txtPrimApellido.TabIndex = 102;
+            txtTelefono.BorderStyle = BorderStyle.FixedSingle;
+            txtTelefono.Location = new Point(19, 240);
+            txtTelefono.Multiline = true;
+            txtTelefono.Name = "txtTelefono";
+            txtTelefono.Size = new Size(180, 37);
+            txtTelefono.TabIndex = 102;
             // 
             // label4
             // 
@@ -241,14 +241,16 @@
             btnCancelar.TabIndex = 106;
             btnCancelar.Text = "CANCELAR";
             btnCancelar.UseVisualStyleBackColor = false;
+            btnCancelar.Click += btnCancelar_Click;
             // 
             // ProveedorRegistro
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.White;
             ClientSize = new Size(485, 561);
             Controls.Add(btnCancelar);
-            Controls.Add(btnGuardarUser);
+            Controls.Add(btnGuardarProv);
             Controls.Add(groupBox1);
             Controls.Add(lblTituloRegistro);
             Name = "ProveedorRegistro";
@@ -262,24 +264,24 @@
 
         #endregion
 
-        public Button btnGuardarUser;
+        public Button btnGuardarProv;
         private GroupBox groupBox1;
         private Label label10;
-        public DateTimePicker dtpFechaNacimiento;
-        private ComboBox cbxEsatdoCivil;
+        public DateTimePicker dtpFechaRegistro;
         private Label label9;
-        public TextBox txtCedula;
+        public TextBox txtNombreProv;
         private Label label7;
-        public TextBox txtSegApellido;
+        public TextBox txtEmail;
         private Label label5;
-        public TextBox txtPrimApellido;
+        public TextBox txtTelefono;
         private Label label4;
         public TextBox txtSegNombre;
         private Label label2;
         public TextBox txtPrimNombre;
         private Label label3;
         public Label lblTituloRegistro;
-        private TextBox txtCodigoGenerado;
         public Button btnCancelar;
+        public ComboBox cbxEstado;
+        public TextBox txtCodigoGenerado;
     }
 }

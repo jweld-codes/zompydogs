@@ -122,7 +122,7 @@ namespace zompyDogs
         private void btnPedidos_Click_1(object sender, EventArgs e)
         {
             CambiarColorBoton((Button)sender);
-            AbrirFormsHija(new Reportes());
+            //AbrirFormsHija(new Reportes());
         }
 
         private void btnInicio_Click(object sender, EventArgs e)

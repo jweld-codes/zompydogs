@@ -30,7 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Usuarios));
             dgvUsuarios = new DataGridView();
-            pictureBox1 = new PictureBox();
             txtBuscarUsuario = new TextBox();
             groupBox1 = new GroupBox();
             dgvProveedor = new DataGridView();
@@ -52,8 +51,8 @@
             btnVisualizarRegistro = new Button();
             btnRefreshDG = new Button();
             cbxFiltro = new ComboBox();
+            button1 = new Button();
             ((System.ComponentModel.ISupportInitialize)dgvUsuarios).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvProveedor).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dgvEmpleados).BeginInit();
@@ -79,17 +78,6 @@
             dgvUsuarios.Size = new Size(800, 338);
             dgvUsuarios.TabIndex = 69;
             dgvUsuarios.CellClick += dgvUsuarios_CellClick;
-            // 
-            // pictureBox1
-            // 
-            pictureBox1.BackColor = Color.White;
-            pictureBox1.Image = Properties.Resources.lupa;
-            pictureBox1.Location = new Point(339, 99);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(41, 27);
-            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox1.TabIndex = 65;
-            pictureBox1.TabStop = false;
             // 
             // txtBuscarUsuario
             // 
@@ -127,8 +115,10 @@
             dgvProveedor.Name = "dgvProveedor";
             dgvProveedor.ReadOnly = true;
             dgvProveedor.RowHeadersWidth = 51;
+            dgvProveedor.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dgvProveedor.Size = new Size(800, 338);
             dgvProveedor.TabIndex = 74;
+            dgvProveedor.CellClick += dgvProveedor_CellClick;
             // 
             // dgvEmpleados
             // 
@@ -145,6 +135,7 @@
             dgvEmpleados.RowHeadersWidth = 51;
             dgvEmpleados.Size = new Size(800, 338);
             dgvEmpleados.TabIndex = 73;
+            dgvEmpleados.CellClick += dgvEmpleados_CellClick;
             // 
             // dgvAdminis
             // 
@@ -161,6 +152,7 @@
             dgvAdminis.RowHeadersWidth = 51;
             dgvAdminis.Size = new Size(800, 338);
             dgvAdminis.TabIndex = 72;
+            dgvAdminis.CellClick += dgvAdminis_CellClick;
             // 
             // btnAgregarNuevoUsuario
             // 
@@ -322,13 +314,14 @@
             btnVisualizarRegistro.Size = new Size(72, 72);
             btnVisualizarRegistro.TabIndex = 116;
             btnVisualizarRegistro.UseVisualStyleBackColor = true;
+            btnVisualizarRegistro.Click += btnVisualizarRegistro_Click;
             // 
             // btnRefreshDG
             // 
             btnRefreshDG.FlatAppearance.BorderSize = 0;
             btnRefreshDG.FlatStyle = FlatStyle.Flat;
             btnRefreshDG.Image = Properties.Resources.refresh;
-            btnRefreshDG.Location = new Point(661, 246);
+            btnRefreshDG.Location = new Point(800, 246);
             btnRefreshDG.Name = "btnRefreshDG";
             btnRefreshDG.Size = new Size(29, 29);
             btnRefreshDG.TabIndex = 118;
@@ -339,7 +332,7 @@
             // 
             cbxFiltro.FormattingEnabled = true;
             cbxFiltro.Items.AddRange(new object[] { "Activo", "Inactivo" });
-            cbxFiltro.Location = new Point(698, 245);
+            cbxFiltro.Location = new Point(653, 245);
             cbxFiltro.Margin = new Padding(3, 3, 6, 3);
             cbxFiltro.Name = "cbxFiltro";
             cbxFiltro.RightToLeft = RightToLeft.Yes;
@@ -349,12 +342,23 @@
             cbxFiltro.Text = "Filtro";
             cbxFiltro.SelectedIndexChanged += cbxFiltro_SelectedIndexChanged;
             // 
+            // button1
+            // 
+            button1.FlatStyle = FlatStyle.Flat;
+            button1.Image = Properties.Resources.search;
+            button1.Location = new Point(348, 99);
+            button1.Name = "button1";
+            button1.Size = new Size(30, 27);
+            button1.TabIndex = 119;
+            button1.UseVisualStyleBackColor = true;
+            // 
             // Usuarios
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.Window;
             ClientSize = new Size(901, 725);
+            Controls.Add(button1);
             Controls.Add(btnRefreshDG);
             Controls.Add(cbxFiltro);
             Controls.Add(btnVisualizarRegistro);
@@ -362,16 +366,14 @@
             Controls.Add(btnEliminarUsuario);
             Controls.Add(topBarMenu);
             Controls.Add(lblBreadCrumbUser);
-            Controls.Add(groupBox1);
             Controls.Add(label1);
             Controls.Add(btnAgregarNuevoUsuario);
             Controls.Add(lblTituloRegistroPanel);
-            Controls.Add(pictureBox1);
             Controls.Add(txtBuscarUsuario);
+            Controls.Add(groupBox1);
             Name = "Usuarios";
             Text = "Usuarios";
             ((System.ComponentModel.ISupportInitialize)dgvUsuarios).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)dgvProveedor).EndInit();
             ((System.ComponentModel.ISupportInitialize)dgvEmpleados).EndInit();
@@ -384,8 +386,6 @@
         }
 
         #endregion
-        private DataGridView dgvUsuarios;
-        private PictureBox pictureBox1;
         private TextBox txtBuscarUsuario;
         private GroupBox groupBox1;
         private Button btnAgregarNuevoUsuario;
@@ -400,12 +400,14 @@
         private Button btnEliminarUsuario;
         private Button btnEmpleadoPanel;
         private Button btnAdminPanel;
-        private DataGridView dgvEmpleados;
-        private DataGridView dgvAdminis;
         private DataGridView dgvProveedor;
         private Button btnPrveedores;
         private Button btnVisualizarRegistro;
         public Button btnRefreshDG;
         public ComboBox cbxFiltro;
+        private Button button1;
+        public DataGridView dgvUsuarios;
+        public DataGridView dgvEmpleados;
+        public DataGridView dgvAdminis;
     }
 }

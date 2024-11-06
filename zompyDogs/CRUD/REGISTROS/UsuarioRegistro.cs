@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using zompyDogs.CRUD.REGISTROS;
 using ZompyDogsDAO;
 using ZompyDogsLib.Controladores;
 
@@ -27,17 +28,56 @@ namespace zompyDogs
             _controladorGeneradorCodigo = new ControladorGeneradoresDeCodigo();
 
             GeneradordeCodigoUsuarioFromForm();
-            CargarPuestosComboBox();
             CargarRolesComboBox();
 
             int siguienteID = UsuarioDAO.ObtenerSiguienteID();
             lblidDetalleUsuario.Text = siguienteID.ToString();
 
+            cbxRol.SelectedIndexChanged += cbxRol_SelectedIndexChanged;
+
         }
 
-        private void CargarPuestosComboBox()
+        private void cbxRol_SelectedIndexChanged(object sender, EventArgs e)
         {
-            DataTable dtPuestos = UsuarioDAO.ObtenerPuestosParaComboBox();
+            if (cbxRol.SelectedValue is DataRowView dataRowView)
+            {
+                int codigoRolSeleccionado = Convert.ToInt32(dataRowView["Id_Rol"]);
+
+                if (codigoRolSeleccionado == 1) // 1 para Administrador
+                {
+                    CargarPuestosAdminsComboBox();
+                }
+                else if (codigoRolSeleccionado == 2) // 2 para Empleado
+                {
+                    CargarPuestosEmpleadosComboBox();
+                }
+            }
+            else if (cbxRol.SelectedValue != null)
+            {
+                int codigoRolSeleccionado = Convert.ToInt32(cbxRol.SelectedValue);
+
+                if (codigoRolSeleccionado == 1)
+                {
+                    CargarPuestosAdminsComboBox();
+                }
+                else if (codigoRolSeleccionado == 2)
+                {
+                    CargarPuestosEmpleadosComboBox();
+                }
+            }
+        }
+
+        public void CargarPuestosEmpleadosComboBox()
+        {
+            DataTable dtPuestos = UsuarioDAO.ObtenerPuestosDeEmpleadosParaComboBox();
+
+            cbPuesto.DataSource = dtPuestos;
+            cbPuesto.DisplayMember = "puesto";
+            cbPuesto.ValueMember = "IdPuesto";
+        }
+        public void CargarPuestosAdminsComboBox()
+        {
+            DataTable dtPuestos = UsuarioDAO.ObtenerPuestosDeAdminsParaComboBox();
 
             cbPuesto.DataSource = dtPuestos;
             cbPuesto.DisplayMember = "puesto";
@@ -94,6 +134,12 @@ namespace zompyDogs
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             this.Hide();
+        }
+
+        private void btnAddPuesto_Click(object sender, EventArgs e)
+        {
+            PuestosRegistro frmPuestoRegistro = new PuestosRegistro();
+            frmPuestoRegistro.Show();
         }
     }
 }

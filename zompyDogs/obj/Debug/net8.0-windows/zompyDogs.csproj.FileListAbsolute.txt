@@ -167,7 +167,6 @@ C:\Users\jenni\Documents\GitHub\unirec\zompydogs\zompyDogs\obj\Debug\net8.0-wind
 C:\Users\jenni\Documents\GitHub\unirec\zompydogs\zompyDogs\obj\Debug\net8.0-windows\zompyDogs.genruntimeconfig.cache
 C:\Users\jenni\Documents\GitHub\unirec\zompydogs\zompyDogs\obj\Debug\net8.0-windows\ref\zompyDogs.dll
 C:\Users\jenni\Documents\GitHub\unirec\zompydogs\zompyDogs\obj\Debug\net8.0-windows\zompyDogs.CRUD.REGISTROS.ProductoRegistro.resources
-C:\Users\jenni\Documents\GitHub\unirec\zompydogs\zompyDogs\obj\Debug\net8.0-windows\zompyDogs.Reportes.resources
 C:\Users\oscar\Documents\GitHub\zompydogs\zompyDogs\bin\Debug\net8.0-windows\zompyDogs.exe
 C:\Users\oscar\Documents\GitHub\zompydogs\zompyDogs\bin\Debug\net8.0-windows\zompyDogs.deps.json
 C:\Users\oscar\Documents\GitHub\zompydogs\zompyDogs\bin\Debug\net8.0-windows\zompyDogs.runtimeconfig.json
@@ -262,3 +261,4 @@ C:\Users\jenni\Documents\GitHub\unirec\zompydogs\zompyDogs\bin\Debug\net8.0-wind
 C:\Users\jenni\Documents\GitHub\unirec\zompydogs\zompyDogs\bin\Debug\net8.0-windows\Microsoft.Extensions.FileProviders.Physical.dll
 C:\Users\jenni\Documents\GitHub\unirec\zompydogs\zompyDogs\bin\Debug\net8.0-windows\Microsoft.Extensions.FileSystemGlobbing.dll
 C:\Users\jenni\Documents\GitHub\unirec\zompydogs\zompyDogs\bin\Debug\net8.0-windows\Microsoft.Extensions.Primitives.dll
+C:\Users\jenni\Documents\GitHub\unirec\zompydogs\zompyDogs\obj\Debug\net8.0-windows\zompyDogs.CRUD.REGISTROS.PuestosRegistro.resources

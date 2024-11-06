@@ -74,15 +74,15 @@ namespace zompyDogs
                 try
                 {
                     conn.Open();
-                    object resultado = cmd.ExecuteScalar(); // Ejecuta la consulta y obtiene el resultado
+                    object resultado = cmd.ExecuteScalar();
 
-                    if (resultado != DBNull.Value) // Verifica si hay un valor
+                    if (resultado != DBNull.Value)
                     {
-                        lblGananciaSemanal.Text = $"{Convert.ToDecimal(resultado):C}"; // Formatea como moneda
+                        lblGananciaSemanal.Text = $"{Convert.ToDecimal(resultado):C}";
                     }
                     else
                     {
-                        lblGananciaSemanal.Text = "L. 0.00"; // Si no hay ganancias
+                        lblGananciaSemanal.Text = "L. 0.00";
                     }
                 }
                 catch (Exception ex)

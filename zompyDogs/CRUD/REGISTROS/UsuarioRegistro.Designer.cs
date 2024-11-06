@@ -50,25 +50,14 @@
             txtSegNombre = new TextBox();
             label2 = new Label();
             groupBox2 = new GroupBox();
+            dtpFechaRegistro = new DateTimePicker();
             btnGeneradorPassword = new Button();
             btnGeneradorUsername = new Button();
             txtPassword = new TextBox();
             label16 = new Label();
             txtUsername = new TextBox();
             label15 = new Label();
-            groupBox3 = new GroupBox();
-            chbxDomingo = new CheckBox();
-            chbxSabado = new CheckBox();
-            chbxViernes = new CheckBox();
-            chbxJueves = new CheckBox();
-            chbxMiercoles = new CheckBox();
-            chbxMartes = new CheckBox();
-            chbxLunes = new CheckBox();
-            cbHorasLaborales = new ComboBox();
-            label14 = new Label();
-            txtSalario = new TextBox();
-            label13 = new Label();
-            button1 = new Button();
+            btnAddPuesto = new Button();
             cbPuesto = new ComboBox();
             label12 = new Label();
             cbxRol = new ComboBox();
@@ -77,12 +66,8 @@
             btnCancelar = new Button();
             label1 = new Label();
             lblidDetalleUsuario = new Label();
-            dtpFechaRegistro = new DateTimePicker();
-            cbxEstado = new ComboBox();
-            label17 = new Label();
             groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
-            groupBox3.SuspendLayout();
             SuspendLayout();
             // 
             // lblTituloRegistro
@@ -296,8 +281,6 @@
             // 
             // groupBox2
             // 
-            groupBox2.Controls.Add(cbxEstado);
-            groupBox2.Controls.Add(label17);
             groupBox2.Controls.Add(dtpFechaRegistro);
             groupBox2.Controls.Add(btnGeneradorPassword);
             groupBox2.Controls.Add(btnGeneradorUsername);
@@ -305,26 +288,29 @@
             groupBox2.Controls.Add(label16);
             groupBox2.Controls.Add(txtUsername);
             groupBox2.Controls.Add(label15);
-            groupBox2.Controls.Add(groupBox3);
-            groupBox2.Controls.Add(cbHorasLaborales);
-            groupBox2.Controls.Add(label14);
-            groupBox2.Controls.Add(txtSalario);
-            groupBox2.Controls.Add(label13);
-            groupBox2.Controls.Add(button1);
+            groupBox2.Controls.Add(btnAddPuesto);
             groupBox2.Controls.Add(cbPuesto);
             groupBox2.Controls.Add(label12);
             groupBox2.Controls.Add(cbxRol);
             groupBox2.Controls.Add(label11);
             groupBox2.Location = new Point(478, 77);
             groupBox2.Name = "groupBox2";
-            groupBox2.Size = new Size(448, 457);
+            groupBox2.Size = new Size(448, 243);
             groupBox2.TabIndex = 100;
             groupBox2.TabStop = false;
             groupBox2.Text = "Datos de Usuario";
             // 
+            // dtpFechaRegistro
+            // 
+            dtpFechaRegistro.Format = DateTimePickerFormat.Short;
+            dtpFechaRegistro.Location = new Point(308, 0);
+            dtpFechaRegistro.Name = "dtpFechaRegistro";
+            dtpFechaRegistro.Size = new Size(125, 27);
+            dtpFechaRegistro.TabIndex = 115;
+            // 
             // btnGeneradorPassword
             // 
-            btnGeneradorPassword.Location = new Point(212, 356);
+            btnGeneradorPassword.Location = new Point(213, 189);
             btnGeneradorPassword.Name = "btnGeneradorPassword";
             btnGeneradorPassword.Size = new Size(111, 29);
             btnGeneradorPassword.TabIndex = 129;
@@ -334,7 +320,7 @@
             // 
             // btnGeneradorUsername
             // 
-            btnGeneradorUsername.Location = new Point(14, 356);
+            btnGeneradorUsername.Location = new Point(15, 189);
             btnGeneradorUsername.Name = "btnGeneradorUsername";
             btnGeneradorUsername.Size = new Size(124, 29);
             btnGeneradorUsername.TabIndex = 128;
@@ -345,7 +331,7 @@
             // txtPassword
             // 
             txtPassword.BorderStyle = BorderStyle.FixedSingle;
-            txtPassword.Location = new Point(213, 323);
+            txtPassword.Location = new Point(214, 156);
             txtPassword.Multiline = true;
             txtPassword.Name = "txtPassword";
             txtPassword.PasswordChar = '*';
@@ -355,7 +341,7 @@
             // label16
             // 
             label16.AutoSize = true;
-            label16.Location = new Point(216, 300);
+            label16.Location = new Point(217, 133);
             label16.Name = "label16";
             label16.Size = new Size(45, 20);
             label16.TabIndex = 127;
@@ -364,7 +350,7 @@
             // txtUsername
             // 
             txtUsername.BorderStyle = BorderStyle.FixedSingle;
-            txtUsername.Location = new Point(15, 323);
+            txtUsername.Location = new Point(16, 156);
             txtUsername.Multiline = true;
             txtUsername.Name = "txtUsername";
             txtUsername.Size = new Size(180, 29);
@@ -373,143 +359,21 @@
             // label15
             // 
             label15.AutoSize = true;
-            label15.Location = new Point(18, 300);
+            label15.Location = new Point(19, 133);
             label15.Name = "label15";
             label15.Size = new Size(59, 20);
             label15.TabIndex = 125;
             label15.Text = "Usuario";
             // 
-            // groupBox3
+            // btnAddPuesto
             // 
-            groupBox3.Controls.Add(chbxDomingo);
-            groupBox3.Controls.Add(chbxSabado);
-            groupBox3.Controls.Add(chbxViernes);
-            groupBox3.Controls.Add(chbxJueves);
-            groupBox3.Controls.Add(chbxMiercoles);
-            groupBox3.Controls.Add(chbxMartes);
-            groupBox3.Controls.Add(chbxLunes);
-            groupBox3.Location = new Point(213, 125);
-            groupBox3.Name = "groupBox3";
-            groupBox3.Size = new Size(229, 161);
-            groupBox3.TabIndex = 123;
-            groupBox3.TabStop = false;
-            groupBox3.Text = "Horario";
-            // 
-            // chbxDomingo
-            // 
-            chbxDomingo.AutoSize = true;
-            chbxDomingo.Location = new Point(126, 94);
-            chbxDomingo.Name = "chbxDomingo";
-            chbxDomingo.Size = new Size(94, 24);
-            chbxDomingo.TabIndex = 6;
-            chbxDomingo.Text = "Domingo";
-            chbxDomingo.UseVisualStyleBackColor = true;
-            // 
-            // chbxSabado
-            // 
-            chbxSabado.AutoSize = true;
-            chbxSabado.Location = new Point(126, 66);
-            chbxSabado.Name = "chbxSabado";
-            chbxSabado.Size = new Size(82, 24);
-            chbxSabado.TabIndex = 5;
-            chbxSabado.Text = "Sábado";
-            chbxSabado.UseVisualStyleBackColor = true;
-            // 
-            // chbxViernes
-            // 
-            chbxViernes.AutoSize = true;
-            chbxViernes.Location = new Point(126, 36);
-            chbxViernes.Name = "chbxViernes";
-            chbxViernes.Size = new Size(79, 24);
-            chbxViernes.TabIndex = 4;
-            chbxViernes.Text = "Viernes";
-            chbxViernes.UseVisualStyleBackColor = true;
-            // 
-            // chbxJueves
-            // 
-            chbxJueves.AutoSize = true;
-            chbxJueves.Location = new Point(16, 124);
-            chbxJueves.Name = "chbxJueves";
-            chbxJueves.Size = new Size(73, 24);
-            chbxJueves.TabIndex = 3;
-            chbxJueves.Text = "Jueves";
-            chbxJueves.UseVisualStyleBackColor = true;
-            // 
-            // chbxMiercoles
-            // 
-            chbxMiercoles.AutoSize = true;
-            chbxMiercoles.Location = new Point(16, 96);
-            chbxMiercoles.Name = "chbxMiercoles";
-            chbxMiercoles.Size = new Size(95, 24);
-            chbxMiercoles.TabIndex = 2;
-            chbxMiercoles.Text = "Miércoles";
-            chbxMiercoles.UseVisualStyleBackColor = true;
-            // 
-            // chbxMartes
-            // 
-            chbxMartes.AutoSize = true;
-            chbxMartes.Location = new Point(16, 66);
-            chbxMartes.Name = "chbxMartes";
-            chbxMartes.Size = new Size(76, 24);
-            chbxMartes.TabIndex = 1;
-            chbxMartes.Text = "Martes";
-            chbxMartes.UseVisualStyleBackColor = true;
-            // 
-            // chbxLunes
-            // 
-            chbxLunes.AutoSize = true;
-            chbxLunes.Location = new Point(16, 36);
-            chbxLunes.Name = "chbxLunes";
-            chbxLunes.Size = new Size(68, 24);
-            chbxLunes.TabIndex = 0;
-            chbxLunes.Text = "Lunes";
-            chbxLunes.UseVisualStyleBackColor = true;
-            // 
-            // cbHorasLaborales
-            // 
-            cbHorasLaborales.FormattingEnabled = true;
-            cbHorasLaborales.ItemHeight = 20;
-            cbHorasLaborales.Items.AddRange(new object[] { "7:00 AM - 5:00 PM", "5:00 PM - 11:00 PM", "8:00 AM - 3:00 PM", "6:00 AM - 12:00 PM" });
-            cbHorasLaborales.Location = new Point(15, 240);
-            cbHorasLaborales.Name = "cbHorasLaborales";
-            cbHorasLaborales.Size = new Size(180, 28);
-            cbHorasLaborales.TabIndex = 122;
-            // 
-            // label14
-            // 
-            label14.AutoSize = true;
-            label14.Location = new Point(15, 215);
-            label14.Name = "label14";
-            label14.Size = new Size(48, 20);
-            label14.TabIndex = 121;
-            label14.Text = "Horas";
-            // 
-            // txtSalario
-            // 
-            txtSalario.BorderStyle = BorderStyle.FixedSingle;
-            txtSalario.Location = new Point(15, 148);
-            txtSalario.Multiline = true;
-            txtSalario.Name = "txtSalario";
-            txtSalario.Size = new Size(180, 37);
-            txtSalario.TabIndex = 115;
-            // 
-            // label13
-            // 
-            label13.AutoSize = true;
-            label13.Location = new Point(15, 125);
-            label13.Name = "label13";
-            label13.Size = new Size(55, 20);
-            label13.TabIndex = 120;
-            label13.Text = "Salario";
-            // 
-            // button1
-            // 
-            button1.Image = Properties.Resources.add_button;
-            button1.Location = new Point(395, 69);
-            button1.Name = "button1";
-            button1.Size = new Size(30, 28);
-            button1.TabIndex = 119;
-            button1.UseVisualStyleBackColor = true;
+            btnAddPuesto.Image = Properties.Resources.add_button;
+            btnAddPuesto.Location = new Point(395, 69);
+            btnAddPuesto.Name = "btnAddPuesto";
+            btnAddPuesto.Size = new Size(30, 28);
+            btnAddPuesto.TabIndex = 119;
+            btnAddPuesto.UseVisualStyleBackColor = true;
+            btnAddPuesto.Click += btnAddPuesto_Click;
             // 
             // cbPuesto
             // 
@@ -539,6 +403,7 @@
             cbxRol.Name = "cbxRol";
             cbxRol.Size = new Size(180, 28);
             cbxRol.TabIndex = 116;
+            cbxRol.SelectedIndexChanged += cbxRol_SelectedIndexChanged;
             // 
             // label11
             // 
@@ -553,9 +418,9 @@
             // 
             btnGuardarUser.BackColor = Color.FromArgb(251, 147, 32);
             btnGuardarUser.ForeColor = SystemColors.ControlLightLight;
-            btnGuardarUser.Location = new Point(286, 540);
+            btnGuardarUser.Location = new Point(524, 347);
             btnGuardarUser.Name = "btnGuardarUser";
-            btnGuardarUser.Size = new Size(177, 64);
+            btnGuardarUser.Size = new Size(150, 42);
             btnGuardarUser.TabIndex = 101;
             btnGuardarUser.Text = "GUARDAR";
             btnGuardarUser.UseVisualStyleBackColor = false;
@@ -564,9 +429,9 @@
             // 
             btnCancelar.BackColor = Color.FromArgb(255, 49, 54);
             btnCancelar.ForeColor = SystemColors.ControlLightLight;
-            btnCancelar.Location = new Point(484, 540);
+            btnCancelar.Location = new Point(690, 347);
             btnCancelar.Name = "btnCancelar";
-            btnCancelar.Size = new Size(177, 64);
+            btnCancelar.Size = new Size(150, 42);
             btnCancelar.TabIndex = 102;
             btnCancelar.Text = "CANCELAR";
             btnCancelar.UseVisualStyleBackColor = false;
@@ -590,39 +455,12 @@
             lblidDetalleUsuario.TabIndex = 116;
             lblidDetalleUsuario.Text = "0";
             // 
-            // dtpFechaRegistro
-            // 
-            dtpFechaRegistro.Format = DateTimePickerFormat.Short;
-            dtpFechaRegistro.Location = new Point(308, 0);
-            dtpFechaRegistro.Name = "dtpFechaRegistro";
-            dtpFechaRegistro.Size = new Size(125, 27);
-            dtpFechaRegistro.TabIndex = 115;
-            // 
-            // cbxEstado
-            // 
-            cbxEstado.FormattingEnabled = true;
-            cbxEstado.ItemHeight = 20;
-            cbxEstado.Items.AddRange(new object[] { "ACTIVO", "INACTIVO" });
-            cbxEstado.Location = new Point(15, 423);
-            cbxEstado.Name = "cbxEstado";
-            cbxEstado.Size = new Size(180, 28);
-            cbxEstado.TabIndex = 116;
-            // 
-            // label17
-            // 
-            label17.AutoSize = true;
-            label17.Location = new Point(15, 398);
-            label17.Name = "label17";
-            label17.Size = new Size(54, 20);
-            label17.TabIndex = 115;
-            label17.Text = "Estado";
-            // 
             // UsuarioRegistro
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.Window;
-            ClientSize = new Size(955, 615);
+            ClientSize = new Size(955, 545);
             Controls.Add(lblidDetalleUsuario);
             Controls.Add(label1);
             Controls.Add(btnCancelar);
@@ -638,8 +476,6 @@
             groupBox1.PerformLayout();
             groupBox2.ResumeLayout(false);
             groupBox2.PerformLayout();
-            groupBox3.ResumeLayout(false);
-            groupBox3.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -669,20 +505,8 @@
         private GroupBox groupBox2;
         public ComboBox cbxRol;
         private Label label11;
-        private Button button1;
+        private Button btnAddPuesto;
         private Label label12;
-        public ComboBox cbHorasLaborales;
-        private Label label14;
-        public TextBox txtSalario;
-        private Label label13;
-        public GroupBox groupBox3;
-        public CheckBox chbxDomingo;
-        public CheckBox chbxSabado;
-        public CheckBox chbxViernes;
-        public CheckBox chbxJueves;
-        public CheckBox chbxMiercoles;
-        public CheckBox chbxMartes;
-        public CheckBox chbxLunes;
         public TextBox txtPassword;
         private Label label16;
         public TextBox txtUsername;
@@ -696,7 +520,5 @@
         private Label label1;
         public Label lblidDetalleUsuario;
         public DateTimePicker dtpFechaRegistro;
-        public ComboBox cbxEstado;
-        private Label label17;
     }
 }
