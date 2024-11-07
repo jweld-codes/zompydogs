@@ -62,9 +62,9 @@
             // 
             label4.AutoSize = true;
             label4.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label4.Location = new Point(444, 450);
+            label4.Location = new Point(388, 338);
             label4.Name = "label4";
-            label4.Size = new Size(80, 20);
+            label4.Size = new Size(64, 15);
             label4.TabIndex = 26;
             label4.Text = "Peticiones";
             // 
@@ -73,18 +73,19 @@
             panel6.BorderStyle = BorderStyle.Fixed3D;
             panel6.Controls.Add(lblTotalPedidas);
             panel6.Controls.Add(label6);
-            panel6.Location = new Point(560, 299);
+            panel6.Location = new Point(490, 224);
+            panel6.Margin = new Padding(3, 2, 3, 2);
             panel6.Name = "panel6";
-            panel6.Size = new Size(188, 118);
+            panel6.Size = new Size(165, 90);
             panel6.TabIndex = 12;
             // 
             // lblTotalPedidas
             // 
             lblTotalPedidas.AutoSize = true;
             lblTotalPedidas.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblTotalPedidas.Location = new Point(28, 42);
+            lblTotalPedidas.Location = new Point(24, 32);
             lblTotalPedidas.Name = "lblTotalPedidas";
-            lblTotalPedidas.Size = new Size(52, 41);
+            lblTotalPedidas.Size = new Size(42, 32);
             lblTotalPedidas.TabIndex = 17;
             lblTotalPedidas.Text = "00";
             // 
@@ -92,9 +93,9 @@
             // 
             label6.AutoSize = true;
             label6.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label6.Location = new Point(28, 10);
+            label6.Location = new Point(24, 8);
             label6.Name = "label6";
-            label6.Size = new Size(124, 20);
+            label6.Size = new Size(97, 15);
             label6.TabIndex = 16;
             label6.Text = "Total de Pedidos";
             // 
@@ -103,18 +104,19 @@
             panel4.BorderStyle = BorderStyle.Fixed3D;
             panel4.Controls.Add(lblGananciaSemanal);
             panel4.Controls.Add(label5);
-            panel4.Location = new Point(148, 299);
+            panel4.Location = new Point(130, 224);
+            panel4.Margin = new Padding(3, 2, 3, 2);
             panel4.Name = "panel4";
-            panel4.Size = new Size(188, 118);
+            panel4.Size = new Size(165, 90);
             panel4.TabIndex = 22;
             // 
             // lblGananciaSemanal
             // 
             lblGananciaSemanal.AutoSize = true;
             lblGananciaSemanal.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblGananciaSemanal.Location = new Point(22, 42);
+            lblGananciaSemanal.Location = new Point(19, 32);
             lblGananciaSemanal.Name = "lblGananciaSemanal";
-            lblGananciaSemanal.Size = new Size(52, 41);
+            lblGananciaSemanal.Size = new Size(42, 32);
             lblGananciaSemanal.TabIndex = 16;
             lblGananciaSemanal.Text = "00";
             // 
@@ -122,9 +124,9 @@
             // 
             label5.AutoSize = true;
             label5.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label5.Location = new Point(22, 10);
+            label5.Location = new Point(19, 8);
             label5.Name = "label5";
-            label5.Size = new Size(136, 20);
+            label5.Size = new Size(107, 15);
             label5.TabIndex = 15;
             label5.Text = "Ganancia Semanal";
             // 
@@ -135,18 +137,19 @@
             panel2.Controls.Add(lblNombreUsuario_Panel);
             panel2.Controls.Add(label1);
             panel2.Controls.Add(pictureBox1);
-            panel2.Location = new Point(7, 85);
+            panel2.Location = new Point(6, 64);
+            panel2.Margin = new Padding(3, 2, 3, 2);
             panel2.Name = "panel2";
-            panel2.Size = new Size(878, 197);
+            panel2.Size = new Size(768, 148);
             panel2.TabIndex = 20;
             // 
             // lblNombreUsuario_Panel
             // 
             lblNombreUsuario_Panel.AutoSize = true;
             lblNombreUsuario_Panel.Font = new Font("Segoe UI", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblNombreUsuario_Panel.Location = new Point(177, 79);
+            lblNombreUsuario_Panel.Location = new Point(155, 59);
             lblNombreUsuario_Panel.Name = "lblNombreUsuario_Panel";
-            lblNombreUsuario_Panel.Size = new Size(47, 46);
+            lblNombreUsuario_Panel.Size = new Size(38, 37);
             lblNombreUsuario_Panel.TabIndex = 5;
             lblNombreUsuario_Panel.Text = "...";
             // 
@@ -154,18 +157,19 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label1.Location = new Point(167, 31);
+            label1.Location = new Point(146, 23);
             label1.Name = "label1";
-            label1.Size = new Size(337, 38);
+            label1.Size = new Size(264, 30);
             label1.TabIndex = 4;
             label1.Text = "Bienvenido Administrador";
             // 
             // pictureBox1
             // 
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(27, 31);
+            pictureBox1.Location = new Point(24, 23);
+            pictureBox1.Margin = new Padding(3, 2, 3, 2);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(136, 114);
+            pictureBox1.Size = new Size(119, 86);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 6;
             pictureBox1.TabStop = false;
@@ -174,9 +178,9 @@
             // 
             lblHistorial.AutoSize = true;
             lblHistorial.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblHistorial.Location = new Point(35, 455);
+            lblHistorial.Location = new Point(31, 341);
             lblHistorial.Name = "lblHistorial";
-            lblHistorial.Size = new Size(151, 20);
+            lblHistorial.Size = new Size(121, 15);
             lblHistorial.TabIndex = 19;
             lblHistorial.Text = "Productos Recientes";
             // 
@@ -188,10 +192,11 @@
             dgvProductosPanel.BorderStyle = BorderStyle.Fixed3D;
             dgvProductosPanel.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single;
             dgvProductosPanel.ColumnHeadersHeight = 42;
-            dgvProductosPanel.Location = new Point(32, 477);
+            dgvProductosPanel.Location = new Point(28, 358);
+            dgvProductosPanel.Margin = new Padding(3, 2, 3, 2);
             dgvProductosPanel.Name = "dgvProductosPanel";
             dgvProductosPanel.RowHeadersWidth = 51;
-            dgvProductosPanel.Size = new Size(394, 184);
+            dgvProductosPanel.Size = new Size(345, 138);
             dgvProductosPanel.TabIndex = 18;
             // 
             // panel1
@@ -199,18 +204,19 @@
             panel1.BorderStyle = BorderStyle.Fixed3D;
             panel1.Controls.Add(lblPerdidas);
             panel1.Controls.Add(label11);
-            panel1.Location = new Point(354, 299);
+            panel1.Location = new Point(310, 224);
+            panel1.Margin = new Padding(3, 2, 3, 2);
             panel1.Name = "panel1";
-            panel1.Size = new Size(188, 118);
+            panel1.Size = new Size(165, 90);
             panel1.TabIndex = 23;
             // 
             // lblPerdidas
             // 
             lblPerdidas.AutoSize = true;
             lblPerdidas.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblPerdidas.Location = new Point(22, 42);
+            lblPerdidas.Location = new Point(19, 32);
             lblPerdidas.Name = "lblPerdidas";
-            lblPerdidas.Size = new Size(52, 41);
+            lblPerdidas.Size = new Size(42, 32);
             lblPerdidas.TabIndex = 16;
             lblPerdidas.Text = "00";
             // 
@@ -218,9 +224,9 @@
             // 
             label11.AutoSize = true;
             label11.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label11.Location = new Point(22, 10);
+            label11.Location = new Point(19, 8);
             label11.Name = "label11";
-            label11.Size = new Size(132, 20);
+            label11.Size = new Size(104, 15);
             label11.TabIndex = 15;
             label11.Text = "Perdidas Semanal";
             // 
@@ -230,8 +236,9 @@
             topBarMenu.Controls.Add(lblTITULO);
             topBarMenu.Dock = DockStyle.Top;
             topBarMenu.Location = new Point(0, 0);
+            topBarMenu.Margin = new Padding(3, 2, 3, 2);
             topBarMenu.Name = "topBarMenu";
-            topBarMenu.Size = new Size(901, 81);
+            topBarMenu.Size = new Size(788, 61);
             topBarMenu.TabIndex = 98;
             // 
             // lblTITULO
@@ -240,9 +247,9 @@
             lblTITULO.BackColor = Color.Transparent;
             lblTITULO.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblTITULO.ForeColor = Color.Transparent;
-            lblTITULO.Location = new Point(404, 29);
+            lblTITULO.Location = new Point(354, 22);
             lblTITULO.Name = "lblTITULO";
-            lblTITULO.Size = new Size(164, 31);
+            lblTITULO.Size = new Size(138, 25);
             lblTITULO.TabIndex = 3;
             lblTITULO.Text = "ZOMPY DOGS";
             lblTITULO.TextAlign = ContentAlignment.MiddleCenter;
@@ -254,20 +261,21 @@
             dgvPeticiones.BackgroundColor = Color.FromArgb(239, 239, 239);
             dgvPeticiones.BorderStyle = BorderStyle.Fixed3D;
             dgvPeticiones.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvPeticiones.Location = new Point(444, 477);
+            dgvPeticiones.Location = new Point(388, 358);
+            dgvPeticiones.Margin = new Padding(3, 2, 3, 2);
             dgvPeticiones.Name = "dgvPeticiones";
             dgvPeticiones.ReadOnly = true;
             dgvPeticiones.RowHeadersWidth = 51;
             dgvPeticiones.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgvPeticiones.Size = new Size(441, 184);
+            dgvPeticiones.Size = new Size(386, 138);
             dgvPeticiones.TabIndex = 99;
             // 
             // PanelAdmin
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
-            ClientSize = new Size(901, 725);
+            ClientSize = new Size(788, 544);
             Controls.Add(dgvPeticiones);
             Controls.Add(topBarMenu);
             Controls.Add(panel1);
@@ -277,8 +285,10 @@
             Controls.Add(panel2);
             Controls.Add(lblHistorial);
             Controls.Add(dgvProductosPanel);
+            Margin = new Padding(3, 2, 3, 2);
             Name = "PanelAdmin";
             Text = "PanelAdmin";
+            Load += PanelAdmin_Load;
             panel6.ResumeLayout(false);
             panel6.PerformLayout();
             panel4.ResumeLayout(false);

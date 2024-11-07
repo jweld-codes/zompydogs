@@ -103,5 +103,29 @@ namespace zompyDogs
                 pedidoCodigoEmpleadoVal = filaSeleccionada.Cells["Codigo_Empleado"].Value.ToString();
             }
         }
+
+        private void dgvHistorialPedidos_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void btnRefreshDG_Click(object sender, EventArgs e)
+        {
+            CargarFacturas();
+        }
+
+        private void txtBuscarUsuario_TextChanged(object sender, EventArgs e)
+        {
+            if (int.TryParse(txtBuscarUsuario.Text, out int valorBusqueda))
+            {
+                DataTable resultados = PedidosDAO.BuscarPeticionesPorID(valorBusqueda);
+                dgvHistorialPedidos.DataSource = resultados;
+            }
+        }
+
+        private void Facturas_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

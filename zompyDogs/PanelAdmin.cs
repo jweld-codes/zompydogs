@@ -30,24 +30,24 @@ namespace zompyDogs
             FormPrincipal = new BienvenidaAdmin();
             InitializeComponent();
             lblNombreUsuario_Panel.Text = $"{NombreUsuario}";
-            
+
             CargarGananciaSemanal();
-            
+
             CargarGastoSemanal();
-            
+
             CargarPedidosSemanal();
-            
+
             CargarProductosRecientes();
 
             CargarPeticionesEnDataGrid();
-            
+
 
         }
         public void InicializarAdmin()
         {
             BienvenidaAdmin frmBienvenidaForm = new BienvenidaAdmin();
             string userLabel = frmBienvenidaForm.lblNombreSideBar.Text;
-            
+
         }
         private void btnLogOutPanel_Click(object sender, EventArgs e)
         {
@@ -170,8 +170,9 @@ namespace zompyDogs
             dgvPeticiones.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
         }
 
+        private void PanelAdmin_Load(object sender, EventArgs e)
+        {
 
-
-
+        }
     }
 }
