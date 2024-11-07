@@ -3,16 +3,23 @@
   "WorkspaceRootPath": "C:\\Users\\jenni\\Documents\\GitHub\\unirec\\zompydogs\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{0FF8C824-BB57-4887-AB3F-C44B540E93EA}|zompyDogs\\zompyDogs.csproj|C:\\Users\\jenni\\Documents\\GitHub\\unirec\\zompydogs\\zompydogs\\frmpos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{0FF8C824-BB57-4887-AB3F-C44B540E93EA}|zompyDogs\\zompyDogs.csproj|solutionrelative:zompydogs\\frmpos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\jenni\\AppData\\Local\\SourceServer\\d12f99495bcff03cdb801583e4e60d121f8181e421e9822f89e01b292918f966\\src\\System.Windows.Forms\\src\\System\\Windows\\Forms\\DataGridViewCellCollection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0FF8C824-BB57-4887-AB3F-C44B540E93EA}|zompyDogs\\zompyDogs.csproj|c:\\users\\jenni\\documents\\github\\unirec\\zompydogs\\zompydogs\\usuarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{0FF8C824-BB57-4887-AB3F-C44B540E93EA}|zompyDogs\\zompyDogs.csproj|solutionrelative:zompydogs\\usuarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{0FF8C824-BB57-4887-AB3F-C44B540E93EA}|zompyDogs\\zompyDogs.csproj|c:\\users\\jenni\\documents\\github\\unirec\\zompydogs\\zompydogs\\frmpos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0FF8C824-BB57-4887-AB3F-C44B540E93EA}|zompyDogs\\zompyDogs.csproj|solutionrelative:zompydogs\\frmpos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{B810D24A-95D4-4ADD-BFE2-CC53185D2745}|ZompyDogsDAO\\ZompyDogsDAO.csproj|c:\\users\\jenni\\documents\\github\\unirec\\zompydogs\\zompydogsdao\\pedidosdao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B810D24A-95D4-4ADD-BFE2-CC53185D2745}|ZompyDogsDAO\\ZompyDogsDAO.csproj|solutionrelative:zompydogsdao\\pedidosdao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0FF8C824-BB57-4887-AB3F-C44B540E93EA}|zompyDogs\\zompyDogs.csproj|c:\\users\\jenni\\documents\\github\\unirec\\zompydogs\\zompydogs\\frmpos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{0FF8C824-BB57-4887-AB3F-C44B540E93EA}|zompyDogs\\zompyDogs.csproj|solutionrelative:zompydogs\\frmpos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,11 +29,36 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
               "DocumentIndex": 2,
+              "Title": "Usuarios.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\jenni\\Documents\\GitHub\\unirec\\zompydogs\\zompyDogs\\Usuarios.cs",
+              "RelativeDocumentMoniker": "zompyDogs\\Usuarios.cs",
+              "ToolTip": "C:\\Users\\jenni\\Documents\\GitHub\\unirec\\zompydogs\\zompyDogs\\Usuarios.cs [Dise\u00F1o]",
+              "RelativeToolTip": "zompyDogs\\Usuarios.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-07T00:00:31.005Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "DataGridViewCellCollection.cs",
+              "DocumentMoniker": "C:\\Users\\jenni\\AppData\\Local\\SourceServer\\d12f99495bcff03cdb801583e4e60d121f8181e421e9822f89e01b292918f966\\src\\System.Windows.Forms\\src\\System\\Windows\\Forms\\DataGridViewCellCollection.cs",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\AppData\\Local\\SourceServer\\d12f99495bcff03cdb801583e4e60d121f8181e421e9822f89e01b292918f966\\src\\System.Windows.Forms\\src\\System\\Windows\\Forms\\DataGridViewCellCollection.cs",
+              "ToolTip": "C:\\Users\\jenni\\AppData\\Local\\SourceServer\\d12f99495bcff03cdb801583e4e60d121f8181e421e9822f89e01b292918f966\\src\\System.Windows.Forms\\src\\System\\Windows\\Forms\\DataGridViewCellCollection.cs",
+              "RelativeToolTip": "..\\..\\..\\..\\AppData\\Local\\SourceServer\\d12f99495bcff03cdb801583e4e60d121f8181e421e9822f89e01b292918f966\\src\\System.Windows.Forms\\src\\System\\Windows\\Forms\\DataGridViewCellCollection.cs",
+              "ViewState": "AQIAAHwAAAAAAAAAAAAowI8AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-06T23:13:21.246Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
               "Title": "frmPOS.cs [Dise\u00F1o]",
               "DocumentMoniker": "C:\\Users\\jenni\\Documents\\GitHub\\unirec\\zompydogs\\zompyDogs\\frmPOS.cs",
               "RelativeDocumentMoniker": "zompyDogs\\frmPOS.cs",
@@ -38,26 +70,26 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
               "Title": "frmPOS.cs",
               "DocumentMoniker": "C:\\Users\\jenni\\Documents\\GitHub\\unirec\\zompydogs\\zompyDogs\\frmPOS.cs",
               "RelativeDocumentMoniker": "zompyDogs\\frmPOS.cs",
               "ToolTip": "C:\\Users\\jenni\\Documents\\GitHub\\unirec\\zompydogs\\zompyDogs\\frmPOS.cs",
               "RelativeToolTip": "zompyDogs\\frmPOS.cs",
-              "ViewState": "AQIAAPQAAAAAAAAAAAAuwAsBAABBAAAA",
+              "ViewState": "AQIAAPgAAAAAAAAAAAAcwFkBAAAkAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-06T21:38:02.908Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "PedidosDAO.cs",
               "DocumentMoniker": "C:\\Users\\jenni\\Documents\\GitHub\\unirec\\zompydogs\\ZompyDogsDAO\\PedidosDAO.cs",
               "RelativeDocumentMoniker": "ZompyDogsDAO\\PedidosDAO.cs",
               "ToolTip": "C:\\Users\\jenni\\Documents\\GitHub\\unirec\\zompydogs\\ZompyDogsDAO\\PedidosDAO.cs",
               "RelativeToolTip": "ZompyDogsDAO\\PedidosDAO.cs",
-              "ViewState": "AQIAACUAAAAAAAAAAAA/wDUAAAAAAAAA",
+              "ViewState": "AQIAACcAAAAAAAAAAAA1wCoAAAAVAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-06T21:32:06.16Z",
               "EditorCaption": ""

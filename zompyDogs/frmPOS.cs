@@ -24,8 +24,9 @@ namespace zompyDogs
         public BindingSource _bndsrcPedido;
 
         private string pedidoPlatilo;
-        private string pedidoCantidad;
-
+        private string pedidoCodigo;
+        private int pedidoCantidad;
+        public decimal totalaPagar = 0;
 
         public frmPOS()
         {
@@ -40,16 +41,22 @@ namespace zompyDogs
             _bndsrcPedido.DataSource = _pedidosDAO.platillosLista;
             dgvPedido.DataSource = _bndsrcPedido;
 
-            dgvPedido.Columns["Codigo"].Visible = false;
+            btnQtyLess.Enabled = false;
+            txtPlatilloOrden.Enabled = false;
+
+            dgvPedido.Columns["Codigo"].HeaderText = "Codigo";
+            dgvPedido.Columns["Codigo"].DataPropertyName = "Codigo";
+
             dgvPedido.Columns["PlatilloNombre"].HeaderText = "Platillo";
             dgvPedido.Columns["PlatilloNombre"].DataPropertyName = "PlatilloNombre";
             dgvPedido.Columns["Precio_Unitario"].HeaderText = "Precio";
             dgvPedido.Columns["Precio_Unitario"].DataPropertyName = "Precio_Unitario";
-            dgvPedido.Columns["TotalProducto"].HeaderText = "Total Producto";
-            dgvPedido.Columns["TotalProducto"].DataPropertyName = "TotalProducto";
+
+            dgvPedido.Columns["TotalProducto"].Visible = false;
             dgvPedido.Columns["Categoria"].Visible = false;
             dgvPedido.Columns["Descripcion"].Visible = false;
             dgvPedido.Columns["ImagenPlatillo"].Visible = false;
+
         }
 
         private void AddCategoria()
@@ -158,6 +165,12 @@ namespace zompyDogs
                     lblPlatillo.AutoSize = true;
                     lblPlatillo.Font = new Font("Arial", 12, FontStyle.Bold);
 
+                    Label lblCodigoPlatillo = new Label();
+                    lblCodigoPlatillo.Text = reader["Codigo"].ToString();
+                    lblCodigoPlatillo.Location = new Point(8, 8);
+                    lblCodigoPlatillo.AutoSize = true;
+                    lblCodigoPlatillo.Font = new Font("Arial", 4, FontStyle.Regular);
+
                     Label lblPrecio = new Label();
                     lblPrecio.Text = $"L.{reader["Precio"].ToString()}";
                     lblPrecio.Location = new Point(20, 5);
@@ -191,21 +204,22 @@ namespace zompyDogs
                     btnAgregarPlatillo.Click += (sender, e) =>
                     {
                         int cantidad = 1;
-                        int cantidadEdit = Convert.ToInt32(txtCantidad.Text);
+                        //int cantidadEdit = Convert.ToInt32(txtCantidad.Text);
 
                         ZompyDogsDAO.PedidosDAO.PlatilloDetalle nuevoPlatillo = new ZompyDogsDAO.PedidosDAO.PlatilloDetalle
                         {
                             PlatilloNombre = lblPlatillo.Text,
                             Precio_Unitario = decimal.Parse(lblPrecio.Text.Replace("L.", "").Trim()),
                             Cantidad = cantidad,
+                            Codigo = lblCodigoPlatillo.Text,
                         };
 
                         _pedidosDAO.platillosLista.Add(nuevoPlatillo);
 
                         _bndsrcPedido.ResetBindings(false);
+                        CalcularTotal();
                     };
 
-                    // Agregar controles al panel del platillo
                     panelPlatillo.Controls.Add(panelNombrePlatillo);
                     panelPlatillo.Controls.Add(panelPrecio);
                     panelPlatillo.Controls.Add(pbxPlatillo);
@@ -216,11 +230,9 @@ namespace zompyDogs
                     panelPrecio.Controls.Add(txtDescripcion);
                     panelPrecio.Controls.Add(btnAgregarPlatillo);
 
-                    // Manually calculate the size of panelPlatillo based on its content
                     int totalHeight = panelNombrePlatillo.Height + panelPrecio.Height + pbxPlatillo.Height;
                     int maxWidth = Math.Max(panelNombrePlatillo.Width, Math.Max(panelPrecio.Width, pbxPlatillo.Width));
 
-                    // Set the panel size based on the calculated values
                     panelPlatillo.Size = new Size(maxWidth, totalHeight);
 
                     // Agregar el panel al FlowLayoutPanel
@@ -264,10 +276,87 @@ namespace zompyDogs
             DataGridViewRow filaSeleccionada = dgvPedido.Rows[e.RowIndex];
             if (e.RowIndex >= 0)
             {
-                pedidoPlatilo = filaSeleccionada.Cells["Platillo"].Value.ToString();
-                pedidoCantidad = filaSeleccionada.Cells["Cantidad"].Value.ToString();
+                pedidoCodigo = filaSeleccionada.Cells["Codigo"].Value.ToString();
+                pedidoPlatilo = filaSeleccionada.Cells["PlatilloNombre"].Value.ToString();
+                pedidoCantidad = Convert.ToInt32(filaSeleccionada.Cells["Cantidad"].Value);
+
+
+                txtPlatilloOrden.Text = pedidoPlatilo;
+                txtCantidad.Text = pedidoCantidad.ToString();
             }
 
         }
+
+        private void btnQtyMore_Click(object sender, EventArgs e)
+        {
+            pedidoCantidad++;
+            txtCantidad.Text = pedidoCantidad.ToString();
+
+            if (pedidoCantidad == 2)
+            {
+                btnQtyLess.Enabled = true;
+            }
+            
+
+        }
+
+        private void btnQtyLess_Click(object sender, EventArgs e)
+        {
+            if (pedidoCantidad == 1)
+            {
+                btnQtyLess.Enabled = false;
+            }
+            else if(pedidoCantidad > 1) 
+            {
+                pedidoCantidad--;
+                txtCantidad.Text = pedidoCantidad.ToString();
+            }
+
+        }
+
+        private void btnEliminarOrden_Click(object sender, EventArgs e)
+        {
+            if (dgvPedido.SelectedRows.Count > 0)
+            {
+                DataGridViewRow filaSeleccionada = dgvPedido.SelectedRows[0];
+
+                string codigoPlatillo = filaSeleccionada.Cells["Codigo"].Value.ToString();
+
+                var platilloAEliminar = _pedidosDAO.platillosLista.FirstOrDefault(p => p.Codigo == codigoPlatillo);
+
+                if (platilloAEliminar != null)
+                {
+                    _pedidosDAO.platillosLista.Remove(platilloAEliminar);
+
+                    _bndsrcPedido.ResetBindings(false);
+
+                    MessageBox.Show("Platillo eliminado de la orden.");
+                    CalcularTotal();
+                }
+                else
+                {
+                    MessageBox.Show("No se encontró el platillo en la lista.");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Por favor, seleccione un platillo para eliminar.");
+            }
+        }
+        private void CalcularTotal()
+        {
+            
+
+            foreach (var pedido in _pedidosDAO.platillosLista)
+            {
+                decimal precio = pedido.Precio_Unitario;
+                int cantidad = pedido.Cantidad;
+
+                totalaPagar += precio * cantidad;
+            }
+
+            lblTotalAPagar.Text = $"{totalaPagar}";
+        }
+
     }
 }

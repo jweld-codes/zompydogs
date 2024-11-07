@@ -367,7 +367,6 @@ namespace zompyDogs
                 }
             }
         }
-        
         private void btnVisualizarRegistro_Click(object sender, EventArgs e)
         {
             if (isUser == true)
@@ -463,7 +462,6 @@ namespace zompyDogs
 
             }
         }
-
         private void btnEliminarUsuario_Click(object sender, EventArgs e)
         {
             DataTable usuarioTabla = UsuarioDAO.ObtenerDetalllesDeUsuariosParaEditar(detalleUsuariocodigoUsuarioVal);
@@ -628,8 +626,6 @@ namespace zompyDogs
             DataGridViewRow filaSeleccionada = dgvUsuarios.Rows[e.RowIndex];
             if (e.RowIndex >= 0)
             {
-                //detalleUsuarioID = Convert.ToInt32(filaSeleccionada.Cells["ID_DetalleUsuario"].Value.ToString());
-
                 detalleUsuariocodigoUsuarioVal = filaSeleccionada.Cells["Codigo"].Value.ToString();
                 detalleUsuarioRol = filaSeleccionada.Cells["RolUsuario"].Value.ToString();
             }
@@ -651,7 +647,6 @@ namespace zompyDogs
                 detalleUsuarioRol = filaSeleccionada.Cells["RolUsuario"].Value.ToString();
             }
         }
-
         private void dgvAdminis_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             DataGridViewRow filaSeleccionada = dgvAdminis.Rows[e.RowIndex];
@@ -662,7 +657,6 @@ namespace zompyDogs
             }
         }
 
-        
         /********* Extras *************/
         private void btnRefreshDG_Click(object sender, EventArgs e)
         {
@@ -704,7 +698,5 @@ namespace zompyDogs
             }
         }
        
-
-
     }
 }

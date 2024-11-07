@@ -30,7 +30,7 @@
         {
             components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPOS));
-            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             topBarMenu = new Panel();
             button2 = new Button();
             pictureBox2 = new PictureBox();
@@ -57,17 +57,6 @@
             label12 = new Label();
             panelContenedrPOS = new Panel();
             flpPOSPanel = new FlowLayoutPanel();
-            panel4 = new Panel();
-            panel2 = new Panel();
-            lblNombrePlatillo = new Label();
-            pictureBox3 = new PictureBox();
-            panel5 = new Panel();
-            textBox1 = new TextBox();
-            btnNext = new Button();
-            btnAgregarPlatillo = new Button();
-            btnAtras = new Button();
-            lblPrecioPlatilo = new Label();
-            label2 = new Label();
             bnSrcPedidos = new BindingSource(components);
             topBarMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
@@ -78,11 +67,6 @@
             panel6.SuspendLayout();
             panel3.SuspendLayout();
             panelContenedrPOS.SuspendLayout();
-            flpPOSPanel.SuspendLayout();
-            panel4.SuspendLayout();
-            panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
-            panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)bnSrcPedidos).BeginInit();
             SuspendLayout();
             // 
@@ -194,6 +178,7 @@
             btnEliminarOrden.Size = new Size(26, 29);
             btnEliminarOrden.TabIndex = 6;
             btnEliminarOrden.UseVisualStyleBackColor = true;
+            btnEliminarOrden.Click += btnEliminarOrden_Click;
             // 
             // txtPlatilloOrden
             // 
@@ -231,6 +216,7 @@
             btnQtyMore.Size = new Size(26, 29);
             btnQtyMore.TabIndex = 5;
             btnQtyMore.UseVisualStyleBackColor = true;
+            btnQtyMore.Click += btnQtyMore_Click;
             // 
             // btnQtyLess
             // 
@@ -241,6 +227,7 @@
             btnQtyLess.Size = new Size(26, 29);
             btnQtyLess.TabIndex = 4;
             btnQtyLess.UseVisualStyleBackColor = true;
+            btnQtyLess.Click += btnQtyLess_Click;
             // 
             // dgvPedido
             // 
@@ -252,14 +239,14 @@
             dgvPedido.BorderStyle = BorderStyle.None;
             dgvPedido.CellBorderStyle = DataGridViewCellBorderStyle.SunkenHorizontal;
             dgvPedido.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = SystemColors.Control;
-            dataGridViewCellStyle2.Font = new Font("Segoe UI", 9F);
-            dataGridViewCellStyle2.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = SystemColors.ControlLight;
-            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
-            dgvPedido.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = SystemColors.Control;
+            dataGridViewCellStyle1.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle1.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = SystemColors.ControlLight;
+            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
+            dgvPedido.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             dgvPedido.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvPedido.GridColor = SystemColors.ScrollBar;
             dgvPedido.Location = new Point(5, 5);
@@ -376,119 +363,11 @@
             // 
             // flpPOSPanel
             // 
-            flpPOSPanel.Controls.Add(panel4);
             flpPOSPanel.Dock = DockStyle.Left;
             flpPOSPanel.Location = new Point(153, 0);
             flpPOSPanel.Name = "flpPOSPanel";
             flpPOSPanel.Size = new Size(426, 581);
             flpPOSPanel.TabIndex = 4;
-            // 
-            // panel4
-            // 
-            panel4.Controls.Add(panel2);
-            panel4.Controls.Add(pictureBox3);
-            panel4.Controls.Add(panel5);
-            panel4.Location = new Point(3, 3);
-            panel4.Name = "panel4";
-            panel4.Size = new Size(204, 343);
-            panel4.TabIndex = 1;
-            // 
-            // panel2
-            // 
-            panel2.Controls.Add(lblNombrePlatillo);
-            panel2.Dock = DockStyle.Top;
-            panel2.Location = new Point(0, 0);
-            panel2.Name = "panel2";
-            panel2.Size = new Size(204, 51);
-            panel2.TabIndex = 5;
-            // 
-            // lblNombrePlatillo
-            // 
-            lblNombrePlatillo.AutoSize = true;
-            lblNombrePlatillo.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblNombrePlatillo.Location = new Point(3, 14);
-            lblNombrePlatillo.Name = "lblNombrePlatillo";
-            lblNombrePlatillo.Size = new Size(176, 25);
-            lblNombrePlatillo.TabIndex = 2;
-            lblNombrePlatillo.Text = "Nombre del Platillo";
-            // 
-            // pictureBox3
-            // 
-            pictureBox3.Location = new Point(20, 56);
-            pictureBox3.Name = "pictureBox3";
-            pictureBox3.Size = new Size(155, 154);
-            pictureBox3.TabIndex = 3;
-            pictureBox3.TabStop = false;
-            // 
-            // panel5
-            // 
-            panel5.Controls.Add(textBox1);
-            panel5.Controls.Add(btnNext);
-            panel5.Controls.Add(btnAgregarPlatillo);
-            panel5.Controls.Add(btnAtras);
-            panel5.Controls.Add(lblPrecioPlatilo);
-            panel5.Controls.Add(label2);
-            panel5.Dock = DockStyle.Bottom;
-            panel5.Location = new Point(0, 216);
-            panel5.Name = "panel5";
-            panel5.Size = new Size(204, 127);
-            panel5.TabIndex = 4;
-            // 
-            // textBox1
-            // 
-            textBox1.Location = new Point(77, 35);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(48, 27);
-            textBox1.TabIndex = 5;
-            // 
-            // btnNext
-            // 
-            btnNext.Image = Properties.Resources.arrow;
-            btnNext.Location = new Point(122, 33);
-            btnNext.Name = "btnNext";
-            btnNext.Size = new Size(36, 29);
-            btnNext.TabIndex = 73;
-            btnNext.UseVisualStyleBackColor = true;
-            // 
-            // btnAgregarPlatillo
-            // 
-            btnAgregarPlatillo.BackColor = Color.ForestGreen;
-            btnAgregarPlatillo.ForeColor = SystemColors.Control;
-            btnAgregarPlatillo.Location = new Point(14, 68);
-            btnAgregarPlatillo.Name = "btnAgregarPlatillo";
-            btnAgregarPlatillo.Size = new Size(176, 42);
-            btnAgregarPlatillo.TabIndex = 4;
-            btnAgregarPlatillo.Text = "Agregar";
-            btnAgregarPlatillo.UseVisualStyleBackColor = false;
-            // 
-            // btnAtras
-            // 
-            btnAtras.Image = Properties.Resources.left_arrow;
-            btnAtras.Location = new Point(41, 35);
-            btnAtras.Name = "btnAtras";
-            btnAtras.Size = new Size(36, 29);
-            btnAtras.TabIndex = 72;
-            btnAtras.UseVisualStyleBackColor = true;
-            // 
-            // lblPrecioPlatilo
-            // 
-            lblPrecioPlatilo.AutoSize = true;
-            lblPrecioPlatilo.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblPrecioPlatilo.Location = new Point(41, 5);
-            lblPrecioPlatilo.Name = "lblPrecioPlatilo";
-            lblPrecioPlatilo.Size = new Size(55, 23);
-            lblPrecioPlatilo.TabIndex = 3;
-            lblPrecioPlatilo.Text = "00.00";
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label2.Location = new Point(20, 5);
-            label2.Name = "label2";
-            label2.Size = new Size(24, 23);
-            label2.TabIndex = 2;
-            label2.Text = "L.";
             // 
             // frmPOS
             // 
@@ -513,13 +392,6 @@
             panel3.ResumeLayout(false);
             panel3.PerformLayout();
             panelContenedrPOS.ResumeLayout(false);
-            flpPOSPanel.ResumeLayout(false);
-            panel4.ResumeLayout(false);
-            panel2.ResumeLayout(false);
-            panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
-            panel5.ResumeLayout(false);
-            panel5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)bnSrcPedidos).EndInit();
             ResumeLayout(false);
         }
@@ -536,16 +408,6 @@
         private Panel panel3;
         private Panel panelContenedrPOS;
         private FlowLayoutPanel flpPOSPanel;
-        private Panel panel4;
-        private Panel panel5;
-        private Button btnAgregarPlatillo;
-        private Label lblPrecioPlatilo;
-        private Label label2;
-        private Label lblNombrePlatillo;
-        private PictureBox pictureBox3;
-        private TextBox textBox1;
-        private Button btnNext;
-        private Button btnAtras;
         private Label lblTotalAPagar;
         private Label label13;
         private Label label12;
@@ -557,7 +419,6 @@
         private Label label15;
         private Button btnEliminarOrden;
         private GroupBox groupBox1;
-        private Panel panel2;
         public Button button2;
         private Panel categoryPanel;
         private Panel panel6;
