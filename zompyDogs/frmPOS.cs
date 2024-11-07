@@ -21,53 +21,82 @@ namespace zompyDogs
 
         public BienvenidaAdmin FormPrincipal { get; set; }
         public EmpleadoBienvenida EmpleadoFormPrincipal { get; set; }
+
         private PedidosDAO _pedidosDAO;
         public BindingSource _bndsrcPedido;
-        private ControladorGeneradoresDeCodigo _controladorGeneradorCodigo;
+        private ControladorGeneradoresDeCodigo _controladorGeneradorCodigoPedido;
 
         private string nuevoCodigoPedido;
+        private int usuarioIDActual;
 
         private string pedidoPlatilo;
         private string pedidoCodigo;
         private int pedidoCantidad;
-        public decimal totalaPagar = 0;
+        private decimal pedidoPrecioUnitario;
 
-        public frmPOS()
+        public decimal subtotalPago;
+        public decimal totalaPago;
+        public int cantidadPedido;
+        public int cantidadPlatillo = 1;
+        public int menuID;
+
+        public frmPOS(int usuarioIDActual)
         {
             InitializeComponent();
+            this.usuarioIDActual = usuarioIDActual;
+
             CargarMenu("Entrada");
             AddCategoria();
+
+            _controladorGeneradorCodigoPedido = new ControladorGeneradoresDeCodigo();
             GeneradordeCodigoPedidoFromForm();
 
             _pedidosDAO = new PedidosDAO();
-            _controladorGeneradorCodigo = new ControladorGeneradoresDeCodigo();
+
             _bndsrcPedido = new BindingSource();
 
             _bndsrcPedido.DataSource = _pedidosDAO.platillosLista;
             dgvPedido.DataSource = _bndsrcPedido;
 
-            btnQtyLess.Enabled = false;
             txtPlatilloOrden.Enabled = false;
 
-            dgvPedido.Columns["Codigo"].HeaderText = "Codigo";
-            dgvPedido.Columns["Codigo"].DataPropertyName = "Codigo";
+            _bndsrcPedido.DataSource = _pedidosDAO.platillosLista;
+            dgvPedido.DataSource = _bndsrcPedido;
 
             dgvPedido.Columns["PlatilloNombre"].HeaderText = "Platillo";
             dgvPedido.Columns["PlatilloNombre"].DataPropertyName = "PlatilloNombre";
+
             dgvPedido.Columns["Precio_Unitario"].HeaderText = "Precio";
             dgvPedido.Columns["Precio_Unitario"].DataPropertyName = "Precio_Unitario";
 
-            dgvPedido.Columns["TotalProducto"].Visible = false;
+            dgvPedido.Columns["Subtotal"].Visible = false;
             dgvPedido.Columns["Categoria"].Visible = false;
+            dgvPedido.Columns["id_Menu"].Visible = false;
+            dgvPedido.Columns["id_pedido"].Visible = false;
             dgvPedido.Columns["Descripcion"].Visible = false;
             dgvPedido.Columns["ImagenPlatillo"].Visible = false;
-
         }
         private void GeneradordeCodigoPedidoFromForm()
         {
-            nuevoCodigoPedido = _controladorGeneradorCodigo.GeneradordeCodigoPedidos();
+            nuevoCodigoPedido = _controladorGeneradorCodigoPedido.GeneradordeCodigoPedidos();
             txtCodigoGenerado.Text = nuevoCodigoPedido;
         }
+        private void CambiarColorBoton(Button botonActivo)
+        {
+            foreach (Control ctrl in topBarMenu.Controls)
+            {
+                if (ctrl is Button)
+                {
+                    Button boton = (Button)ctrl;
+                    boton.BackColor = Color.Transparent;
+                    boton.ForeColor = Color.White;
+                }
+            }
+
+            botonActivo.BackColor = Color.White;
+            botonActivo.ForeColor = Color.Black;
+        }
+
         private void AddCategoria()
         {
             string qry = "SELECT * FROM Categoria";
@@ -120,14 +149,13 @@ namespace zompyDogs
         {
             using (SqlConnection conn = new SqlConnection(con_string))
             {
-                string query = "SELECT Codigo, Platillo, Descripcion, Precio, Imagen FROM v_DetallesMenu WHERE Categoria = @Categoria";
+                string query = "SELECT ID_Menu, Codigo, Platillo, Descripcion, Precio, Imagen FROM v_DetallesMenu WHERE Categoria = @Categoria";
 
                 SqlCommand cmd = new SqlCommand(query, conn);
                 cmd.Parameters.AddWithValue("@Categoria", categoria);
 
                 conn.Open();
                 SqlDataReader reader = cmd.ExecuteReader();
-
 
                 flpPOSPanel.Controls.Clear();
                 bool hasResults = false;
@@ -180,6 +208,10 @@ namespace zompyDogs
                     lblCodigoPlatillo.AutoSize = true;
                     lblCodigoPlatillo.Font = new Font("Arial", 4, FontStyle.Regular);
 
+                    Label lblId_Menu = new Label();
+                    lblId_Menu.Text = reader["ID_Menu"].ToString();
+                    lblId_Menu.Hide();
+
                     Label lblPrecio = new Label();
                     lblPrecio.Text = $"L.{reader["Precio"].ToString()}";
                     lblPrecio.Location = new Point(20, 5);
@@ -212,19 +244,21 @@ namespace zompyDogs
 
                     btnAgregarPlatillo.Click += (sender, e) =>
                     {
-                        int cantidad = 1;
-                        ZompyDogsDAO.PedidosDAO.PlatilloDetalle nuevoPlatillo = new ZompyDogsDAO.PedidosDAO.PlatilloDetalle
+                        ZompyDogsDAO.PedidosDAO.DetalleDePedido nuevoPlatillo = new ZompyDogsDAO.PedidosDAO.DetalleDePedido
                         {
                             PlatilloNombre = lblPlatillo.Text,
                             Precio_Unitario = decimal.Parse(lblPrecio.Text.Replace("L.", "").Trim()),
-                            Cantidad = cantidad,
-                            Codigo = lblCodigoPlatillo.Text,
+                            Cantidad = cantidadPlatillo,
                         };
+                        cantidadPedido++;
 
                         _pedidosDAO.platillosLista.Add(nuevoPlatillo);
+                        menuID = Convert.ToInt32(lblId_Menu.Text);
+                        pedidoPrecioUnitario = decimal.Parse(lblPrecio.Text.Replace("L.", "").Trim());
 
                         _bndsrcPedido.ResetBindings(false);
                         CalcularTotal();
+
                     };
 
                     panelPlatillo.Controls.Add(panelNombrePlatillo);
@@ -264,40 +298,13 @@ namespace zompyDogs
             DataGridViewRow filaSeleccionada = dgvPedido.Rows[e.RowIndex];
             if (e.RowIndex >= 0)
             {
-                pedidoCodigo = filaSeleccionada.Cells["Codigo"].Value.ToString();
+                //pedidoCodigo = filaSeleccionada.Cells["Codigo"].Value.ToString();
                 pedidoPlatilo = filaSeleccionada.Cells["PlatilloNombre"].Value.ToString();
                 pedidoCantidad = Convert.ToInt32(filaSeleccionada.Cells["Cantidad"].Value);
-
+                pedidoPrecioUnitario = Convert.ToInt32(filaSeleccionada.Cells["Precio_Unitario"].Value);
 
                 txtPlatilloOrden.Text = pedidoPlatilo;
-                txtCantidad.Text = pedidoCantidad.ToString();
             }
-
-        }
-        private void btnQtyMore_Click(object sender, EventArgs e)
-        {
-            pedidoCantidad++;
-            txtCantidad.Text = pedidoCantidad.ToString();
-
-            if (pedidoCantidad == 2)
-            {
-                btnQtyLess.Enabled = true;
-            }
-
-
-        }
-        private void btnQtyLess_Click(object sender, EventArgs e)
-        {
-            if (pedidoCantidad == 1)
-            {
-                btnQtyLess.Enabled = false;
-            }
-            else if (pedidoCantidad > 1)
-            {
-                pedidoCantidad--;
-                txtCantidad.Text = pedidoCantidad.ToString();
-            }
-
         }
         private void btnEliminarOrden_Click(object sender, EventArgs e)
         {
@@ -305,17 +312,17 @@ namespace zompyDogs
             {
                 DataGridViewRow filaSeleccionada = dgvPedido.SelectedRows[0];
 
-                string codigoPlatillo = filaSeleccionada.Cells["Codigo"].Value.ToString();
+                string namePlatillo = filaSeleccionada.Cells["PlatilloNombre"].Value.ToString();
 
-                var platilloAEliminar = _pedidosDAO.platillosLista.FirstOrDefault(p => p.Codigo == codigoPlatillo);
+                var platilloAEliminar = _pedidosDAO.platillosLista.FirstOrDefault(p => p.PlatilloNombre == namePlatillo);
 
                 if (platilloAEliminar != null)
                 {
                     _pedidosDAO.platillosLista.Remove(platilloAEliminar);
-
+                    cantidadPedido--;
                     _bndsrcPedido.ResetBindings(false);
 
-                    MessageBox.Show("Platillo eliminado de la orden.");
+                    MessageBox.Show("Platillo eliminado de la orden. Cantidad Reducida: " + cantidadPedido);
                     CalcularTotal();
                 }
                 else
@@ -330,54 +337,108 @@ namespace zompyDogs
         }
         private void CalcularTotal()
         {
-
-
+            subtotalPago = 0; // Reiniciar el subtotal en cada cálculo
             foreach (var pedido in _pedidosDAO.platillosLista)
             {
                 decimal precio = pedido.Precio_Unitario;
                 int cantidad = pedido.Cantidad;
 
-                totalaPagar += precio * cantidad;
+                subtotalPago += precio * cantidad;
             }
 
-            lblTotalAPagar.Text = $"{totalaPagar}";
+            decimal isv = subtotalPago * 0.15m;
+            totalaPago = subtotalPago + isv;
+
+            lblTotalAPagar.Text = $"{totalaPago}";
+            lblSubtotal.Text = $"{subtotalPago}";
         }
+
 
         private void btnConfirmarPedido_Click(object sender, EventArgs e)
         {
-            if (_pedidosDAO.platillosLista.Count == 0)
+            GuardarPedido();
+        }
+
+        private void GuardarPedido()
+        {
+            string codigoPedido = txtCodigoGenerado.Text;
+            decimal totalPago = subtotalPago;
+
+            try
             {
-                MessageBox.Show("No hay platillos en el pedido. Agrega al menos un platillo antes de confirmar.");
-                return;
+                using (SqlConnection conn = new SqlConnection(con_string))
+                {
+                    conn.Open();
+                    SqlTransaction transaction = conn.BeginTransaction();
+
+                    string queryPedido = @"INSERT INTO Pedido(codigoPedido, Fk_Usuario, FechaPedido, estado)
+                                   VALUES (@CodigoPedido, @CodigoEmpleado, GETDATE(), 'COMPLETADO');
+                                   SELECT SCOPE_IDENTITY();";
+
+                    SqlCommand cmdPedido = new SqlCommand(queryPedido, conn, transaction);
+                    cmdPedido.Parameters.AddWithValue("@CodigoPedido", codigoPedido);
+                    cmdPedido.Parameters.AddWithValue("@CodigoEmpleado", usuarioIDActual);
+
+                    int pedidoID = Convert.ToInt32(cmdPedido.ExecuteScalar());
+
+                    foreach (var platillo in _pedidosDAO.platillosLista)
+                    {
+                        string queryDetalle = @"INSERT INTO Detalle_Pedido(idPedido, Fk_Menu, Cantidad, precioUnitario, subtotal,total)
+                                        VALUES (@CodigoPedido, @CodigoPlatillo, @Cantidad, @PrecioUnitario, @subTotal, @TotalAPagar)";
+
+                        SqlCommand cmdDetalle = new SqlCommand(queryDetalle, conn, transaction);
+                        cmdDetalle.Parameters.AddWithValue("@CodigoPedido", pedidoID);
+                        cmdDetalle.Parameters.AddWithValue("@CodigoPlatillo", menuID);
+                        cmdDetalle.Parameters.AddWithValue("@Cantidad", cantidadPlatillo);
+                        cmdDetalle.Parameters.AddWithValue("@PrecioUnitario", pedidoPrecioUnitario);
+                        cmdDetalle.Parameters.AddWithValue("@subTotal", subtotalPago);
+                        cmdPedido.Parameters.AddWithValue("@TotalAPagar", totalaPago);
+
+
+                        cmdDetalle.ExecuteNonQuery();
+                    }
+
+                    transaction.Commit();
+                    MessageBox.Show("Pedido guardado exitosamente.");
+                    CargarMenu("Entrada");
+                    _pedidosDAO.platillosLista.Clear();
+                    _bndsrcPedido.ResetBindings(false);
+                    subtotalPago = 0;
+                    lblSubtotal.Text = "0.00";
+                }
             }
-
-            ZompyDogsDAO.PedidosDAO.PedidoDetalle nuevoPedido = new ZompyDogsDAO.PedidosDAO.PedidoDetalle
+            catch (Exception ex)
             {
-                CodigoPedido = txtCodigoGenerado.Text,
-                CodigoEmpleado = "EMP001",
-                FechaDelPedido = DateTime.Now,
-                TotalDeProductos = _pedidosDAO.platillosLista.Sum(p => p.Cantidad),
-                Sub_Total = _pedidosDAO.platillosLista.Sum(p => p.Precio_Unitario * p.Cantidad),
-                I_S_V = _pedidosDAO.platillosLista.Sum(p => p.Precio_Unitario * p.Cantidad) * 0.15m, // ISV del 15%
-                TOTAL_Pagar = totalaPagar,
-                MetodoDePago = "Efectivo", // Cambia según el método de pago seleccionado en el formulario
-                Estado = "Pendiente" // Estado inicial del pedido
-            };
+                MessageBox.Show("Ocurrió un error al guardar el pedido: " + ex.Message);
+                Console.WriteLine("Ocurrió un error al guardar el pedido: " + ex.Message);
+            }
+        }
 
-            // Llamar a GuardarPedido para almacenar el pedido en la base de datos
-            bool exito = _pedidosDAO.GuardarPedido(nuevoPedido, _pedidosDAO.platillosLista);
-
-            if (exito)
+        private void btnHistorial_Click(object sender, EventArgs e)
+        {
+            CambiarColorBoton((Button)sender);
+            if (FormPrincipal != null)
             {
-                MessageBox.Show("El pedido se ha guardado exitosamente.");
-                _pedidosDAO.platillosLista.Clear(); // Limpiar la lista después de guardar el pedido
-                _bndsrcPedido.ResetBindings(false);
-                CalcularTotal();
+                FormPrincipal.AbrirFormsHija(new Facturas(usuarioIDActual) { FormPrincipal = FormPrincipal });
+            }
+            else if (EmpleadoFormPrincipal != null)
+            {
+                EmpleadoFormPrincipal.AbrirFormsHijaEmpleado(new Facturas(usuarioIDActual) { EmpleadoFormPrincipal = EmpleadoFormPrincipal });
             }
             else
             {
-                MessageBox.Show("Hubo un problema al guardar el pedido. Inténtalo nuevamente.");
+                MessageBox.Show("Form es nulo");
             }
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            CargarMenu("Entrada");
+            lblSubtotal.Text = "00";
+            lblTotalAPagar.Text = "00";
+            txtPlatilloOrden.Text = "";
+            _pedidosDAO.platillosLista.Clear();
+            _bndsrcPedido.ResetBindings(false);
         }
     }
 }

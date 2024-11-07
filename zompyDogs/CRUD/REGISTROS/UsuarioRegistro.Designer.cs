@@ -471,7 +471,6 @@
             Controls.Add(lblTituloRegistro);
             Name = "UsuarioRegistro";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "AddNuevoRegistro";
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
             groupBox2.ResumeLayout(false);

@@ -48,9 +48,9 @@ namespace ZompyDogsLib.Controladores
         {
             string fechaRegistro = DateTime.Now.ToString("yyyyMMdd");
             string numeroAleatorio = new Random().Next(1000, 9999).ToString();
-            string codigoGeneradoPuesto = $"PED-{fechaRegistro}-{numeroAleatorio}";
+            string codigoGeneradoPedidos = $"PED-{fechaRegistro}-{numeroAleatorio}";
 
-            return codigoGeneradoPuesto;
+            return codigoGeneradoPedidos;
         }
 
     }

@@ -60,18 +60,16 @@ namespace zompyDogs
         private void btnPedidos_Click(object sender, EventArgs e)
         {
             CambiarColorBoton((Button)sender);
-            AbrirFormsHijaEmpleado(new Factura());
+            //AbrirFormsHijaEmpleado(new Factura());
         }
 
         private void btnPOS_Click(object sender, EventArgs e)
         {
             CambiarColorBoton((Button)sender);
-            frmPOS fmPuntoDeVenta = new frmPOS
+            frmPOS fmPuntoDeVenta = new frmPOS(IdEmpleado)
             {
                 EmpleadoFormPrincipal = this
             };
-            fmPuntoDeVenta.button2.Hide();
-            fmPuntoDeVenta.button2.Enabled = false;
             AbrirFormsHijaEmpleado(fmPuntoDeVenta);
         }
 

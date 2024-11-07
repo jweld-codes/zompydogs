@@ -30,35 +30,38 @@
         {
             components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPOS));
-            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             topBarMenu = new Panel();
+            btnHistorial = new Button();
             pictureBox2 = new PictureBox();
-            btnUsuarioPanel = new Button();
+            btnPuntoVenta = new Button();
             lblTITULO = new Label();
             panel1 = new Panel();
+            label6 = new Label();
+            lblSubtotal = new Label();
+            btnCancelar = new Button();
+            label13 = new Label();
+            txtCodigoGenerado = new TextBox();
+            label12 = new Label();
             groupBox1 = new GroupBox();
             label15 = new Label();
             btnEliminarOrden = new Button();
             txtPlatilloOrden = new TextBox();
             btnConfirmarEdit = new Button();
-            txtCantidad = new TextBox();
-            btnQtyMore = new Button();
-            btnQtyLess = new Button();
             dgvPedido = new DataGridView();
             btnConfirmarPedido = new Button();
             panel = new Panel();
             categoryPanel = new Panel();
             panel6 = new Panel();
+            label2 = new Label();
             label1 = new Label();
             panel3 = new Panel();
             lblTotalAPagar = new Label();
-            label13 = new Label();
-            label12 = new Label();
+            label4 = new Label();
+            label5 = new Label();
             panelContenedrPOS = new Panel();
             flpPOSPanel = new FlowLayoutPanel();
             bnSrcPedidos = new BindingSource(components);
-            txtCodigoGenerado = new TextBox();
-            btnCancelar = new Button();
             topBarMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             panel1.SuspendLayout();
@@ -74,14 +77,29 @@
             // topBarMenu
             // 
             topBarMenu.BackColor = Color.FromArgb(31, 19, 10);
+            topBarMenu.Controls.Add(btnHistorial);
             topBarMenu.Controls.Add(pictureBox2);
-            topBarMenu.Controls.Add(btnUsuarioPanel);
+            topBarMenu.Controls.Add(btnPuntoVenta);
             topBarMenu.Controls.Add(lblTITULO);
             topBarMenu.Dock = DockStyle.Top;
             topBarMenu.Location = new Point(0, 0);
             topBarMenu.Name = "topBarMenu";
             topBarMenu.Size = new Size(901, 81);
             topBarMenu.TabIndex = 106;
+            // 
+            // btnHistorial
+            // 
+            btnHistorial.BackColor = Color.Transparent;
+            btnHistorial.FlatAppearance.BorderSize = 0;
+            btnHistorial.FlatStyle = FlatStyle.Flat;
+            btnHistorial.ForeColor = SystemColors.ButtonHighlight;
+            btnHistorial.Location = new Point(718, 45);
+            btnHistorial.Name = "btnHistorial";
+            btnHistorial.Size = new Size(152, 36);
+            btnHistorial.TabIndex = 99;
+            btnHistorial.Text = "HISTORIAL";
+            btnHistorial.UseVisualStyleBackColor = false;
+            btnHistorial.Click += btnHistorial_Click;
             // 
             // pictureBox2
             // 
@@ -93,18 +111,18 @@
             pictureBox2.TabIndex = 97;
             pictureBox2.TabStop = false;
             // 
-            // btnUsuarioPanel
+            // btnPuntoVenta
             // 
-            btnUsuarioPanel.BackColor = Color.White;
-            btnUsuarioPanel.FlatAppearance.BorderSize = 0;
-            btnUsuarioPanel.FlatStyle = FlatStyle.Flat;
-            btnUsuarioPanel.ForeColor = SystemColors.ActiveCaptionText;
-            btnUsuarioPanel.Location = new Point(558, 45);
-            btnUsuarioPanel.Name = "btnUsuarioPanel";
-            btnUsuarioPanel.Size = new Size(152, 36);
-            btnUsuarioPanel.TabIndex = 98;
-            btnUsuarioPanel.Text = "PUNTO DE VENTA";
-            btnUsuarioPanel.UseVisualStyleBackColor = false;
+            btnPuntoVenta.BackColor = Color.White;
+            btnPuntoVenta.FlatAppearance.BorderSize = 0;
+            btnPuntoVenta.FlatStyle = FlatStyle.Flat;
+            btnPuntoVenta.ForeColor = SystemColors.ActiveCaptionText;
+            btnPuntoVenta.Location = new Point(558, 45);
+            btnPuntoVenta.Name = "btnPuntoVenta";
+            btnPuntoVenta.Size = new Size(152, 36);
+            btnPuntoVenta.TabIndex = 98;
+            btnPuntoVenta.Text = "PUNTO DE VENTA";
+            btnPuntoVenta.UseVisualStyleBackColor = false;
             // 
             // lblTITULO
             // 
@@ -122,8 +140,12 @@
             // panel1
             // 
             panel1.BorderStyle = BorderStyle.FixedSingle;
+            panel1.Controls.Add(label6);
+            panel1.Controls.Add(lblSubtotal);
             panel1.Controls.Add(btnCancelar);
+            panel1.Controls.Add(label13);
             panel1.Controls.Add(txtCodigoGenerado);
+            panel1.Controls.Add(label12);
             panel1.Controls.Add(groupBox1);
             panel1.Controls.Add(dgvPedido);
             panel1.Dock = DockStyle.Right;
@@ -132,16 +154,74 @@
             panel1.Size = new Size(322, 644);
             panel1.TabIndex = 0;
             // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Font = new Font("Segoe UI", 7.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label6.Location = new Point(12, 538);
+            label6.Name = "label6";
+            label6.Size = new Size(57, 17);
+            label6.TabIndex = 98;
+            label6.Text = "ISV 15%";
+            // 
+            // lblSubtotal
+            // 
+            lblSubtotal.AutoSize = true;
+            lblSubtotal.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblSubtotal.Location = new Point(115, 510);
+            lblSubtotal.Name = "lblSubtotal";
+            lblSubtotal.Size = new Size(57, 25);
+            lblSubtotal.TabIndex = 4;
+            lblSubtotal.Text = "00.00";
+            // 
+            // btnCancelar
+            // 
+            btnCancelar.BackColor = Color.DarkRed;
+            btnCancelar.ForeColor = SystemColors.Control;
+            btnCancelar.Location = new Point(9, 580);
+            btnCancelar.Name = "btnCancelar";
+            btnCancelar.Size = new Size(179, 47);
+            btnCancelar.TabIndex = 5;
+            btnCancelar.Text = "CANCELAR PEDIDO";
+            btnCancelar.UseVisualStyleBackColor = false;
+            btnCancelar.Click += btnCancelar_Click;
+            // 
+            // label13
+            // 
+            label13.AutoSize = true;
+            label13.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label13.Location = new Point(94, 510);
+            label13.Name = "label13";
+            label13.Size = new Size(26, 25);
+            label13.TabIndex = 3;
+            label13.Text = "L.";
+            // 
+            // txtCodigoGenerado
+            // 
+            txtCodigoGenerado.BorderStyle = BorderStyle.FixedSingle;
+            txtCodigoGenerado.Enabled = false;
+            txtCodigoGenerado.Location = new Point(83, 22);
+            txtCodigoGenerado.Name = "txtCodigoGenerado";
+            txtCodigoGenerado.ReadOnly = true;
+            txtCodigoGenerado.Size = new Size(223, 27);
+            txtCodigoGenerado.TabIndex = 97;
+            // 
+            // label12
+            // 
+            label12.AutoSize = true;
+            label12.Location = new Point(9, 515);
+            label12.Name = "label12";
+            label12.Size = new Size(79, 20);
+            label12.TabIndex = 2;
+            label12.Text = "SUBTOTAL:";
+            // 
             // groupBox1
             // 
             groupBox1.Controls.Add(label15);
             groupBox1.Controls.Add(btnEliminarOrden);
             groupBox1.Controls.Add(txtPlatilloOrden);
             groupBox1.Controls.Add(btnConfirmarEdit);
-            groupBox1.Controls.Add(txtCantidad);
-            groupBox1.Controls.Add(btnQtyMore);
-            groupBox1.Controls.Add(btnQtyLess);
-            groupBox1.Location = new Point(5, 376);
+            groupBox1.Location = new Point(5, 348);
             groupBox1.Name = "groupBox1";
             groupBox1.Size = new Size(304, 150);
             groupBox1.TabIndex = 7;
@@ -173,7 +253,7 @@
             txtPlatilloOrden.BorderStyle = BorderStyle.FixedSingle;
             txtPlatilloOrden.Location = new Point(48, 53);
             txtPlatilloOrden.Name = "txtPlatilloOrden";
-            txtPlatilloOrden.Size = new Size(136, 27);
+            txtPlatilloOrden.Size = new Size(250, 27);
             txtPlatilloOrden.TabIndex = 2;
             // 
             // btnConfirmarEdit
@@ -187,36 +267,6 @@
             btnConfirmarEdit.Text = "Confirmar";
             btnConfirmarEdit.UseVisualStyleBackColor = false;
             // 
-            // txtCantidad
-            // 
-            txtCantidad.BorderStyle = BorderStyle.FixedSingle;
-            txtCantidad.Location = new Point(222, 53);
-            txtCantidad.Name = "txtCantidad";
-            txtCantidad.Size = new Size(48, 27);
-            txtCantidad.TabIndex = 3;
-            // 
-            // btnQtyMore
-            // 
-            btnQtyMore.FlatAppearance.BorderSize = 0;
-            btnQtyMore.Image = Properties.Resources.plus__1_;
-            btnQtyMore.Location = new Point(190, 51);
-            btnQtyMore.Name = "btnQtyMore";
-            btnQtyMore.Size = new Size(26, 29);
-            btnQtyMore.TabIndex = 5;
-            btnQtyMore.UseVisualStyleBackColor = true;
-            btnQtyMore.Click += btnQtyMore_Click;
-            // 
-            // btnQtyLess
-            // 
-            btnQtyLess.FlatAppearance.BorderSize = 0;
-            btnQtyLess.Image = Properties.Resources.negative;
-            btnQtyLess.Location = new Point(275, 51);
-            btnQtyLess.Name = "btnQtyLess";
-            btnQtyLess.Size = new Size(26, 29);
-            btnQtyLess.TabIndex = 4;
-            btnQtyLess.UseVisualStyleBackColor = true;
-            btnQtyLess.Click += btnQtyLess_Click;
-            // 
             // dgvPedido
             // 
             dgvPedido.AllowUserToAddRows = false;
@@ -227,14 +277,14 @@
             dgvPedido.BorderStyle = BorderStyle.None;
             dgvPedido.CellBorderStyle = DataGridViewCellBorderStyle.SunkenHorizontal;
             dgvPedido.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = SystemColors.Control;
-            dataGridViewCellStyle1.Font = new Font("Segoe UI", 9F);
-            dataGridViewCellStyle1.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = SystemColors.ControlLight;
-            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
-            dgvPedido.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = SystemColors.Control;
+            dataGridViewCellStyle2.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle2.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = SystemColors.ControlLight;
+            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
+            dgvPedido.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             dgvPedido.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvPedido.GridColor = SystemColors.ScrollBar;
             dgvPedido.Location = new Point(5, 58);
@@ -279,12 +329,23 @@
             // 
             // panel6
             // 
+            panel6.Controls.Add(label2);
             panel6.Controls.Add(label1);
             panel6.Dock = DockStyle.Top;
             panel6.Location = new Point(0, 0);
             panel6.Name = "panel6";
             panel6.Size = new Size(151, 58);
             panel6.TabIndex = 2;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label2.Location = new Point(9, 15);
+            label2.Name = "label2";
+            label2.Size = new Size(133, 28);
+            label2.TabIndex = 1;
+            label2.Text = "CATEGORIAS";
             // 
             // label1
             // 
@@ -300,9 +361,9 @@
             // 
             panel3.BorderStyle = BorderStyle.FixedSingle;
             panel3.Controls.Add(lblTotalAPagar);
-            panel3.Controls.Add(label13);
-            panel3.Controls.Add(label12);
             panel3.Controls.Add(btnConfirmarPedido);
+            panel3.Controls.Add(label4);
+            panel3.Controls.Add(label5);
             panel3.Dock = DockStyle.Bottom;
             panel3.Location = new Point(153, 581);
             panel3.Name = "panel3";
@@ -313,30 +374,30 @@
             // 
             lblTotalAPagar.AutoSize = true;
             lblTotalAPagar.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblTotalAPagar.Location = new Point(112, 17);
+            lblTotalAPagar.Location = new Point(97, 17);
             lblTotalAPagar.Name = "lblTotalAPagar";
             lblTotalAPagar.Size = new Size(57, 25);
-            lblTotalAPagar.TabIndex = 4;
+            lblTotalAPagar.TabIndex = 100;
             lblTotalAPagar.Text = "00.00";
             // 
-            // label13
+            // label4
             // 
-            label13.AutoSize = true;
-            label13.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label13.Location = new Point(91, 17);
-            label13.Name = "label13";
-            label13.Size = new Size(26, 25);
-            label13.TabIndex = 3;
-            label13.Text = "L.";
+            label4.AutoSize = true;
+            label4.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label4.Location = new Point(76, 17);
+            label4.Name = "label4";
+            label4.Size = new Size(26, 25);
+            label4.TabIndex = 99;
+            label4.Text = "L.";
             // 
-            // label12
+            // label5
             // 
-            label12.AutoSize = true;
-            label12.Location = new Point(40, 21);
-            label12.Name = "label12";
-            label12.Size = new Size(53, 20);
-            label12.TabIndex = 2;
-            label12.Text = "TOTAL:";
+            label5.AutoSize = true;
+            label5.Location = new Point(25, 21);
+            label5.Name = "label5";
+            label5.Size = new Size(53, 20);
+            label5.TabIndex = 98;
+            label5.Text = "TOTAL:";
             // 
             // panelContenedrPOS
             // 
@@ -358,27 +419,6 @@
             flpPOSPanel.Size = new Size(426, 581);
             flpPOSPanel.TabIndex = 4;
             // 
-            // txtCodigoGenerado
-            // 
-            txtCodigoGenerado.BorderStyle = BorderStyle.FixedSingle;
-            txtCodigoGenerado.Enabled = false;
-            txtCodigoGenerado.Location = new Point(83, 22);
-            txtCodigoGenerado.Name = "txtCodigoGenerado";
-            txtCodigoGenerado.ReadOnly = true;
-            txtCodigoGenerado.Size = new Size(223, 27);
-            txtCodigoGenerado.TabIndex = 97;
-            // 
-            // btnCancelar
-            // 
-            btnCancelar.BackColor = Color.DarkRed;
-            btnCancelar.ForeColor = SystemColors.Control;
-            btnCancelar.Location = new Point(138, 589);
-            btnCancelar.Name = "btnCancelar";
-            btnCancelar.Size = new Size(179, 47);
-            btnCancelar.TabIndex = 5;
-            btnCancelar.Text = "CANCELAR PEDIDO";
-            btnCancelar.UseVisualStyleBackColor = false;
-            // 
             // frmPOS
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -388,7 +428,6 @@
             Controls.Add(panelContenedrPOS);
             Controls.Add(topBarMenu);
             Name = "frmPOS";
-            Text = "Facturacion";
             topBarMenu.ResumeLayout(false);
             topBarMenu.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
@@ -410,7 +449,7 @@
         #endregion
         private Panel topBarMenu;
         private PictureBox pictureBox2;
-        public Button btnUsuarioPanel;
+        public Button btnPuntoVenta;
         private Label lblTITULO;
         private Panel panel1;
         private Button btnConfirmarPedido;
@@ -419,13 +458,10 @@
         private Panel panel3;
         private Panel panelContenedrPOS;
         private FlowLayoutPanel flpPOSPanel;
-        private Label lblTotalAPagar;
+        private Label lblSubtotal;
         private Label label13;
         private Label label12;
         private Button btnConfirmarEdit;
-        private Button btnQtyMore;
-        private Button btnQtyLess;
-        private TextBox txtCantidad;
         private TextBox txtPlatilloOrden;
         private Label label15;
         private Button btnEliminarOrden;
@@ -433,8 +469,14 @@
         private Panel categoryPanel;
         private Panel panel6;
         private BindingSource bnSrcPedidos;
-        public DataGridView dgvPedido;
         public TextBox txtCodigoGenerado;
         private Button btnCancelar;
+        private Label label2;
+        public Button btnHistorial;
+        public DataGridView dgvPedido;
+        private Label label6;
+        private Label lblTotalAPagar;
+        private Label label4;
+        private Label label5;
     }
 }

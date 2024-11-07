@@ -25,85 +25,85 @@ namespace ZompyDogsDAO
             }
         }
 
-        public class PedidoDetalle
+       
+        public class RegistroPedidos
         {
             public string CodigoPedido { get; set; }
-            public string CodigoEmpleado { get; set; }
+            public int CodigoEmpleado { get; set; }
             public string EmpleadoNombre { get; set; }
             public DateTime FechaDelPedido { get; set; }
-            public int TotalDeProductos { get; set; }
-            public decimal Precio_Unitario { get; set; }
-            //public decimal Sub_Total { get; set; }
-            //public decimal I_S_V { get; set; }
-            //public decimal TOTAL_Pagar { get; set; }
             public string Estado { get; set; }
         }
 
-        public class PlatilloDetalle
+        public class DetalleDePedido
         {
-            public string Codigo { get; set; }
+            public int id_Menu { get; set; }
+            public int Cantidad { get; set; }
+            public decimal Precio_Unitario { get; set; }
+            public int id_Pedido { get; set; }
             public string PlatilloNombre { get; set; }
             public string Descripcion { get; set; }
             public int Categoria { get; set; }
-            public int Cantidad { get; set; }
-            public decimal Precio_Unitario { get; set; }
             public string ImagenPlatillo { get; set; }
-            public decimal TotalProducto { get; set; }
+            public decimal SubTotal { get; set; }
         }
 
-        public BindingList<PlatilloDetalle> platillosLista = new BindingList<PlatilloDetalle>();
+        public BindingList<DetalleDePedido> platillosLista = new BindingList<DetalleDePedido>();
 
-        public bool GuardarPedido(PedidoDetalle pedido, BindingList<PlatilloDetalle> platillos)
+
+        /************************ FACTURAS ******************* */
+
+        public static DataTable ObtenerDetalllesPedidos_DGV()
         {
+            DataTable dtpDetallesUsuarios = new DataTable();
+            string query = "SELECT Codigo_Pedido, Empleado, Total_De_Productos, Precio_Unitario_Promedio, Subtotal, ISV, Total_a_Pagar, Fecha_Del_Pedido FROM v_DetallesPedidosPorEmpleado";
+
             using (SqlConnection conn = new SqlConnection(con_string))
             {
-                conn.Open();
-                SqlTransaction transaction = conn.BeginTransaction();
+                SqlCommand cmd = new SqlCommand(query, conn);
+
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
 
                 try
                 {
-                    string queryPedido = @"INSERT INTO Pedido (codigoPedido, Fk_Usuario, FechaPedido, total, estado)
-                                   VALUES (@CodigoPedido, @CodigoEmpleado, @FechaDelPedido, @TotalDeProductos, @Precio_Total, @ISV, @TotalPagar, @MetodoDePago, @Estado)";
-                    
-                    SqlCommand cmdPedido = new SqlCommand(queryPedido, conn, transaction);
-                    cmdPedido.Parameters.AddWithValue("@CodigoPedido", pedido.CodigoPedido);
-                    cmdPedido.Parameters.AddWithValue("@CodigoEmpleado", pedido.CodigoEmpleado);
-                    cmdPedido.Parameters.AddWithValue("@FechaDelPedido", pedido.FechaDelPedido);
-                    cmdPedido.Parameters.AddWithValue("@TotalDeProductos", pedido.TotalDeProductos);
-                    //cmdPedido.Parameters.AddWithValue("@Precio_Total", pedido.Sub_Total);
-                    //cmdPedido.Parameters.AddWithValue("@ISV", pedido.I_S_V);
-                    //cmdPedido.Parameters.AddWithValue("@TotalPagar", pedido.TOTAL_Pagar);
-                    //cmdPedido.Parameters.AddWithValue("@MetodoDePago", pedido.MetodoDePago);
-                    cmdPedido.Parameters.AddWithValue("@Estado", pedido.Estado);
-
-                    cmdPedido.ExecuteNonQuery();
-
-                    foreach (var platillo in platillos)
-                    {
-                        string queryDetalle = @"INSERT INTO DetallesPedido (CodigoPedido, CodigoPlatillo, Cantidad, Precio_Unitario, TotalProducto)
-                                        VALUES (@CodigoPedido, @CodigoPlatillo, @Cantidad, @PrecioUnitario, @TotalProducto)";
-                        SqlCommand cmdDetalle = new SqlCommand(queryDetalle, conn, transaction);
-                        cmdDetalle.Parameters.AddWithValue("@CodigoPedido", pedido.CodigoPedido);
-                        cmdDetalle.Parameters.AddWithValue("@CodigoPlatillo", platillo.Codigo);
-                        cmdDetalle.Parameters.AddWithValue("@Cantidad", platillo.Cantidad);
-                        cmdDetalle.Parameters.AddWithValue("@PrecioUnitario", platillo.Precio_Unitario);
-                        cmdDetalle.Parameters.AddWithValue("@TotalProducto", platillo.TotalProducto);
-
-                        cmdDetalle.ExecuteNonQuery();
-                    }
-
-                    transaction.Commit();
-                    Console.WriteLine("Pedido guardado exitosamente.");
-                    return true;
+                    conn.Open();
+                    da.Fill(dtpDetallesUsuarios);
                 }
                 catch (Exception ex)
                 {
-                    transaction.Rollback();
-                    Console.WriteLine("Error al guardar el pedido: " + ex.Message);
-                    return false;
+                    Console.WriteLine("Error al obtener las descripciones de usuarios: " + ex.Message);
                 }
             }
+
+            return dtpDetallesUsuarios;
         }
+
+        public static DataTable ObtenerDetalllesDeFacturaPorEmpleado(string codigoEmpleado)
+        {
+            DataTable dtpDetallesUsuarios = new DataTable();
+            string query = "SELECT * FROM v_DetallesPedidosConPlatillo WHERE Codigo_Empleado = @codigoEmpleado";
+
+            using (SqlConnection conn = new SqlConnection(con_string))
+            {
+                SqlCommand cmd = new SqlCommand(query, conn);
+                cmd.Parameters.AddWithValue("@codigoEmpleado", codigoEmpleado);
+
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+
+                try
+                {
+                    conn.Open();
+                    da.Fill(dtpDetallesUsuarios);
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine("Error al obtener las descripciones de pedidos: " + ex.Message);
+                }
+            }
+
+            return dtpDetallesUsuarios;
+        }
+
 
     }
 }

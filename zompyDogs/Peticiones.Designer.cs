@@ -181,7 +181,7 @@
             // btnEliminarUsuario
             // 
             btnEliminarUsuario.Image = Properties.Resources.bin;
-            btnEliminarUsuario.Location = new Point(270, 189);
+            btnEliminarUsuario.Location = new Point(192, 189);
             btnEliminarUsuario.Name = "btnEliminarUsuario";
             btnEliminarUsuario.Size = new Size(72, 72);
             btnEliminarUsuario.TabIndex = 109;
@@ -204,12 +204,11 @@
             // btnActualizar
             // 
             btnActualizar.Image = Properties.Resources.pen__1_;
-            btnActualizar.Location = new Point(192, 189);
+            btnActualizar.Location = new Point(270, 189);
             btnActualizar.Name = "btnActualizar";
             btnActualizar.Size = new Size(72, 72);
             btnActualizar.TabIndex = 111;
             btnActualizar.UseVisualStyleBackColor = true;
-          //  btnActualizar.Click += btnActualizar_Click;
             // 
             // btnRefreshDG
             // 

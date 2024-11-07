@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             groupBox2 = new GroupBox();
             tmEnd = new DateTimePicker();
             tmBegin = new DateTimePicker();
@@ -100,7 +100,7 @@
             tmEnd.ShowUpDown = true;
             tmEnd.Size = new Size(85, 27);
             tmEnd.TabIndex = 141;
-            tmEnd.Value = new DateTime(2024, 11, 6, 0, 0, 0, 0);
+            tmEnd.Value = new DateTime(2024, 11, 7, 15, 0, 0, 0);
             // 
             // tmBegin
             // 
@@ -323,7 +323,7 @@
             // 
             btnCancelar.BackColor = Color.FromArgb(255, 49, 54);
             btnCancelar.ForeColor = SystemColors.ControlLightLight;
-            btnCancelar.Location = new Point(797, 420);
+            btnCancelar.Location = new Point(633, 387);
             btnCancelar.Name = "btnCancelar";
             btnCancelar.Size = new Size(148, 45);
             btnCancelar.TabIndex = 104;
@@ -335,7 +335,7 @@
             // 
             btnGuardarPuesto.BackColor = Color.FromArgb(251, 147, 32);
             btnGuardarPuesto.ForeColor = SystemColors.ControlLightLight;
-            btnGuardarPuesto.Location = new Point(644, 420);
+            btnGuardarPuesto.Location = new Point(480, 387);
             btnGuardarPuesto.Name = "btnGuardarPuesto";
             btnGuardarPuesto.Size = new Size(148, 45);
             btnGuardarPuesto.TabIndex = 103;
@@ -351,21 +351,21 @@
             dgvPuestos.AllowUserToResizeColumns = false;
             dgvPuestos.AllowUserToResizeRows = false;
             dgvPuestos.BackgroundColor = SystemColors.Window;
-            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = SystemColors.ControlDarkDark;
-            dataGridViewCellStyle2.Font = new Font("Segoe UI", 9F);
-            dataGridViewCellStyle2.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
-            dgvPuestos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = SystemColors.ControlDarkDark;
+            dataGridViewCellStyle1.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle1.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
+            dgvPuestos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             dgvPuestos.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvPuestos.Location = new Point(477, 72);
             dgvPuestos.Name = "dgvPuestos";
             dgvPuestos.ReadOnly = true;
             dgvPuestos.RowHeadersWidth = 51;
             dgvPuestos.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgvPuestos.Size = new Size(486, 177);
+            dgvPuestos.Size = new Size(394, 177);
             dgvPuestos.TabIndex = 105;
             dgvPuestos.CellClick += dgvPuestos_CellClick;
             // 
@@ -414,7 +414,7 @@
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
-            ClientSize = new Size(987, 487);
+            ClientSize = new Size(890, 487);
             Controls.Add(btnEditarPuesto);
             Controls.Add(btnEliminarUsuario);
             Controls.Add(btnAgregarNuevoPuesto);

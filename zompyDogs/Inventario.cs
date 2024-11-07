@@ -33,8 +33,8 @@ namespace zompyDogs
 
         private void btnPedidos_Click(object sender, EventArgs e)
         {
-            Factura frmPedidos = new Factura();
-            frmPedidos.Show();
+            //Factura frmPedidos = new Factura();
+            //frmPedidos.Show();
             this.Close();
         }
     }

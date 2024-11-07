@@ -121,6 +121,11 @@ namespace zompyDogs.CRUD.REGISTROS
                     {
                         MessageBox.Show("Puesto actualizado con éxito.");
                         CargarPuestos();
+                        txtCodigoGeneradoPuesto.Text = string.Empty;
+                        txtNombrePuesto.Text = string.Empty;
+                        txtDescripcion.Text = string.Empty;
+                        txtSalario.Text = string.Empty;
+                        txtDiasLaborales.Text = string.Empty;
                     }
                     else
                     {
@@ -167,6 +172,11 @@ namespace zompyDogs.CRUD.REGISTROS
 
                     MessageBox.Show("Puesto Registrado con Éxito.");
                     CargarPuestos();
+                    GeneradordeCodigoPuestoFromForm();
+                    txtNombrePuesto.Text = string.Empty;
+                    txtDescripcion.Text = string.Empty;
+                    txtSalario.Text = string.Empty;
+                    txtDiasLaborales.Text = string.Empty;
                 }
                 catch
                 {
@@ -179,7 +189,11 @@ namespace zompyDogs.CRUD.REGISTROS
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {
+            UsuarioRegistro frmUsuarioRegisro = new UsuarioRegistro();
             this.Close();
+            frmUsuarioRegisro.Close();
+
+
         }
 
         private void dgvPuestos_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -204,6 +218,11 @@ namespace zompyDogs.CRUD.REGISTROS
                 {
                     MessageBox.Show("Puesto eliminado con éxito.");
                     CargarPuestos();
+                    txtCodigoGeneradoPuesto.Text = string.Empty;
+                    txtNombrePuesto.Text = string.Empty;
+                    txtDescripcion.Text = string.Empty;
+                    txtSalario.Text = string.Empty;
+                    txtDiasLaborales.Text = string.Empty;
                 }
                 else
                 {

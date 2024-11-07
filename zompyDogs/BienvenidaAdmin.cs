@@ -102,7 +102,7 @@ namespace zompyDogs
         private void btnPOS_Click(object sender, EventArgs e)
         {
             CambiarColorBoton((Button)sender);
-            frmPOS fmPuntoDeVenta = new frmPOS
+            frmPOS fmPuntoDeVenta = new frmPOS(IdEmpleado)
             {
                 FormPrincipal = this
             };

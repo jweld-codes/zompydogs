@@ -17,6 +17,7 @@ namespace zompyDogs
     public partial class Login : Form
     {
         private Peticiones frmPeticionesAdmin;
+        public static int UsuarioIdActual { get; private set; }
 
         public Login()
         {
@@ -40,6 +41,8 @@ namespace zompyDogs
             }
             else
             {
+                UsuarioIdActual = idEmpleado;
+
                 if (isAdmin)
                 {
                     BienvenidaAdmin frmBienvenidaAdmin = new BienvenidaAdmin();
@@ -57,9 +60,6 @@ namespace zompyDogs
 
                     frmBienvenidaAdmin.AbrirFormsHija(frmPanelAdmin);
                     frmBienvenidaAdmin.Show();
-
-                    //MessageBox.Show($"rolID: {rolId}");
-
                     this.Hide();
                 }
                 else
@@ -72,8 +72,6 @@ namespace zompyDogs
                     PanelEmpleado frmPanelEmpleado = new PanelEmpleado();
                     frmPanelEmpleado.NombreUsuarioEmpleado = $"{nombreUser} {apeUser}";
                     frmPanelEmpleado.InicializarEmpleado(idEmpleado);
-
-                   // MessageBox.Show($"rolID: {rolId}");
 
                     frmBienvenidaUsuario.AbrirFormsHijaEmpleado(frmPanelEmpleado);
                     frmBienvenidaUsuario.Show();
