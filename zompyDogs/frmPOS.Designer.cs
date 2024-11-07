@@ -32,7 +32,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPOS));
             DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             topBarMenu = new Panel();
-            button2 = new Button();
             pictureBox2 = new PictureBox();
             btnUsuarioPanel = new Button();
             lblTITULO = new Label();
@@ -58,6 +57,8 @@
             panelContenedrPOS = new Panel();
             flpPOSPanel = new FlowLayoutPanel();
             bnSrcPedidos = new BindingSource(components);
+            txtCodigoGenerado = new TextBox();
+            btnCancelar = new Button();
             topBarMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             panel1.SuspendLayout();
@@ -73,7 +74,6 @@
             // topBarMenu
             // 
             topBarMenu.BackColor = Color.FromArgb(31, 19, 10);
-            topBarMenu.Controls.Add(button2);
             topBarMenu.Controls.Add(pictureBox2);
             topBarMenu.Controls.Add(btnUsuarioPanel);
             topBarMenu.Controls.Add(lblTITULO);
@@ -82,20 +82,6 @@
             topBarMenu.Name = "topBarMenu";
             topBarMenu.Size = new Size(901, 81);
             topBarMenu.TabIndex = 106;
-            // 
-            // button2
-            // 
-            button2.BackColor = Color.Transparent;
-            button2.FlatAppearance.BorderSize = 0;
-            button2.FlatStyle = FlatStyle.Flat;
-            button2.ForeColor = SystemColors.ButtonHighlight;
-            button2.Location = new Point(716, 45);
-            button2.Name = "button2";
-            button2.Size = new Size(152, 36);
-            button2.TabIndex = 99;
-            button2.Text = "FACTURAS";
-            button2.UseVisualStyleBackColor = false;
-            button2.Click += button2_Click;
             // 
             // pictureBox2
             // 
@@ -136,6 +122,8 @@
             // panel1
             // 
             panel1.BorderStyle = BorderStyle.FixedSingle;
+            panel1.Controls.Add(btnCancelar);
+            panel1.Controls.Add(txtCodigoGenerado);
             panel1.Controls.Add(groupBox1);
             panel1.Controls.Add(dgvPedido);
             panel1.Dock = DockStyle.Right;
@@ -249,12 +237,12 @@
             dgvPedido.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             dgvPedido.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvPedido.GridColor = SystemColors.ScrollBar;
-            dgvPedido.Location = new Point(5, 5);
+            dgvPedido.Location = new Point(5, 58);
             dgvPedido.Name = "dgvPedido";
             dgvPedido.RowHeadersVisible = false;
             dgvPedido.RowHeadersWidth = 51;
             dgvPedido.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgvPedido.Size = new Size(304, 337);
+            dgvPedido.Size = new Size(304, 284);
             dgvPedido.TabIndex = 0;
             dgvPedido.CellClick += dgvPedido_CellClick;
             // 
@@ -268,6 +256,7 @@
             btnConfirmarPedido.TabIndex = 1;
             btnConfirmarPedido.Text = "CONFIRMAR PEDIDO";
             btnConfirmarPedido.UseVisualStyleBackColor = false;
+            btnConfirmarPedido.Click += btnConfirmarPedido_Click;
             // 
             // panel
             // 
@@ -369,6 +358,27 @@
             flpPOSPanel.Size = new Size(426, 581);
             flpPOSPanel.TabIndex = 4;
             // 
+            // txtCodigoGenerado
+            // 
+            txtCodigoGenerado.BorderStyle = BorderStyle.FixedSingle;
+            txtCodigoGenerado.Enabled = false;
+            txtCodigoGenerado.Location = new Point(83, 22);
+            txtCodigoGenerado.Name = "txtCodigoGenerado";
+            txtCodigoGenerado.ReadOnly = true;
+            txtCodigoGenerado.Size = new Size(223, 27);
+            txtCodigoGenerado.TabIndex = 97;
+            // 
+            // btnCancelar
+            // 
+            btnCancelar.BackColor = Color.DarkRed;
+            btnCancelar.ForeColor = SystemColors.Control;
+            btnCancelar.Location = new Point(138, 589);
+            btnCancelar.Name = "btnCancelar";
+            btnCancelar.Size = new Size(179, 47);
+            btnCancelar.TabIndex = 5;
+            btnCancelar.Text = "CANCELAR PEDIDO";
+            btnCancelar.UseVisualStyleBackColor = false;
+            // 
             // frmPOS
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -383,6 +393,7 @@
             topBarMenu.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             panel1.ResumeLayout(false);
+            panel1.PerformLayout();
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)dgvPedido).EndInit();
@@ -419,10 +430,11 @@
         private Label label15;
         private Button btnEliminarOrden;
         private GroupBox groupBox1;
-        public Button button2;
         private Panel categoryPanel;
         private Panel panel6;
         private BindingSource bnSrcPedidos;
         public DataGridView dgvPedido;
+        public TextBox txtCodigoGenerado;
+        private Button btnCancelar;
     }
 }

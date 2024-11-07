@@ -33,10 +33,9 @@ namespace ZompyDogsDAO
             public DateTime FechaDelPedido { get; set; }
             public int TotalDeProductos { get; set; }
             public decimal Precio_Unitario { get; set; }
-            public decimal Sub_Total { get; set; }
-            public decimal I_S_V { get; set; }
-            public decimal TOTAL_Pagar { get; set; }
-            public string MetodoDePago { get; set; }
+            //public decimal Sub_Total { get; set; }
+            //public decimal I_S_V { get; set; }
+            //public decimal TOTAL_Pagar { get; set; }
             public string Estado { get; set; }
         }
 
@@ -53,6 +52,58 @@ namespace ZompyDogsDAO
         }
 
         public BindingList<PlatilloDetalle> platillosLista = new BindingList<PlatilloDetalle>();
+
+        public bool GuardarPedido(PedidoDetalle pedido, BindingList<PlatilloDetalle> platillos)
+        {
+            using (SqlConnection conn = new SqlConnection(con_string))
+            {
+                conn.Open();
+                SqlTransaction transaction = conn.BeginTransaction();
+
+                try
+                {
+                    string queryPedido = @"INSERT INTO Pedido (codigoPedido, Fk_Usuario, FechaPedido, total, estado)
+                                   VALUES (@CodigoPedido, @CodigoEmpleado, @FechaDelPedido, @TotalDeProductos, @Precio_Total, @ISV, @TotalPagar, @MetodoDePago, @Estado)";
+                    
+                    SqlCommand cmdPedido = new SqlCommand(queryPedido, conn, transaction);
+                    cmdPedido.Parameters.AddWithValue("@CodigoPedido", pedido.CodigoPedido);
+                    cmdPedido.Parameters.AddWithValue("@CodigoEmpleado", pedido.CodigoEmpleado);
+                    cmdPedido.Parameters.AddWithValue("@FechaDelPedido", pedido.FechaDelPedido);
+                    cmdPedido.Parameters.AddWithValue("@TotalDeProductos", pedido.TotalDeProductos);
+                    //cmdPedido.Parameters.AddWithValue("@Precio_Total", pedido.Sub_Total);
+                    //cmdPedido.Parameters.AddWithValue("@ISV", pedido.I_S_V);
+                    //cmdPedido.Parameters.AddWithValue("@TotalPagar", pedido.TOTAL_Pagar);
+                    //cmdPedido.Parameters.AddWithValue("@MetodoDePago", pedido.MetodoDePago);
+                    cmdPedido.Parameters.AddWithValue("@Estado", pedido.Estado);
+
+                    cmdPedido.ExecuteNonQuery();
+
+                    foreach (var platillo in platillos)
+                    {
+                        string queryDetalle = @"INSERT INTO DetallesPedido (CodigoPedido, CodigoPlatillo, Cantidad, Precio_Unitario, TotalProducto)
+                                        VALUES (@CodigoPedido, @CodigoPlatillo, @Cantidad, @PrecioUnitario, @TotalProducto)";
+                        SqlCommand cmdDetalle = new SqlCommand(queryDetalle, conn, transaction);
+                        cmdDetalle.Parameters.AddWithValue("@CodigoPedido", pedido.CodigoPedido);
+                        cmdDetalle.Parameters.AddWithValue("@CodigoPlatillo", platillo.Codigo);
+                        cmdDetalle.Parameters.AddWithValue("@Cantidad", platillo.Cantidad);
+                        cmdDetalle.Parameters.AddWithValue("@PrecioUnitario", platillo.Precio_Unitario);
+                        cmdDetalle.Parameters.AddWithValue("@TotalProducto", platillo.TotalProducto);
+
+                        cmdDetalle.ExecuteNonQuery();
+                    }
+
+                    transaction.Commit();
+                    Console.WriteLine("Pedido guardado exitosamente.");
+                    return true;
+                }
+                catch (Exception ex)
+                {
+                    transaction.Rollback();
+                    Console.WriteLine("Error al guardar el pedido: " + ex.Message);
+                    return false;
+                }
+            }
+        }
 
     }
 }
