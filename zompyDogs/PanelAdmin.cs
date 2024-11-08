@@ -108,15 +108,15 @@ namespace zompyDogs
                 try
                 {
                     conn.Open();
-                    object resultado = cmd.ExecuteScalar(); // Ejecuta la consulta y obtiene el resultado
+                    object resultado = cmd.ExecuteScalar();
 
-                    if (resultado != DBNull.Value) // Verifica si hay un valor
+                    if (resultado != DBNull.Value)
                     {
-                        lblPerdidas.Text = $"{Convert.ToDecimal(resultado):C}"; // Formatea como moneda
+                        lblPerdidas.Text = $"{Convert.ToDecimal(resultado):C}"; 
                     }
                     else
                     {
-                        lblPerdidas.Text = "L. 0.00"; // Si no hay ganancias
+                        lblPerdidas.Text = "L. 0.00";
                     }
                 }
                 catch (Exception ex)
@@ -169,10 +169,13 @@ namespace zompyDogs
             dgvPeticiones.DataSource = PeticionesValidaciones.ObtenerPeticionesParaPanel();
             dgvPeticiones.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
         }
+<<<<<<< Updated upstream
 
         private void PanelAdmin_Load(object sender, EventArgs e)
         {
 
         }
+=======
+>>>>>>> Stashed changes
     }
 }

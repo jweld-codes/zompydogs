@@ -13,6 +13,7 @@ namespace zompyDogs
     public partial class EmpleadoBienvenida : Form
     {
         public int IdEmpleado { get; set; }
+        public int RolID { get; set; }
         public EmpleadoBienvenida()
         {
             InitializeComponent();
@@ -66,7 +67,7 @@ namespace zompyDogs
         private void btnPOS_Click(object sender, EventArgs e)
         {
             CambiarColorBoton((Button)sender);
-            frmPOS fmPuntoDeVenta = new frmPOS(IdEmpleado)
+            frmPOS fmPuntoDeVenta = new frmPOS(IdEmpleado, RolID)
             {
                 EmpleadoFormPrincipal = this
             };

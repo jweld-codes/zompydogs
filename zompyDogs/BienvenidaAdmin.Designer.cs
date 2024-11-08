@@ -141,13 +141,13 @@
             btnPOS.FlatAppearance.BorderSize = 0;
             btnPOS.FlatStyle = FlatStyle.Flat;
             btnPOS.ForeColor = SystemColors.ButtonFace;
-            btnPOS.Image = (Image)resources.GetObject("btnPOS.Image");
+            btnPOS.Image = Properties.Resources.invoice;
             btnPOS.ImageAlign = ContentAlignment.MiddleLeft;
             btnPOS.Location = new Point(48, 443);
             btnPOS.Name = "btnPOS";
             btnPOS.Size = new Size(167, 51);
             btnPOS.TabIndex = 11;
-            btnPOS.Text = "      Punto de Venta";
+            btnPOS.Text = "      Pedidos";
             btnPOS.UseVisualStyleBackColor = false;
             btnPOS.Click += btnPOS_Click;
             // 

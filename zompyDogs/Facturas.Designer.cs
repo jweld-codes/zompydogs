@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             button1 = new Button();
-            btnRefreshDG = new Button();
             btnVisualizarRegistro = new Button();
             lblTituloRegistroPanel = new Label();
             txtBuscarUsuario = new TextBox();
@@ -57,6 +56,7 @@
             button1.TabIndex = 132;
             button1.UseVisualStyleBackColor = true;
             // 
+<<<<<<< Updated upstream
             // btnRefreshDG
             // 
             btnRefreshDG.FlatAppearance.BorderSize = 0;
@@ -70,6 +70,8 @@
             btnRefreshDG.UseVisualStyleBackColor = true;
             btnRefreshDG.Click += btnRefreshDG_Click;
             // 
+=======
+>>>>>>> Stashed changes
             // btnVisualizarRegistro
             // 
             btnVisualizarRegistro.Image = Properties.Resources.file__1_;
@@ -97,8 +99,13 @@
             txtBuscarUsuario.Margin = new Padding(3, 2, 3, 2);
             txtBuscarUsuario.Multiline = true;
             txtBuscarUsuario.Name = "txtBuscarUsuario";
+<<<<<<< Updated upstream
             txtBuscarUsuario.PlaceholderText = "Buscar Num Factura";
             txtBuscarUsuario.Size = new Size(420, 21);
+=======
+            txtBuscarUsuario.PlaceholderText = "Buscar Empleado";
+            txtBuscarUsuario.Size = new Size(479, 27);
+>>>>>>> Stashed changes
             txtBuscarUsuario.TabIndex = 120;
             txtBuscarUsuario.TextChanged += txtBuscarUsuario_TextChanged;
             // 
@@ -209,15 +216,17 @@
             ClientSize = new Size(788, 544);
             Controls.Add(topBarMenu);
             Controls.Add(button1);
-            Controls.Add(btnRefreshDG);
             Controls.Add(btnVisualizarRegistro);
             Controls.Add(lblTituloRegistroPanel);
             Controls.Add(txtBuscarUsuario);
             Controls.Add(groupBox1);
             Margin = new Padding(3, 2, 3, 2);
             Name = "Facturas";
+<<<<<<< Updated upstream
             Text = "Facturas";
             Load += Facturas_Load;
+=======
+>>>>>>> Stashed changes
             groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)dgvHistorialPedidos).EndInit();
             topBarMenu.ResumeLayout(false);
@@ -230,7 +239,6 @@
         #endregion
 
         private Button button1;
-        public Button btnRefreshDG;
         private Button btnVisualizarRegistro;
         private Label lblTituloRegistroPanel;
         private TextBox txtBuscarUsuario;

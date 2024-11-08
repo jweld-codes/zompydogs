@@ -32,6 +32,9 @@
             btnCancelar = new Button();
             txtCodigoGenerado = new TextBox();
             groupBox1 = new GroupBox();
+            label1 = new Label();
+            label3 = new Label();
+            label5 = new Label();
             txtEstado = new TextBox();
             lblTotal = new Label();
             label13 = new Label();
@@ -49,9 +52,6 @@
             label6 = new Label();
             pictureBox1 = new PictureBox();
             label2 = new Label();
-            label1 = new Label();
-            label3 = new Label();
-            label5 = new Label();
             groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvTotalPedido).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
@@ -61,7 +61,7 @@
             // 
             btnCancelar.BackColor = Color.FromArgb(255, 49, 54);
             btnCancelar.ForeColor = SystemColors.ControlLightLight;
-            btnCancelar.Location = new Point(299, 521);
+            btnCancelar.Location = new Point(425, 521);
             btnCancelar.Name = "btnCancelar";
             btnCancelar.Size = new Size(150, 42);
             btnCancelar.TabIndex = 122;
@@ -73,7 +73,7 @@
             // 
             txtCodigoGenerado.BorderStyle = BorderStyle.FixedSingle;
             txtCodigoGenerado.Enabled = false;
-            txtCodigoGenerado.Location = new Point(133, 87);
+            txtCodigoGenerado.Location = new Point(160, 87);
             txtCodigoGenerado.Name = "txtCodigoGenerado";
             txtCodigoGenerado.ReadOnly = true;
             txtCodigoGenerado.Size = new Size(241, 27);
@@ -101,15 +101,45 @@
             groupBox1.Controls.Add(label6);
             groupBox1.Location = new Point(15, 145);
             groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(441, 370);
+            groupBox1.Size = new Size(560, 370);
             groupBox1.TabIndex = 119;
             groupBox1.TabStop = false;
-            groupBox1.Text = "Factura";
+            groupBox1.Text = "Pedido";
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.Location = new Point(453, 282);
+            label1.Name = "label1";
+            label1.Size = new Size(27, 28);
+            label1.TabIndex = 126;
+            label1.Text = "L.";
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label3.Location = new Point(453, 249);
+            label3.Name = "label3";
+            label3.Size = new Size(27, 28);
+            label3.TabIndex = 125;
+            label3.Text = "L.";
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label5.Location = new Point(453, 217);
+            label5.Name = "label5";
+            label5.Size = new Size(27, 28);
+            label5.TabIndex = 124;
+            label5.Text = "L.";
             // 
             // txtEstado
             // 
             txtEstado.BorderStyle = BorderStyle.FixedSingle;
-            txtEstado.Location = new Point(213, 152);
+            txtEstado.Location = new Point(332, 151);
             txtEstado.Multiline = true;
             txtEstado.Name = "txtEstado";
             txtEstado.Size = new Size(201, 29);
@@ -119,7 +149,7 @@
             // 
             lblTotal.AutoSize = true;
             lblTotal.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblTotal.Location = new Point(355, 283);
+            lblTotal.Location = new Point(474, 282);
             lblTotal.Name = "lblTotal";
             lblTotal.Size = new Size(65, 28);
             lblTotal.TabIndex = 122;
@@ -128,7 +158,7 @@
             // label13
             // 
             label13.AutoSize = true;
-            label13.Location = new Point(225, 290);
+            label13.Location = new Point(344, 289);
             label13.Name = "label13";
             label13.Size = new Size(103, 20);
             label13.TabIndex = 121;
@@ -138,7 +168,7 @@
             // 
             lblISV.AutoSize = true;
             lblISV.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblISV.Location = new Point(355, 250);
+            lblISV.Location = new Point(474, 249);
             lblISV.Name = "lblISV";
             lblISV.Size = new Size(65, 28);
             lblISV.TabIndex = 120;
@@ -147,7 +177,7 @@
             // label11
             // 
             label11.AutoSize = true;
-            label11.Location = new Point(266, 225);
+            label11.Location = new Point(385, 224);
             label11.Name = "label11";
             label11.Size = new Size(68, 20);
             label11.TabIndex = 119;
@@ -156,7 +186,7 @@
             // label9
             // 
             label9.AutoSize = true;
-            label9.Location = new Point(213, 129);
+            label9.Location = new Point(332, 128);
             label9.Name = "label9";
             label9.Size = new Size(54, 20);
             label9.TabIndex = 111;
@@ -166,7 +196,7 @@
             // 
             lblSubtotal.AutoSize = true;
             lblSubtotal.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblSubtotal.Location = new Point(355, 218);
+            lblSubtotal.Location = new Point(474, 217);
             lblSubtotal.Name = "lblSubtotal";
             lblSubtotal.Size = new Size(65, 28);
             lblSubtotal.TabIndex = 118;
@@ -175,7 +205,7 @@
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(256, 257);
+            label4.Location = new Point(375, 256);
             label4.Name = "label4";
             label4.Size = new Size(75, 20);
             label4.TabIndex = 117;
@@ -184,7 +214,7 @@
             // lblCodigoEmpleado
             // 
             lblCodigoEmpleado.AutoSize = true;
-            lblCodigoEmpleado.Location = new Point(296, 60);
+            lblCodigoEmpleado.Location = new Point(415, 59);
             lblCodigoEmpleado.Name = "lblCodigoEmpleado";
             lblCodigoEmpleado.Size = new Size(25, 20);
             lblCodigoEmpleado.TabIndex = 116;
@@ -224,13 +254,13 @@
             dgvTotalPedido.RowHeadersVisible = false;
             dgvTotalPedido.RowHeadersWidth = 51;
             dgvTotalPedido.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgvTotalPedido.Size = new Size(180, 284);
+            dgvTotalPedido.Size = new Size(295, 284);
             dgvTotalPedido.TabIndex = 114;
             // 
             // dtpFechaRegistro
             // 
             dtpFechaRegistro.Format = DateTimePickerFormat.Short;
-            dtpFechaRegistro.Location = new Point(213, 0);
+            dtpFechaRegistro.Location = new Point(359, 0);
             dtpFechaRegistro.Name = "dtpFechaRegistro";
             dtpFechaRegistro.Size = new Size(180, 27);
             dtpFechaRegistro.TabIndex = 113;
@@ -238,7 +268,7 @@
             // txtEmpleado
             // 
             txtEmpleado.BorderStyle = BorderStyle.FixedSingle;
-            txtEmpleado.Location = new Point(213, 83);
+            txtEmpleado.Location = new Point(332, 82);
             txtEmpleado.Multiline = true;
             txtEmpleado.Name = "txtEmpleado";
             txtEmpleado.Size = new Size(201, 29);
@@ -247,7 +277,7 @@
             // label7
             // 
             label7.AutoSize = true;
-            label7.Location = new Point(213, 60);
+            label7.Location = new Point(332, 59);
             label7.Name = "label7";
             label7.Size = new Size(77, 20);
             label7.TabIndex = 107;
@@ -278,48 +308,18 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label2.Location = new Point(133, 43);
+            label2.Location = new Point(160, 43);
             label2.Name = "label2";
             label2.Size = new Size(246, 41);
             label2.TabIndex = 124;
             label2.Text = "Vista del Pedido";
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(334, 283);
-            label1.Name = "label1";
-            label1.Size = new Size(27, 28);
-            label1.TabIndex = 126;
-            label1.Text = "L.";
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label3.Location = new Point(334, 250);
-            label3.Name = "label3";
-            label3.Size = new Size(27, 28);
-            label3.TabIndex = 125;
-            label3.Text = "L.";
-            // 
-            // label5
-            // 
-            label5.AutoSize = true;
-            label5.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label5.Location = new Point(334, 218);
-            label5.Name = "label5";
-            label5.Size = new Size(27, 28);
-            label5.TabIndex = 124;
-            label5.Text = "L.";
             // 
             // FacturaView
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
-            ClientSize = new Size(492, 573);
+            ClientSize = new Size(617, 573);
             Controls.Add(label2);
             Controls.Add(pictureBox1);
             Controls.Add(btnCancelar);

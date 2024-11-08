@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using zompyDogs.CRUD.REGISTROS;
 using ZompyDogsDAO;
 using ZompyDogsLib.Controladores;
 
@@ -28,11 +29,12 @@ namespace zompyDogs
 
         private string nuevoCodigoPedido;
         private int usuarioIDActual;
+        private int rolIDActual;
 
-        private string pedidoPlatilo;
-        private string pedidoCodigo;
-        private int pedidoCantidad;
-        private decimal pedidoPrecioUnitario;
+        public string pedidoPlatilo;
+        public string pedidoCodigo;
+        public int pedidoCantidad;
+        public decimal pedidoPrecioUnitario;
 
         public decimal subtotalPago;
         public decimal totalaPago;
@@ -40,10 +42,18 @@ namespace zompyDogs
         public int cantidadPlatillo = 1;
         public int menuID;
 
-        public frmPOS(int usuarioIDActual)
+        public frmPOS(int usuarioIDActual, int rolIDActual)
         {
             InitializeComponent();
             this.usuarioIDActual = usuarioIDActual;
+            this.rolIDActual = rolIDActual;
+            MessageBox.Show("idEmpleado: " + usuarioIDActual + "RolIdActual: " + rolIDActual);
+            if (rolIDActual > 1)
+            {
+                btnHistorial.Enabled = false;
+                btnHistorial.Visible = false;
+                btnHistorial.Hide();
+            }
 
             CargarMenu("Entrada");
             AddCategoria();
@@ -298,7 +308,6 @@ namespace zompyDogs
             DataGridViewRow filaSeleccionada = dgvPedido.Rows[e.RowIndex];
             if (e.RowIndex >= 0)
             {
-                //pedidoCodigo = filaSeleccionada.Cells["Codigo"].Value.ToString();
                 pedidoPlatilo = filaSeleccionada.Cells["PlatilloNombre"].Value.ToString();
                 pedidoCantidad = Convert.ToInt32(filaSeleccionada.Cells["Cantidad"].Value);
                 pedidoPrecioUnitario = Convert.ToInt32(filaSeleccionada.Cells["Precio_Unitario"].Value);
@@ -353,7 +362,6 @@ namespace zompyDogs
             lblSubtotal.Text = $"{subtotalPago}";
         }
 
-
         private void btnConfirmarPedido_Click(object sender, EventArgs e)
         {
             GuardarPedido();
@@ -392,19 +400,22 @@ namespace zompyDogs
                         cmdDetalle.Parameters.AddWithValue("@Cantidad", cantidadPlatillo);
                         cmdDetalle.Parameters.AddWithValue("@PrecioUnitario", pedidoPrecioUnitario);
                         cmdDetalle.Parameters.AddWithValue("@subTotal", subtotalPago);
-                        cmdPedido.Parameters.AddWithValue("@TotalAPagar", totalaPago);
+                        cmdDetalle.Parameters.AddWithValue("@TotalAPagar", totalaPago);
 
 
                         cmdDetalle.ExecuteNonQuery();
                     }
 
                     transaction.Commit();
-                    MessageBox.Show("Pedido guardado exitosamente.");
+                    VerFacturaFinalizada();
+                    MessageBox.Show($"Pedido: {codigoPedido} guardado exitosamente.");
+
                     CargarMenu("Entrada");
                     _pedidosDAO.platillosLista.Clear();
                     _bndsrcPedido.ResetBindings(false);
                     subtotalPago = 0;
                     lblSubtotal.Text = "0.00";
+                    lblTotalAPagar.Text = "0.00";
                 }
             }
             catch (Exception ex)
@@ -414,21 +425,57 @@ namespace zompyDogs
             }
         }
 
+        private void VerFacturaFinalizada()
+        {
+            var facturaView = new FacturaView();
+
+            // Deshabilitar todos los elementos del formulario
+            foreach (Control control in facturaView.Controls)
+            {
+                control.Enabled = false;
+            }
+            facturaView.btnCancelar.Enabled = true;
+            facturaView.dgvTotalPedido.Enabled = true;
+            facturaView.btnCancelar.Text = "ACEPTAR";
+            facturaView.btnCancelar.BackColor = Color.Blue;
+            facturaView.Show();
+
+            DataTable facturaDatosView = PedidosDAO.ObtenerDetalllesDeFacturaFinalizada(nuevoCodigoPedido);
+
+            if (facturaDatosView.Rows.Count > 0)
+            {
+                DataRow fila = facturaDatosView.Rows[0];
+
+                facturaView.txtCodigoGenerado.Text = fila["Codigo_Pedido"].ToString();
+                facturaView.lblCodigoEmpleado.Text = fila["Codigo_Empleado"].ToString();
+                facturaView.txtEmpleado.Text = fila["Empleado"].ToString();
+                facturaView.dtpFechaRegistro.Text = fila["Fecha_Del_Pedido"].ToString();
+                facturaView.lblTotal.Text = fila["Total_a_Pagar"].ToString();
+                facturaView.lblSubtotal.Text = fila["Subtotal"].ToString();
+                facturaView.lblISV.Text = fila["ISV"].ToString();
+                facturaView.lblTotalProductos.Text = fila["Total_De_Productos"].ToString();
+                facturaView.txtEstado.Text = fila["Estado"].ToString();
+
+                DataTable detalleProductosTable = new DataTable();
+                detalleProductosTable.Columns.Add("Platillo", typeof(string));
+                detalleProductosTable.Columns.Add("Cantidad", typeof(int));
+                detalleProductosTable.Columns.Add("Precio Unitario", typeof(decimal));
+
+                foreach (var platillo in _pedidosDAO.platillosLista)
+                {
+                    detalleProductosTable.Rows.Add(
+                        platillo.PlatilloNombre,
+                        platillo.Cantidad,  
+                        platillo.Precio_Unitario
+                    );
+                }
+                facturaView.dgvTotalPedido.DataSource = detalleProductosTable;
+            }
+        }
+
         private void btnHistorial_Click(object sender, EventArgs e)
         {
-            CambiarColorBoton((Button)sender);
-            if (FormPrincipal != null)
-            {
-                FormPrincipal.AbrirFormsHija(new Facturas(usuarioIDActual) { FormPrincipal = FormPrincipal });
-            }
-            else if (EmpleadoFormPrincipal != null)
-            {
-                EmpleadoFormPrincipal.AbrirFormsHijaEmpleado(new Facturas(usuarioIDActual) { EmpleadoFormPrincipal = EmpleadoFormPrincipal });
-            }
-            else
-            {
-                MessageBox.Show("Form es nulo");
-            }
+            
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)

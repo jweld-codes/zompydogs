@@ -15,6 +15,7 @@ namespace zompyDogs
     public partial class BienvenidaAdmin : Form
     {
         public int IdEmpleado { get; set; }
+        public int RolID { get; set; }
         public BienvenidaAdmin()
         {
             InitializeComponent();
@@ -102,11 +103,11 @@ namespace zompyDogs
         private void btnPOS_Click(object sender, EventArgs e)
         {
             CambiarColorBoton((Button)sender);
-            frmPOS fmPuntoDeVenta = new frmPOS(IdEmpleado)
+            Facturas fmFactura = new Facturas(IdEmpleado, RolID)
             {
                 FormPrincipal = this
             };
-            AbrirFormsHija(fmPuntoDeVenta);
+            AbrirFormsHija(fmFactura);
         }
 
         private void btnMenu_Click(object sender, EventArgs e)

@@ -11,12 +11,13 @@ namespace ZompyDogsDAO
 
         // Metodo para validar el usuario y obtener sus datos
         public static (
-    bool isValid,
-    bool isAdmin,
-    string nombreUser,
-    string apeUser,
-    string username,
-    int idEmpleado
+            bool isValid,
+            bool isAdmin,
+            string nombreUser,
+            string apeUser,
+            string username,
+            int idEmpleado,
+            int idRol
 ) IsValidUser(string user, string clave)
         {
             bool isValid = false;
@@ -25,6 +26,7 @@ namespace ZompyDogsDAO
             string apeUser = string.Empty;
             string username = string.Empty;
             int idEmpleado = 0;
+            int idRol =0;
 
             try
             {
@@ -63,6 +65,7 @@ namespace ZompyDogsDAO
                         apeUser = reader["Apellido_Usuario"].ToString();
                         username = reader["Usuario"].ToString();
                         idEmpleado = reader.GetInt32(reader.GetOrdinal("IDUsuario"));
+                        idRol = reader.GetInt32(reader.GetOrdinal("RolId"));
 
                         System.Diagnostics.Debug.WriteLine("Datos obtenidos: Nombre = " + nombreUser + ", Apellido = " + apeUser + ", Usuario = " + username);
 
@@ -93,7 +96,7 @@ namespace ZompyDogsDAO
                 }
             }
 
-            return (isValid, isAdmin, nombreUser, apeUser, username, idEmpleado);
+            return (isValid, isAdmin, nombreUser, apeUser, username, idEmpleado, idRol);
         }
     }
 }

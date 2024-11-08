@@ -30,7 +30,7 @@
         {
             components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPOS));
-            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             topBarMenu = new Panel();
             btnHistorial = new Button();
             pictureBox2 = new PictureBox();
@@ -47,7 +47,6 @@
             label15 = new Label();
             btnEliminarOrden = new Button();
             txtPlatilloOrden = new TextBox();
-            btnConfirmarEdit = new Button();
             dgvPedido = new DataGridView();
             btnConfirmarPedido = new Button();
             panel = new Panel();
@@ -158,7 +157,7 @@
             // 
             label6.AutoSize = true;
             label6.Font = new Font("Segoe UI", 7.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label6.Location = new Point(12, 538);
+            label6.Location = new Point(12, 502);
             label6.Name = "label6";
             label6.Size = new Size(57, 17);
             label6.TabIndex = 98;
@@ -168,7 +167,7 @@
             // 
             lblSubtotal.AutoSize = true;
             lblSubtotal.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblSubtotal.Location = new Point(115, 510);
+            lblSubtotal.Location = new Point(115, 474);
             lblSubtotal.Name = "lblSubtotal";
             lblSubtotal.Size = new Size(57, 25);
             lblSubtotal.TabIndex = 4;
@@ -178,7 +177,7 @@
             // 
             btnCancelar.BackColor = Color.DarkRed;
             btnCancelar.ForeColor = SystemColors.Control;
-            btnCancelar.Location = new Point(9, 580);
+            btnCancelar.Location = new Point(138, 589);
             btnCancelar.Name = "btnCancelar";
             btnCancelar.Size = new Size(179, 47);
             btnCancelar.TabIndex = 5;
@@ -190,7 +189,7 @@
             // 
             label13.AutoSize = true;
             label13.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label13.Location = new Point(94, 510);
+            label13.Location = new Point(94, 474);
             label13.Name = "label13";
             label13.Size = new Size(26, 25);
             label13.TabIndex = 3;
@@ -209,7 +208,7 @@
             // label12
             // 
             label12.AutoSize = true;
-            label12.Location = new Point(9, 515);
+            label12.Location = new Point(9, 479);
             label12.Name = "label12";
             label12.Size = new Size(79, 20);
             label12.TabIndex = 2;
@@ -220,10 +219,9 @@
             groupBox1.Controls.Add(label15);
             groupBox1.Controls.Add(btnEliminarOrden);
             groupBox1.Controls.Add(txtPlatilloOrden);
-            groupBox1.Controls.Add(btnConfirmarEdit);
             groupBox1.Location = new Point(5, 348);
             groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(304, 150);
+            groupBox1.Size = new Size(304, 115);
             groupBox1.TabIndex = 7;
             groupBox1.TabStop = false;
             groupBox1.Text = "Editar Orden";
@@ -256,17 +254,6 @@
             txtPlatilloOrden.Size = new Size(250, 27);
             txtPlatilloOrden.TabIndex = 2;
             // 
-            // btnConfirmarEdit
-            // 
-            btnConfirmarEdit.BackColor = SystemColors.Highlight;
-            btnConfirmarEdit.ForeColor = SystemColors.Control;
-            btnConfirmarEdit.Location = new Point(185, 97);
-            btnConfirmarEdit.Name = "btnConfirmarEdit";
-            btnConfirmarEdit.Size = new Size(116, 47);
-            btnConfirmarEdit.TabIndex = 5;
-            btnConfirmarEdit.Text = "Confirmar";
-            btnConfirmarEdit.UseVisualStyleBackColor = false;
-            // 
             // dgvPedido
             // 
             dgvPedido.AllowUserToAddRows = false;
@@ -277,14 +264,14 @@
             dgvPedido.BorderStyle = BorderStyle.None;
             dgvPedido.CellBorderStyle = DataGridViewCellBorderStyle.SunkenHorizontal;
             dgvPedido.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = SystemColors.Control;
-            dataGridViewCellStyle2.Font = new Font("Segoe UI", 9F);
-            dataGridViewCellStyle2.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = SystemColors.ControlLight;
-            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
-            dgvPedido.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = SystemColors.Control;
+            dataGridViewCellStyle1.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle1.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = SystemColors.ControlLight;
+            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
+            dgvPedido.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             dgvPedido.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvPedido.GridColor = SystemColors.ScrollBar;
             dgvPedido.Location = new Point(5, 58);
@@ -461,7 +448,6 @@
         private Label lblSubtotal;
         private Label label13;
         private Label label12;
-        private Button btnConfirmarEdit;
         private TextBox txtPlatilloOrden;
         private Label label15;
         private Button btnEliminarOrden;
