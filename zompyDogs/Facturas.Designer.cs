@@ -55,7 +55,7 @@
             button1.Size = new Size(26, 20);
             button1.TabIndex = 132;
             button1.UseVisualStyleBackColor = true;
-       
+            // 
             // btnVisualizarRegistro
             // 
             btnVisualizarRegistro.Image = Properties.Resources.file__1_;
@@ -83,10 +83,10 @@
             txtBuscarUsuario.Margin = new Padding(3, 2, 3, 2);
             txtBuscarUsuario.Multiline = true;
             txtBuscarUsuario.Name = "txtBuscarUsuario";
-            txtBuscarUsuario.PlaceholderText = "Buscar Num Factura";
-            txtBuscarUsuario.Size = new Size(420, 21);
             txtBuscarUsuario.PlaceholderText = "Buscar Empleado";
             txtBuscarUsuario.Size = new Size(479, 27);
+            txtBuscarUsuario.PlaceholderText = "Buscar Num Factura";
+            txtBuscarUsuario.Size = new Size(420, 21);
             txtBuscarUsuario.TabIndex = 120;
             txtBuscarUsuario.TextChanged += txtBuscarUsuario_TextChanged;
             // 
@@ -120,7 +120,6 @@
             dgvHistorialPedidos.Size = new Size(700, 254);
             dgvHistorialPedidos.TabIndex = 72;
             dgvHistorialPedidos.CellClick += dgvHistorialPedidos_CellClick;
-            dgvHistorialPedidos.CellContentClick += dgvHistorialPedidos_CellContentClick;
             // 
             // topBarMenu
             // 
@@ -204,6 +203,7 @@
             Margin = new Padding(3, 2, 3, 2);
             Name = "Facturas";
             Text = "Facturas";
+//            Load += Facturas_Load;
             groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)dgvHistorialPedidos).EndInit();
             topBarMenu.ResumeLayout(false);

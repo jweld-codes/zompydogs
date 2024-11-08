@@ -159,7 +159,7 @@ namespace zompyDogs
         {
             using (SqlConnection conn = new SqlConnection(con_string))
             {
-                string query = "SELECT IDMenu, Codigo, Platillo, Descripcion, Precio, Imagen FROM v_DetallesMenu WHERE Categoria = @Categoria";
+                string query = "SELECT ID_Menu, Codigo, Platillo, Descripcion, Precio, Imagen FROM v_DetallesMenu WHERE Categoria = @Categoria";
 
                 SqlCommand cmd = new SqlCommand(query, conn);
                 cmd.Parameters.AddWithValue("@Categoria", categoria);
