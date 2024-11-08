@@ -55,23 +55,7 @@
             button1.Size = new Size(26, 20);
             button1.TabIndex = 132;
             button1.UseVisualStyleBackColor = true;
-            // 
-<<<<<<< Updated upstream
-            // btnRefreshDG
-            // 
-            btnRefreshDG.FlatAppearance.BorderSize = 0;
-            btnRefreshDG.FlatStyle = FlatStyle.Flat;
-            btnRefreshDG.Image = Properties.Resources.refresh;
-            btnRefreshDG.Location = new Point(720, 206);
-            btnRefreshDG.Margin = new Padding(3, 2, 3, 2);
-            btnRefreshDG.Name = "btnRefreshDG";
-            btnRefreshDG.Size = new Size(25, 22);
-            btnRefreshDG.TabIndex = 131;
-            btnRefreshDG.UseVisualStyleBackColor = true;
-            btnRefreshDG.Click += btnRefreshDG_Click;
-            // 
-=======
->>>>>>> Stashed changes
+       
             // btnVisualizarRegistro
             // 
             btnVisualizarRegistro.Image = Properties.Resources.file__1_;
@@ -99,13 +83,10 @@
             txtBuscarUsuario.Margin = new Padding(3, 2, 3, 2);
             txtBuscarUsuario.Multiline = true;
             txtBuscarUsuario.Name = "txtBuscarUsuario";
-<<<<<<< Updated upstream
             txtBuscarUsuario.PlaceholderText = "Buscar Num Factura";
             txtBuscarUsuario.Size = new Size(420, 21);
-=======
             txtBuscarUsuario.PlaceholderText = "Buscar Empleado";
             txtBuscarUsuario.Size = new Size(479, 27);
->>>>>>> Stashed changes
             txtBuscarUsuario.TabIndex = 120;
             txtBuscarUsuario.TextChanged += txtBuscarUsuario_TextChanged;
             // 
@@ -222,11 +203,7 @@
             Controls.Add(groupBox1);
             Margin = new Padding(3, 2, 3, 2);
             Name = "Facturas";
-<<<<<<< Updated upstream
             Text = "Facturas";
-            Load += Facturas_Load;
-=======
->>>>>>> Stashed changes
             groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)dgvHistorialPedidos).EndInit();
             topBarMenu.ResumeLayout(false);

@@ -169,13 +169,10 @@ namespace zompyDogs
             dgvPeticiones.DataSource = PeticionesValidaciones.ObtenerPeticionesParaPanel();
             dgvPeticiones.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
         }
-<<<<<<< Updated upstream
 
         private void PanelAdmin_Load(object sender, EventArgs e)
         {
 
         }
-=======
->>>>>>> Stashed changes
     }
 }

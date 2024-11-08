@@ -17,11 +17,7 @@ namespace ZompyDogsDAO
         {
             using (SqlConnection conn = new SqlConnection(con_string))
             {
-<<<<<<< Updated upstream
                 string query = "SELECT * FROM v_DetallesPedidosConPlatillo ORDER BY Fecha_Del_Pedido DESC";
-=======
-                string query = "SELECT Codigo_Pedido, Empleado, Total_De_Productos FROM v_DetallesPedidos ORDER BY Fecha_Del_Pedido DESC";
->>>>>>> Stashed changes
                 SqlDataAdapter da = new SqlDataAdapter(query, conn);
                 DataTable dtProductos = new DataTable();
                 da.Fill(dtProductos);
@@ -64,7 +60,6 @@ namespace ZompyDogsDAO
             public DateTime FechaDelPedido { get; set; }
             public string Estado { get; set; }
         }
-<<<<<<< Updated upstream
         public static DataTable BuscarPeticionesPorID(int valorBusqueda)
         {
             string query = "SELECT  * FROM v_DetallesPedidosConPlatillo WHERE Num_Factura = @valorBusqueda;";
@@ -81,9 +76,6 @@ namespace ZompyDogsDAO
                 }
             }
         }
-
-=======
->>>>>>> Stashed changes
         public class DetalleDePedido
         {
             public int id_Menu { get; set; }

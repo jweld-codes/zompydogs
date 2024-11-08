@@ -128,7 +128,6 @@ namespace zompyDogs
                 MessageBox.Show("No se encontraron detalles para el pedido especificado.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
         private void dgvHistorialPedidos_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             txtBuscarUsuario.PlaceholderText = "Buscar Empleado";
@@ -144,7 +143,6 @@ namespace zompyDogs
             }
         }
 
-<<<<<<< Updated upstream
         private void dgvHistorialPedidos_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
@@ -164,16 +162,5 @@ namespace zompyDogs
             }
         }
 
-        private void Facturas_Load(object sender, EventArgs e)
-        {
-
-=======
-        private void txtBuscarUsuario_TextChanged(object sender, EventArgs e)
-        {
-            string valorBusqueda = txtBuscarUsuario.Text;
-            DataTable resultados = PedidosDAO.BuscadorDeFacturas(valorBusqueda);
-            dgvHistorialPedidos.DataSource = resultados;
->>>>>>> Stashed changes
-        }
     }
 }
