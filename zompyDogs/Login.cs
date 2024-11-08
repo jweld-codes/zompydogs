@@ -18,6 +18,7 @@ namespace zompyDogs
     {
         private Peticiones frmPeticionesAdmin;
         public static int UsuarioIdActual { get; private set; }
+        public static int RolIdActual { get; private set; }
 
         public Login()
         {
@@ -28,7 +29,7 @@ namespace zompyDogs
 
         private void btnIniciarSession_Click(object sender, EventArgs e)
         {
-            var (isValid, isAdmin, nombreUser, apeUser, username, idEmpleado) = UsuarioValidaciones.IsValidUser(txtUser.Text, txtPassword.Text);
+            var (isValid, isAdmin, nombreUser, apeUser, username, idEmpleado, idRol) = UsuarioValidaciones.IsValidUser(txtUser.Text, txtPassword.Text);
 
             string validUser = txtUser.Text;
             string validpassword = txtPassword.Text;
@@ -42,11 +43,15 @@ namespace zompyDogs
             else
             {
                 UsuarioIdActual = idEmpleado;
+                RolIdActual = idRol;
+
+                MessageBox.Show("idEmpleado: "+ UsuarioIdActual + "RolIdActual: "+ RolIdActual);
 
                 if (isAdmin)
                 {
                     BienvenidaAdmin frmBienvenidaAdmin = new BienvenidaAdmin();
                     frmBienvenidaAdmin.IdEmpleado = idEmpleado;
+                    frmBienvenidaAdmin.RolID = idRol;
                     frmBienvenidaAdmin.lblNombreSideBar.Text = $"{nombreUser} {apeUser}";
 
                     PanelAdmin frmPanelAdmin = new PanelAdmin();
@@ -67,6 +72,7 @@ namespace zompyDogs
 
                     EmpleadoBienvenida frmBienvenidaUsuario = new EmpleadoBienvenida();
                     frmBienvenidaUsuario.IdEmpleado = idEmpleado;
+                    frmBienvenidaUsuario.RolID = idRol;
                     frmBienvenidaUsuario.lblNombreSideBar.Text = $"{nombreUser} {apeUser}";
 
                     PanelEmpleado frmPanelEmpleado = new PanelEmpleado();

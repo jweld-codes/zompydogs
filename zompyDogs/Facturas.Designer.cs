@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             button1 = new Button();
-            btnRefreshDG = new Button();
             btnVisualizarRegistro = new Button();
             lblTituloRegistroPanel = new Label();
             txtBuscarUsuario = new TextBox();
@@ -56,17 +55,6 @@
             button1.TabIndex = 132;
             button1.UseVisualStyleBackColor = true;
             // 
-            // btnRefreshDG
-            // 
-            btnRefreshDG.FlatAppearance.BorderSize = 0;
-            btnRefreshDG.FlatStyle = FlatStyle.Flat;
-            btnRefreshDG.Image = Properties.Resources.refresh;
-            btnRefreshDG.Location = new Point(823, 275);
-            btnRefreshDG.Name = "btnRefreshDG";
-            btnRefreshDG.Size = new Size(29, 29);
-            btnRefreshDG.TabIndex = 131;
-            btnRefreshDG.UseVisualStyleBackColor = true;
-            // 
             // btnVisualizarRegistro
             // 
             btnVisualizarRegistro.Image = Properties.Resources.file__1_;
@@ -92,9 +80,10 @@
             txtBuscarUsuario.Location = new Point(397, 96);
             txtBuscarUsuario.Multiline = true;
             txtBuscarUsuario.Name = "txtBuscarUsuario";
-            txtBuscarUsuario.PlaceholderText = "Buscar Usuario";
+            txtBuscarUsuario.PlaceholderText = "Buscar Empleado";
             txtBuscarUsuario.Size = new Size(479, 27);
             txtBuscarUsuario.TabIndex = 120;
+            txtBuscarUsuario.TextChanged += txtBuscarUsuario_TextChanged;
             // 
             // groupBox1
             // 
@@ -195,13 +184,11 @@
             ClientSize = new Size(901, 725);
             Controls.Add(topBarMenu);
             Controls.Add(button1);
-            Controls.Add(btnRefreshDG);
             Controls.Add(btnVisualizarRegistro);
             Controls.Add(lblTituloRegistroPanel);
             Controls.Add(txtBuscarUsuario);
             Controls.Add(groupBox1);
             Name = "Facturas";
-            Text = "Facturas";
             groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)dgvHistorialPedidos).EndInit();
             topBarMenu.ResumeLayout(false);
@@ -214,7 +201,6 @@
         #endregion
 
         private Button button1;
-        public Button btnRefreshDG;
         private Button btnVisualizarRegistro;
         private Label lblTituloRegistroPanel;
         private TextBox txtBuscarUsuario;

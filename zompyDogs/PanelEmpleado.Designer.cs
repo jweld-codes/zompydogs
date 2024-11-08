@@ -38,11 +38,19 @@
             topBarMenu = new Panel();
             pictureBox2 = new PictureBox();
             lblTITULO = new Label();
+            panel6 = new Panel();
+            lblTotalPedidas = new Label();
+            label6 = new Label();
+            panel1 = new Panel();
+            label2 = new Label();
+            label3 = new Label();
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dtgHistorialPedidos).BeginInit();
             topBarMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
+            panel6.SuspendLayout();
+            panel1.SuspendLayout();
             SuspendLayout();
             // 
             // panel2
@@ -52,7 +60,7 @@
             panel2.Controls.Add(lblNombreUser);
             panel2.Controls.Add(label1);
             panel2.Controls.Add(pictureBox1);
-            panel2.Location = new Point(39, 129);
+            panel2.Location = new Point(36, 89);
             panel2.Name = "panel2";
             panel2.Size = new Size(622, 208);
             panel2.TabIndex = 31;
@@ -104,21 +112,21 @@
             dtgHistorialPedidos.BackgroundColor = Color.FromArgb(239, 239, 239);
             dtgHistorialPedidos.BorderStyle = BorderStyle.Fixed3D;
             dtgHistorialPedidos.ColumnHeadersHeight = 42;
-            dtgHistorialPedidos.Location = new Point(36, 391);
+            dtgHistorialPedidos.Location = new Point(33, 491);
             dtgHistorialPedidos.Name = "dtgHistorialPedidos";
             dtgHistorialPedidos.RowHeadersWidth = 51;
-            dtgHistorialPedidos.Size = new Size(622, 224);
+            dtgHistorialPedidos.Size = new Size(625, 224);
             dtgHistorialPedidos.TabIndex = 33;
             // 
             // lblHistorial
             // 
             lblHistorial.AutoSize = true;
             lblHistorial.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblHistorial.Location = new Point(39, 369);
+            lblHistorial.Location = new Point(36, 469);
             lblHistorial.Name = "lblHistorial";
-            lblHistorial.Size = new Size(135, 20);
+            lblHistorial.Size = new Size(64, 20);
             lblHistorial.TabIndex = 34;
-            lblHistorial.Text = "Pedidos Recientes";
+            lblHistorial.Text = "Pedidos";
             // 
             // topBarMenu
             // 
@@ -154,12 +162,74 @@
             lblTITULO.Text = "INICIO";
             lblTITULO.TextAlign = ContentAlignment.MiddleCenter;
             // 
+            // panel6
+            // 
+            panel6.BorderStyle = BorderStyle.Fixed3D;
+            panel6.Controls.Add(lblTotalPedidas);
+            panel6.Controls.Add(label6);
+            panel6.Location = new Point(115, 327);
+            panel6.Name = "panel6";
+            panel6.Size = new Size(188, 118);
+            panel6.TabIndex = 118;
+            // 
+            // lblTotalPedidas
+            // 
+            lblTotalPedidas.AutoSize = true;
+            lblTotalPedidas.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblTotalPedidas.Location = new Point(28, 42);
+            lblTotalPedidas.Name = "lblTotalPedidas";
+            lblTotalPedidas.Size = new Size(52, 41);
+            lblTotalPedidas.TabIndex = 17;
+            lblTotalPedidas.Text = "00";
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label6.Location = new Point(28, 10);
+            label6.Name = "label6";
+            label6.Size = new Size(124, 20);
+            label6.TabIndex = 16;
+            label6.Text = "Total de Pedidos";
+            // 
+            // panel1
+            // 
+            panel1.BorderStyle = BorderStyle.Fixed3D;
+            panel1.Controls.Add(label2);
+            panel1.Controls.Add(label3);
+            panel1.Location = new Point(324, 327);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(285, 118);
+            panel1.TabIndex = 119;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label2.Location = new Point(28, 42);
+            label2.Name = "label2";
+            label2.Size = new Size(52, 41);
+            label2.TabIndex = 17;
+            label2.Text = "00";
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label3.Location = new Point(28, 10);
+            label3.Name = "label3";
+            label3.Size = new Size(239, 20);
+            label3.TabIndex = 16;
+            label3.Text = "Total de Pedidos De Esta Semana";
+            // 
             // PanelEmpleado
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.Window;
             ClientSize = new Size(901, 725);
+            Controls.Add(panel1);
+            Controls.Add(panel6);
             Controls.Add(topBarMenu);
             Controls.Add(panel2);
             Controls.Add(dtgHistorialPedidos);
@@ -175,6 +245,10 @@
             topBarMenu.ResumeLayout(false);
             topBarMenu.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
+            panel6.ResumeLayout(false);
+            panel6.PerformLayout();
+            panel1.ResumeLayout(false);
+            panel1.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -190,5 +264,11 @@
         private Panel topBarMenu;
         private PictureBox pictureBox2;
         private Label lblTITULO;
+        private Panel panel6;
+        private Label lblTotalPedidas;
+        private Label label6;
+        private Panel panel1;
+        private Label label2;
+        private Label label3;
     }
 }

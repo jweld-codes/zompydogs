@@ -33,13 +33,11 @@
             btnInicio = new Button();
             lblCerrarSession = new Label();
             lblNombreSideBar = new Label();
-            pictureBox3 = new PictureBox();
             btnMenu = new Button();
             btnPOS = new Button();
             pictureBox2 = new PictureBox();
             panelContenedor = new Panel();
             sidebarMenu.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             SuspendLayout();
             // 
@@ -49,7 +47,6 @@
             sidebarMenu.Controls.Add(btnInicio);
             sidebarMenu.Controls.Add(lblCerrarSession);
             sidebarMenu.Controls.Add(lblNombreSideBar);
-            sidebarMenu.Controls.Add(pictureBox3);
             sidebarMenu.Controls.Add(btnMenu);
             sidebarMenu.Controls.Add(btnPOS);
             sidebarMenu.Controls.Add(pictureBox2);
@@ -81,7 +78,7 @@
             lblCerrarSession.Cursor = Cursors.Hand;
             lblCerrarSession.Font = new Font("Segoe UI", 7.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lblCerrarSession.ForeColor = SystemColors.ButtonFace;
-            lblCerrarSession.Location = new Point(75, 683);
+            lblCerrarSession.Location = new Point(12, 685);
             lblCerrarSession.Name = "lblCerrarSession";
             lblCerrarSession.Size = new Size(93, 17);
             lblCerrarSession.TabIndex = 13;
@@ -95,21 +92,11 @@
             lblNombreSideBar.AutoSize = true;
             lblNombreSideBar.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblNombreSideBar.ForeColor = SystemColors.ButtonFace;
-            lblNombreSideBar.Location = new Point(74, 662);
+            lblNombreSideBar.Location = new Point(11, 664);
             lblNombreSideBar.Name = "lblNombreSideBar";
             lblNombreSideBar.Size = new Size(116, 23);
             lblNombreSideBar.TabIndex = 9;
             lblNombreSideBar.Text = "Juan Sánchez";
-            // 
-            // pictureBox3
-            // 
-            pictureBox3.Image = (Image)resources.GetObject("pictureBox3.Image");
-            pictureBox3.Location = new Point(23, 662);
-            pictureBox3.Name = "pictureBox3";
-            pictureBox3.Size = new Size(39, 37);
-            pictureBox3.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox3.TabIndex = 9;
-            pictureBox3.TabStop = false;
             // 
             // btnMenu
             // 
@@ -177,7 +164,6 @@
             Text = "EmpleadoBienvenida";
             sidebarMenu.ResumeLayout(false);
             sidebarMenu.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ResumeLayout(false);
         }
@@ -187,7 +173,6 @@
         private Panel sidebarMenu;
         private Label lblCerrarSession;
         public Label lblNombreSideBar;
-        private PictureBox pictureBox3;
         private Button btnMenu;
         private Button btnPOS;
         private PictureBox pictureBox2;

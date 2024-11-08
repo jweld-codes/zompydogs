@@ -36,7 +36,7 @@ namespace zompyDogs
 
         private void CargarPedidosRecientes()
         {
-            DataTable pedidos = PedidosDAO.ObtenerDetallesdePedido();
+            DataTable pedidos = PedidosDAO.ObtenerDetallesdePedidoPorEmpleado(IDEmpleado);
             dtgHistorialPedidos.DataSource = pedidos;
         }
 
