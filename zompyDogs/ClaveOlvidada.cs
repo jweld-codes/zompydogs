@@ -29,8 +29,8 @@ namespace zompyDogs
 
         private void btnRegresar_Click(object sender, EventArgs e)
         {
-         //   Login frmLogin = new Login();
-           // frmLogin.Show();
+            //   Login frmLogin = new Login();
+            // frmLogin.Show();
             this.Close();
         }
 
@@ -49,7 +49,7 @@ namespace zompyDogs
             nuevoCodigoPeticion = _controladorGeneradorCodigo.GeneradordeCodigoPeticion();
             userForgetCodigo = nuevoCodigoPeticion;
         }
-            private void btnEnviarSolicitud_Click(object sender, EventArgs e)
+        private void btnEnviarSolicitud_Click(object sender, EventArgs e)
         {
             string nombreUsuario = txtUserForget.Text;
 
@@ -84,7 +84,7 @@ namespace zompyDogs
                 PeticionesValidaciones.GuardarPeticion(nuevaPeticion);
                 /* MessageBox.Show("Message”, "Title", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
                  */
-                MessageBox.Show($"Solicitud enviada correctamente.\n Un administrador revisará su petición.\n\n Código de solicitud: {userForgetCodigo}","Solicitud de Recuperación de contraseña.", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show($"Solicitud enviada correctamente.\n Un administrador revisará su petición.\n\n Código de solicitud: {userForgetCodigo}", "Solicitud de Recuperación de contraseña.", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 Login frmLogin = new Login();
                 this.Hide();
                 frmLogin.Show();
@@ -93,6 +93,11 @@ namespace zompyDogs
             {
                 MessageBox.Show($"Error al enviar la solicitud: {ex.Message}");
             }
+        }
+
+        private void ClaveOlvidada_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

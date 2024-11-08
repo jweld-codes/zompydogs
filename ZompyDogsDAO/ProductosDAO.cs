@@ -10,7 +10,7 @@ namespace ZompyDogsDAO
 {
     public class ProductosDAO
     {
-        private static readonly string con_string = "Data Source=MACARENA\\SQLEXPRESS;Initial Catalog=DB_ZompyDogs;Integrated Security=True;Encrypt=False";
+        private static readonly string con_string = "Data Source=KRISHBLAPTOP\\SQLEXPRESS;Initial Catalog=DB_ZompyDogs;Integrated Security=True;Encrypt=False";
 
         public static DataTable ObtenerProductosRecientes()
         {

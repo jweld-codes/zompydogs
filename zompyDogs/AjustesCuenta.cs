@@ -39,8 +39,8 @@ namespace zompyDogs
             IdEmpleado = usuarioID;
             NombreUsuarioAjuste = usuarioNombre;
 
-            MessageBox.Show("IdEmpleado: " + IdEmpleado);
-            MessageBox.Show("NombreUsuario: " + NombreUsuarioAjuste);
+            //MessageBox.Show("IdEmpleado: " + IdEmpleado);
+            //MessageBox.Show("NombreUsuario: " + NombreUsuarioAjuste);
 
             CargarPeticiones();
 

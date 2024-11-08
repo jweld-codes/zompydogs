@@ -16,7 +16,7 @@ namespace zompyDogs
 {
     public partial class PanelAdmin : Form
     {
-        public static readonly string con_string = "Data Source=MACARENA\\SQLEXPRESS;Initial Catalog=DB_ZompyDogs;Integrated Security=True;Encrypt=False";
+        public static readonly string con_string = "Data Source=KRISHBLAPTOP\\SQLEXPRESS;Initial Catalog=DB_ZompyDogs;Integrated Security=True;Encrypt=False";
         public static SqlConnection conn = new SqlConnection(con_string);
 
         public BienvenidaAdmin FormPrincipal { get; set; }
@@ -71,11 +71,11 @@ namespace zompyDogs
 
                     if (resultado != DBNull.Value)
                     {
-                        lblGananciaSemanal.Text = $"{Convert.ToDecimal(resultado):C}";
+                        
                     }
                     else
                     {
-                        lblGananciaSemanal.Text = "L. 0.00";
+                        
                     }
                 }
                 catch (Exception ex)
@@ -86,37 +86,37 @@ namespace zompyDogs
 
 
         }
-      /*  private void CargarGastoSemanal()
-        {
-            using (SqlConnection conn = new SqlConnection(con_string))
-            {
-                string query = @"
-                SELECT SUM(TotalGastoSemanal) AS GastoSemanal
-                FROM v_gastossemanales
-                WHERE Año = YEAR(GETDATE()) AND Semana = DATEPART(WEEK, GETDATE());";
+        /*  private void CargarGastoSemanal()
+          {
+              using (SqlConnection conn = new SqlConnection(con_string))
+              {
+                  string query = @"
+                  SELECT SUM(TotalGastoSemanal) AS GastoSemanal
+                  FROM v_gastossemanales
+                  WHERE Año = YEAR(GETDATE()) AND Semana = DATEPART(WEEK, GETDATE());";
 
-                SqlCommand cmd = new SqlCommand(query, conn);
+                  SqlCommand cmd = new SqlCommand(query, conn);
 
-                try
-                {
-                    conn.Open();
-                    object resultado = cmd.ExecuteScalar();
+                  try
+                  {
+                      conn.Open();
+                      object resultado = cmd.ExecuteScalar();
 
-                    if (resultado != DBNull.Value)
-                    {
-                        lblPerdidas.Text = $"{Convert.ToDecimal(resultado):C}"; 
-                    }
-                    else
-                    {
-                        lblPerdidas.Text = "L. 0.00";
-                    }
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show($"Error al cargar el gasto semanal: {ex.Message}");
-                }
-            }
-        }*/
+                      if (resultado != DBNull.Value)
+                      {
+                          lblPerdidas.Text = $"{Convert.ToDecimal(resultado):C}"; 
+                      }
+                      else
+                      {
+                          lblPerdidas.Text = "L. 0.00";
+                      }
+                  }
+                  catch (Exception ex)
+                  {
+                      MessageBox.Show($"Error al cargar el gasto semanal: {ex.Message}");
+                  }
+              }
+          }*/
         private void CargarPedidosSemanal()
         {
             using (SqlConnection conn = new SqlConnection(con_string))
@@ -135,11 +135,11 @@ namespace zompyDogs
 
                     if (resultado != DBNull.Value)
                     {
-                        lblTotalPedidas.Text = $"{resultado}";
+                        
                     }
                     else
                     {
-                        lblTotalPedidas.Text = "00";
+                        
                     }
                 }
                 catch (Exception ex)
@@ -158,6 +158,11 @@ namespace zompyDogs
         public void CargarPeticionesEnDataGrid()
         {
             dgvPeticionesPendientes.DataSource = PeticionesValidaciones.ObtenerPeticionesParaPanel();
+        }
+
+        private void PanelAdmin_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

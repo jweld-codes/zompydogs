@@ -11,7 +11,7 @@ namespace ZompyDogsDAO
    
     public class AuditoriaDAO
     {
-        public static readonly string con_string = "Data Source=MACARENA\\SQLEXPRESS;Initial Catalog=DB_ZompyDogs;Integrated Security=True;Encrypt=False";
+        public static readonly string con_string = "Data Source=KRISHBLAPTOP\\SQLEXPRESS;Initial Catalog=DB_ZompyDogs;Integrated Security=True;Encrypt=False";
         public static SqlConnection conn = new SqlConnection(con_string);
 
         public static DataTable ObtenerAuditorias()

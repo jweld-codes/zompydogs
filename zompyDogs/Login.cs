@@ -11,6 +11,7 @@ using System.Data.SqlClient;
 using ZompyDogsDAO;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 using zompyDogs.CRUD.REGISTROS;
+using zompyDogs.Properties;
 
 namespace zompyDogs
 {
@@ -25,6 +26,7 @@ namespace zompyDogs
         {
             InitializeComponent();
             seeCloseIcon.Visible = false;
+            
 
         }
 

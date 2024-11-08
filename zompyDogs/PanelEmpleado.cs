@@ -14,7 +14,7 @@ namespace zompyDogs
 {
     public partial class PanelEmpleado : Form
     {
-        public static readonly string con_string = "Data Source=MACARENA\\SQLEXPRESS;Initial Catalog=DB_ZompyDogs;Integrated Security=True;Encrypt=False";
+        public static readonly string con_string = "Data Source=KRISHBLAPTOP\\SQLEXPRESS;Initial Catalog=DB_ZompyDogs;Integrated Security=True;Encrypt=False";
         public static SqlConnection conn = new SqlConnection(con_string);
 
         public int IDEmpleado { get; set; }
@@ -36,7 +36,7 @@ namespace zompyDogs
         private void CargarPedidosRecientes()
         {
             DataTable pedidos = PedidosDAO.ObtenerDetallesdePedidoPorEmpleado(IDEmpleado);
-            dtgHistorialPedidos.DataSource = pedidos;
+            
         }
 
         private void btnLogOutPanel_Click(object sender, EventArgs e)

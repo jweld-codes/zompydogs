@@ -2558,19 +2558,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\jenni\\.nuget\\packages\\": {}
+    "C:\\Users\\krish\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\jenni\\Desktop\\zompydogs\\zompydogs\\zompyDogs\\zompyDogs.csproj",
+      "projectUniqueName": "C:\\Users\\krish\\Downloads\\ZompyGodsF.1\\zompyDogs\\zompyDogs.csproj",
       "projectName": "zompyDogs",
-      "projectPath": "C:\\Users\\jenni\\Desktop\\zompydogs\\zompydogs\\zompyDogs\\zompyDogs.csproj",
-      "packagesPath": "C:\\Users\\jenni\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\jenni\\Desktop\\zompydogs\\zompydogs\\zompyDogs\\obj\\",
+      "projectPath": "C:\\Users\\krish\\Downloads\\ZompyGodsF.1\\zompyDogs\\zompyDogs.csproj",
+      "packagesPath": "C:\\Users\\krish\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\krish\\Downloads\\ZompyGodsF.1\\zompyDogs\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\jenni\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\krish\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -2584,11 +2584,11 @@
         "net8.0-windows7.0": {
           "targetAlias": "net8.0-windows",
           "projectReferences": {
-            "C:\\Users\\jenni\\Desktop\\zompydogs\\zompydogs\\ZompyDogsDAO\\ZompyDogsDAO.csproj": {
-              "projectPath": "C:\\Users\\jenni\\Desktop\\zompydogs\\zompydogs\\ZompyDogsDAO\\ZompyDogsDAO.csproj"
+            "C:\\Users\\krish\\Downloads\\ZompyGodsF.1\\ZompyDogsDAO\\ZompyDogsDAO.csproj": {
+              "projectPath": "C:\\Users\\krish\\Downloads\\ZompyGodsF.1\\ZompyDogsDAO\\ZompyDogsDAO.csproj"
             },
-            "C:\\Users\\jenni\\Desktop\\zompydogs\\zompydogs\\ZompyDogsLib\\ZompyDogsLib.csproj": {
-              "projectPath": "C:\\Users\\jenni\\Desktop\\zompydogs\\zompydogs\\ZompyDogsLib\\ZompyDogsLib.csproj"
+            "C:\\Users\\krish\\Downloads\\ZompyGodsF.1\\ZompyDogsLib\\ZompyDogsLib.csproj": {
+              "projectPath": "C:\\Users\\krish\\Downloads\\ZompyGodsF.1\\ZompyDogsLib\\ZompyDogsLib.csproj"
             }
           }
         }
@@ -2644,7 +2644,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.302/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.303/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

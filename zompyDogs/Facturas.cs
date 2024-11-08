@@ -33,7 +33,7 @@ namespace zompyDogs
             InitializeComponent();
             this.rolIDActual = rolIDActual;
             this.usuarioIDActual = usuarioIDActual;
-            MessageBox.Show("idEmpleado: " + usuarioIDActual + "RolIdActual: " + rolIDActual);
+            //MessageBox.Show("idEmpleado: " + usuarioIDActual + "RolIdActual: " + rolIDActual);
             if (rolIDActual == 1)
             {
                 btnPuntoVenta.Enabled = false;
@@ -116,7 +116,9 @@ namespace zompyDogs
                 {
                     detalleProductosTable.Rows.Add(
                         platillo["Platillo"].ToString(),
-                        Convert.ToInt32(platillo["Total_De_Productos"]),
+
+                        //No existe en Tabla? -Kristian
+                        //Convert.ToInt32(platillo["Total_De_Productos"]),
                         Convert.ToDecimal(platillo["Precio_Unitario"])
                     );
                 }
