@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\krish\\Downloads\\ZompyGodsF.1\\zompyDogs\\zompyDogs.csproj": {}
+    "C:\\Users\\jenni\\Downloads\\elNuevo\\zompyDogs\\zompyDogs.csproj": {}
   },
   "projects": {
-    "C:\\Users\\krish\\Downloads\\ZompyGodsF.1\\ZompyDogsDAO\\ZompyDogsDAO.csproj": {
+    "C:\\Users\\jenni\\Downloads\\elNuevo\\ZompyDogsDAO\\ZompyDogsDAO.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\krish\\Downloads\\ZompyGodsF.1\\ZompyDogsDAO\\ZompyDogsDAO.csproj",
+        "projectUniqueName": "C:\\Users\\jenni\\Downloads\\elNuevo\\ZompyDogsDAO\\ZompyDogsDAO.csproj",
         "projectName": "ZompyDogsDAO",
-        "projectPath": "C:\\Users\\krish\\Downloads\\ZompyGodsF.1\\ZompyDogsDAO\\ZompyDogsDAO.csproj",
-        "packagesPath": "C:\\Users\\krish\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\krish\\Downloads\\ZompyGodsF.1\\ZompyDogsDAO\\obj\\",
+        "projectPath": "C:\\Users\\jenni\\Downloads\\elNuevo\\ZompyDogsDAO\\ZompyDogsDAO.csproj",
+        "packagesPath": "C:\\Users\\jenni\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\jenni\\Downloads\\elNuevo\\ZompyDogsDAO\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\krish\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\jenni\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -78,21 +78,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.303/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.302/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\krish\\Downloads\\ZompyGodsF.1\\ZompyDogsLib\\ZompyDogsLib.csproj": {
+    "C:\\Users\\jenni\\Downloads\\elNuevo\\ZompyDogsLib\\ZompyDogsLib.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\krish\\Downloads\\ZompyGodsF.1\\ZompyDogsLib\\ZompyDogsLib.csproj",
+        "projectUniqueName": "C:\\Users\\jenni\\Downloads\\elNuevo\\ZompyDogsLib\\ZompyDogsLib.csproj",
         "projectName": "ZompyDogsLib",
-        "projectPath": "C:\\Users\\krish\\Downloads\\ZompyGodsF.1\\ZompyDogsLib\\ZompyDogsLib.csproj",
-        "packagesPath": "C:\\Users\\krish\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\krish\\Downloads\\ZompyGodsF.1\\ZompyDogsLib\\obj\\",
+        "projectPath": "C:\\Users\\jenni\\Downloads\\elNuevo\\ZompyDogsLib\\ZompyDogsLib.csproj",
+        "packagesPath": "C:\\Users\\jenni\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\jenni\\Downloads\\elNuevo\\ZompyDogsLib\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\krish\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\jenni\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -138,21 +138,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.303/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.302/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\krish\\Downloads\\ZompyGodsF.1\\zompyDogs\\zompyDogs.csproj": {
+    "C:\\Users\\jenni\\Downloads\\elNuevo\\zompyDogs\\zompyDogs.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\krish\\Downloads\\ZompyGodsF.1\\zompyDogs\\zompyDogs.csproj",
+        "projectUniqueName": "C:\\Users\\jenni\\Downloads\\elNuevo\\zompyDogs\\zompyDogs.csproj",
         "projectName": "zompyDogs",
-        "projectPath": "C:\\Users\\krish\\Downloads\\ZompyGodsF.1\\zompyDogs\\zompyDogs.csproj",
-        "packagesPath": "C:\\Users\\krish\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\krish\\Downloads\\ZompyGodsF.1\\zompyDogs\\obj\\",
+        "projectPath": "C:\\Users\\jenni\\Downloads\\elNuevo\\zompyDogs\\zompyDogs.csproj",
+        "packagesPath": "C:\\Users\\jenni\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\jenni\\Downloads\\elNuevo\\zompyDogs\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\krish\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\jenni\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -166,11 +166,11 @@
           "net8.0-windows7.0": {
             "targetAlias": "net8.0-windows",
             "projectReferences": {
-              "C:\\Users\\krish\\Downloads\\ZompyGodsF.1\\ZompyDogsDAO\\ZompyDogsDAO.csproj": {
-                "projectPath": "C:\\Users\\krish\\Downloads\\ZompyGodsF.1\\ZompyDogsDAO\\ZompyDogsDAO.csproj"
+              "C:\\Users\\jenni\\Downloads\\elNuevo\\ZompyDogsDAO\\ZompyDogsDAO.csproj": {
+                "projectPath": "C:\\Users\\jenni\\Downloads\\elNuevo\\ZompyDogsDAO\\ZompyDogsDAO.csproj"
               },
-              "C:\\Users\\krish\\Downloads\\ZompyGodsF.1\\ZompyDogsLib\\ZompyDogsLib.csproj": {
-                "projectPath": "C:\\Users\\krish\\Downloads\\ZompyGodsF.1\\ZompyDogsLib\\ZompyDogsLib.csproj"
+              "C:\\Users\\jenni\\Downloads\\elNuevo\\ZompyDogsLib\\ZompyDogsLib.csproj": {
+                "projectPath": "C:\\Users\\jenni\\Downloads\\elNuevo\\ZompyDogsLib\\ZompyDogsLib.csproj"
               }
             }
           }
@@ -226,7 +226,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.303/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.302/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

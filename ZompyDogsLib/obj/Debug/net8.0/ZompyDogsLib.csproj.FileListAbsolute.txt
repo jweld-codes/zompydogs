@@ -70,3 +70,15 @@ C:\Users\krish\Downloads\ZompyGodsF.1\ZompyDogsLib\obj\Debug\net8.0\ZompyDogsLib
 C:\Users\krish\Downloads\ZompyGodsF.1\ZompyDogsLib\obj\Debug\net8.0\refint\ZompyDogsLib.dll
 C:\Users\krish\Downloads\ZompyGodsF.1\ZompyDogsLib\obj\Debug\net8.0\ZompyDogsLib.pdb
 C:\Users\krish\Downloads\ZompyGodsF.1\ZompyDogsLib\obj\Debug\net8.0\ref\ZompyDogsLib.dll
+C:\Users\jenni\Downloads\elNuevo\ZompyDogsLib\bin\Debug\net8.0\ZompyDogsLib.deps.json
+C:\Users\jenni\Downloads\elNuevo\ZompyDogsLib\bin\Debug\net8.0\ZompyDogsLib.dll
+C:\Users\jenni\Downloads\elNuevo\ZompyDogsLib\bin\Debug\net8.0\ZompyDogsLib.pdb
+C:\Users\jenni\Downloads\elNuevo\ZompyDogsLib\obj\Debug\net8.0\ZompyDogsLib.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\jenni\Downloads\elNuevo\ZompyDogsLib\obj\Debug\net8.0\ZompyDogsLib.AssemblyInfoInputs.cache
+C:\Users\jenni\Downloads\elNuevo\ZompyDogsLib\obj\Debug\net8.0\ZompyDogsLib.AssemblyInfo.cs
+C:\Users\jenni\Downloads\elNuevo\ZompyDogsLib\obj\Debug\net8.0\ZompyDogsLib.csproj.CoreCompileInputs.cache
+C:\Users\jenni\Downloads\elNuevo\ZompyDogsLib\obj\Debug\net8.0\ZompyDogsLib.sourcelink.json
+C:\Users\jenni\Downloads\elNuevo\ZompyDogsLib\obj\Debug\net8.0\ZompyDogsLib.dll
+C:\Users\jenni\Downloads\elNuevo\ZompyDogsLib\obj\Debug\net8.0\refint\ZompyDogsLib.dll
+C:\Users\jenni\Downloads\elNuevo\ZompyDogsLib\obj\Debug\net8.0\ZompyDogsLib.pdb
+C:\Users\jenni\Downloads\elNuevo\ZompyDogsLib\obj\Debug\net8.0\ref\ZompyDogsLib.dll
