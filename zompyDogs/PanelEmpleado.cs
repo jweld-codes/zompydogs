@@ -21,6 +21,7 @@ namespace zompyDogs
         public string NombreUsuarioEmpleado { get => lblNombreUser.Text; set => lblNombreUser.Text = value; }
 
 
+        //Panel Empleados
         public PanelEmpleado()
         {
             InitializeComponent();
