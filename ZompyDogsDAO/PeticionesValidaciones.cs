@@ -12,7 +12,7 @@ namespace ZompyDogsDAO
 {
     public class PeticionesValidaciones
     {
-        public static readonly string con_string = "Data Source=KRISHBLAPTOP\\SQLEXPRESS;Initial Catalog=DB_ZompyDogs;Integrated Security=True;Encrypt=False";
+        public static readonly string con_string = "Data Source=MACARENA\\SQLEXPRESS;Initial Catalog=DB_ZompyDogs;Integrated Security=True;Encrypt=False";
         public static SqlConnection conn = new SqlConnection(con_string);
         //Metodo para obtener datos de la peticiones
 
@@ -177,7 +177,8 @@ namespace ZompyDogsDAO
         {
             // USO EN: PanelAdmin
             DataTable dtPeticiones = new DataTable();
-            string query = "SELECT Peticion, Usuario, Fecha_De_Envio FROM v_PeticionesxUsuarios WHERE estado = 'Pendiente' ORDER BY Fecha_De_Envio DESC";
+            string query = "SELECT TOP 10 Peticion, Usuario, Fecha_De_Envio FROM v_PeticionesxUsuarios WHERE estado = 'Pendiente' ORDER BY Fecha_De_Envio DESC";
+
 
             using (SqlConnection conn = new SqlConnection(con_string))
             {

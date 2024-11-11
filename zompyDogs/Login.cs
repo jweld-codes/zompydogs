@@ -11,7 +11,6 @@ using System.Data.SqlClient;
 using ZompyDogsDAO;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 using zompyDogs.CRUD.REGISTROS;
-using zompyDogs.Properties;
 
 namespace zompyDogs
 {
@@ -26,7 +25,6 @@ namespace zompyDogs
         {
             InitializeComponent();
             seeCloseIcon.Visible = false;
-            
 
         }
 
@@ -36,18 +34,31 @@ namespace zompyDogs
 
             string validUser = txtUser.Text;
             string validpassword = txtPassword.Text;
+            UsuarioIdActual = idEmpleado;
+            RolIdActual = idRol;
+            UsuarioName = $"{nombreUser} {apeUser}";
+
+           // MessageBox.Show("RolIdActual: " + RolIdActual);
+           // MessageBox.Show("UsuarioIdActual: " + UsuarioIdActual);
+           // MessageBox.Show("UsuarioName: " + UsuarioName);
 
             if (!isValid)
             {
                 MessageBox.Show("Usuario o Clave Incorrecto. Intentar Nuevamente");
+                txtUser.Focus();
+                txtPassword.Text = "";
+                txtUser.Text = "";
+            }
+            else if(RolIdActual == 4)
+            {
+                MessageBox.Show("Como Usuario Básico, no tiene acceso a este sistema.");
+                txtUser.Focus();
                 txtPassword.Text = "";
                 txtUser.Text = "";
             }
             else
             {
-                UsuarioIdActual = idEmpleado;
-                RolIdActual = idRol;
-                UsuarioName = $"{nombreUser} {apeUser}";
+                
                 //MessageBox.Show("idEmpleado: "+ UsuarioIdActual + "RolIdActual: "+ RolIdActual);
 
                 if (isAdmin)
@@ -82,9 +93,8 @@ namespace zompyDogs
                     frmBienvenidaUsuario.RolID = idRol;
                     frmBienvenidaUsuario.lblNombreSideBar.Text = $"{nombreUser} {apeUser}";
 
-                    PanelEmpleado frmPanelEmpleado = new PanelEmpleado();
+                    PanelEmpleado frmPanelEmpleado = new PanelEmpleado(idEmpleado);
                     frmPanelEmpleado.NombreUsuarioEmpleado = $"{nombreUser} {apeUser}";
-                    frmPanelEmpleado.InicializarEmpleado(idEmpleado);
 
                     frmBienvenidaUsuario.AbrirFormsHijaEmpleado(frmPanelEmpleado);
                     frmBienvenidaUsuario.Show();

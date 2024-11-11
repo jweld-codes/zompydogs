@@ -47,8 +47,10 @@ namespace zompyDogs
             dgvEmpleados.Hide();
             dgvAdminis.Hide();
             dgvProveedor.Hide();
+            btnEliminarUsuario.Hide();
+            btnEditarUsuario.Hide();
 
-            cbxFiltro.Hide();
+            //cbxFiltro.Hide();
 
             _controladorGeneradorCodigo = new ControladorGeneradoresDeCodigo();
             _usuarioRegistroForm = new UsuarioRegistro();
@@ -66,21 +68,54 @@ namespace zompyDogs
         {
             DataTable usuarios = UsuarioDAO.ObtenerDetalllesDeUsuarios();
             dgvUsuarios.DataSource = usuarios;
+
+            dgvUsuarios.Columns["Nombre_Completo"].HeaderText = "Nombre del Empleado";
+            dgvUsuarios.Columns["RolUsuario"].HeaderText = "Rol";
+
+            dgvUsuarios.EnableHeadersVisualStyles = false;
+            dgvUsuarios.ColumnHeadersDefaultCellStyle.BackColor = Color.LightGray;
+            dgvUsuarios.ColumnHeadersDefaultCellStyle.ForeColor = Color.Black;
+            dgvUsuarios.ColumnHeadersDefaultCellStyle.Font = new Font("Arial", 10, FontStyle.Bold);
+
         }
         private void CargarUsuariosEmpleados()
         {
             DataTable usuariosEmp = UsuarioDAO.ObtenerDetalllesDeUsuariosEmpleados();
             dgvEmpleados.DataSource = usuariosEmp;
+
+            dgvEmpleados.Columns["Nombre_Completo"].HeaderText = "Nombre del Empleado";
+            dgvEmpleados.Columns["RolUsuario"].HeaderText = "Rol";
+
+            dgvEmpleados.EnableHeadersVisualStyles = false;
+            dgvEmpleados.ColumnHeadersDefaultCellStyle.BackColor = Color.LightGray;
+            dgvEmpleados.ColumnHeadersDefaultCellStyle.ForeColor = Color.Black;
+            dgvEmpleados.ColumnHeadersDefaultCellStyle.Font = new Font("Arial", 10, FontStyle.Bold);
+
         }
         private void CargarUsuariosAdministradores()
         {
             DataTable usuariosAdmin = UsuarioDAO.ObtenerDetalllesDeUsuariosAdmin();
             dgvAdminis.DataSource = usuariosAdmin;
+
+            dgvAdminis.Columns["Nombre_Completo"].HeaderText = "Nombre del Empleado";
+            dgvAdminis.Columns["RolUsuario"].HeaderText = "Rol";
+
+            dgvAdminis.EnableHeadersVisualStyles = false;
+            dgvAdminis.ColumnHeadersDefaultCellStyle.BackColor = Color.LightGray;
+            dgvAdminis.ColumnHeadersDefaultCellStyle.ForeColor = Color.Black;
+            dgvAdminis.ColumnHeadersDefaultCellStyle.Font = new Font("Arial", 10, FontStyle.Bold);
         }
         private void CargarProveedores()
         {
             DataTable usuariosAdmin = UsuarioDAO.ObtenerDetalllesProveedores();
             dgvProveedor.DataSource = usuariosAdmin;
+
+            dgvProveedor.Columns["Nombre_Completo"].HeaderText = "Nombre del Empleado";
+
+            dgvProveedor.EnableHeadersVisualStyles = false;
+            dgvProveedor.ColumnHeadersDefaultCellStyle.BackColor = Color.LightGray;
+            dgvProveedor.ColumnHeadersDefaultCellStyle.ForeColor = Color.Black;
+            dgvProveedor.ColumnHeadersDefaultCellStyle.Font = new Font("Arial", 10, FontStyle.Bold);
         }
 
         /********** CRUD Para Usuarios ********/
@@ -209,11 +244,19 @@ namespace zompyDogs
                     usuarioEditar.txtCedula.Enabled = false;
 
                     usuarioEditar.txtPrimNombre.Text = fila["Nombre_Usuario"].ToString();
+                    usuarioEditar.txtPrimNombre.Enabled = false;
+
                     usuarioEditar.txtSegNombre.Text = fila["Segundo_Nombre"].ToString();
+                    usuarioEditar.txtSegNombre.Enabled = false;
+
                     usuarioEditar.txtPrimApellido.Text = fila["Apellido_Usuario"].ToString();
+                    usuarioEditar.txtPrimApellido.Enabled = false;
+
                     usuarioEditar.txtSegApellido.Text = fila["Segundo_Apellido"].ToString();
+                    usuarioEditar.txtSegApellido.Enabled = false;
 
                     usuarioEditar.txtDireccion.Text = fila["Direccion"].ToString();
+
                     usuarioEditar.txtTelefono.Text = fila["Telefono"].ToString();
 
                     usuarioEditar.cbxEsatdoCivil.Text = fila["Estado_Civil"].ToString();
@@ -281,6 +324,7 @@ namespace zompyDogs
                             {
                                 MessageBox.Show("Usuario actualizado con éxito.");
                                 CargarUsuarios();
+                                this.Close();
                             }
                             else
                             {
@@ -304,6 +348,8 @@ namespace zompyDogs
                 var frmProveedorRegistro = new ProveedorRegistro();
                 frmProveedorRegistro.lblTituloRegistro.Text = "Editar Proveedor";
                 frmProveedorRegistro.btnGuardarProv.Text = "EDITAR";
+                frmProveedorRegistro.cbxEstado.Enabled = true;
+                frmProveedorRegistro.txtNombreProv.Enabled = false;
 
                 frmProveedorRegistro.Show();
 
@@ -507,7 +553,7 @@ namespace zompyDogs
             lblBreadCrumbUser.Text = "USUARIOS";
             dgvEmpleados.Hide();
             dgvAdminis.Hide();
-            cbxFiltro.Hide();
+           // cbxFiltro.Hide();
 
             txtBuscarUsuario.TextChanged += (s, args) =>
             {
@@ -527,7 +573,7 @@ namespace zompyDogs
             dgvEmpleados.Hide();
             dgvProveedor.Hide();
             dgvAdminis.Show();
-            cbxFiltro.Hide();
+            //cbxFiltro.Hide();
             lblBreadCrumbUser.Text = "ADMINISTRADORES";
 
             txtBuscarUsuario.TextChanged += (s, args) =>
@@ -549,7 +595,7 @@ namespace zompyDogs
             dgvEmpleados.Show();
             lblBreadCrumbUser.Text = "EMPLEADOS";
             dgvAdminis.Hide();
-            cbxFiltro.Hide();
+            //cbxFiltro.Hide();
 
             txtBuscarUsuario.TextChanged += (s, args) =>
             {
@@ -569,7 +615,7 @@ namespace zompyDogs
             dgvEmpleados.Hide();
             dgvAdminis.Hide();
             dgvProveedor.Show();
-            cbxFiltro.Show();
+            btnEditarUsuario.Show();
 
             btnRefreshDG.Show();
 

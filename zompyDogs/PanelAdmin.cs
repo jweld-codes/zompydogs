@@ -16,7 +16,7 @@ namespace zompyDogs
 {
     public partial class PanelAdmin : Form
     {
-        public static readonly string con_string = "Data Source=KRISHBLAPTOP\\SQLEXPRESS;Initial Catalog=DB_ZompyDogs;Integrated Security=True;Encrypt=False";
+        public static readonly string con_string = "Data Source=MACARENA\\SQLEXPRESS;Initial Catalog=DB_ZompyDogs;Integrated Security=True;Encrypt=False";
         public static SqlConnection conn = new SqlConnection(con_string);
 
         public BienvenidaAdmin FormPrincipal { get; set; }
@@ -71,11 +71,11 @@ namespace zompyDogs
 
                     if (resultado != DBNull.Value)
                     {
-                        
+                        lblGananciaSemanal.Text = $"{Convert.ToDecimal(resultado):C}";
                     }
                     else
                     {
-                        
+                        lblGananciaSemanal.Text = "L. 0.00";
                     }
                 }
                 catch (Exception ex)
@@ -135,11 +135,11 @@ namespace zompyDogs
 
                     if (resultado != DBNull.Value)
                     {
-                        
+                        lblTotalPedidas.Text = $"{resultado}";
                     }
                     else
                     {
-                        
+                        lblTotalPedidas.Text = "00";
                     }
                 }
                 catch (Exception ex)
@@ -153,15 +153,14 @@ namespace zompyDogs
         {
             DataTable pedidos = PedidosDAO.ObtenerPedidosRecientes();
             dgvPedidosPanel.DataSource = pedidos;
+            dgvPedidosPanel.Columns["Codigo_Pedido"].HeaderText = "Codigo del Pedido";
+            dgvPedidosPanel.Columns["Total_a_Pagar"].HeaderText = "Total";
         }
 
         public void CargarPeticionesEnDataGrid()
         {
             dgvPeticionesPendientes.DataSource = PeticionesValidaciones.ObtenerPeticionesParaPanel();
-        }
-
-        private void PanelAdmin_Load(object sender, EventArgs e)
-        {
+            dgvPeticionesPendientes.Columns["Fecha_De_Envio"].HeaderText = "Fecha de Envío";
 
         }
     }
